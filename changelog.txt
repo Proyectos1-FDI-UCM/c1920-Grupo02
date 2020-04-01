@@ -1,0 +1,120 @@
+NUEVO EN LA VERSION 1.2:
+////////////////////////
+
+
+DISPARO DEL JUGADOR:
+
++ Añadida la variable "private bool playerLookingRight" en el GM para conocer la orientación del jugador.
+
++ Añadido el método "public void UpdatePlayerLooking(bool val)" en el GM, que configura "playerLookingRight".
++ Añadido el método "public bool GetPlayerLooking()" en el GM, que devuelve "playerLookingRight".
+
+* Cambiado el script "PlayerController":
+	+ Ahora se comunica con el GM mediante "UpdatePlayerLooking" para registrar el sentido de la mirada.
+* Cambiado el script "SetInitialSpeed":
+	+ Añadida la manera de direccionarse gracias a "GetPlayerLooking" (comunicación con el GM).
+	- Quitado "FixedUpdate()".
+* Cambiado el script "Dash" (necesario tras percatarme de que lo había roto):
+	+ Añadida la manera de direccionarse gracias a "GetPlayerLooking" (comunicación con el GM).
+
+* Movido el objeto "FirePoint" al centro del personaje.
++ Añadido un icono de editor para el objeto "FirePoint" de color magenta.
+
+
+ATAQUE CUERPO A CUERPO DEL JUGADOR:
+
++ Añadida la variable "private bool playerCanAtMelee" en el GM para controlar el estado del ataque a melee.
+
++ Añadido el método "public void UpdateCanMelee(bool val)" en el GM, que configura "playerCanAtMelee".
++ Añadido el método "public bool GetPlayerCanMelee()" en el GM, que devuelve "playerCanAtMelee".
+
++ Añadido un prefab que daña a los enemigos y su sprite provisional.
+
++ Añadido el script "Melee" (para el jugador), que informa al GM de la intención de atacar y es el primer responsable de que se realice la acción.
++ Añadido el script "EnemyDamager" (para el nuevo prefab de ataque), que controla el comportamiento de un prefab que interactúa con los enemigos.
++ Añadido el script "QuitaVida_aEnemigo" (para los enemigos) [PLACEHOLDER], que se encargará de restar vida al enemigo que choque con el prefab.
+
+* Cambiada la casilla EnemyDamage-PlayerDetection de la matriz de colisiones de las físicas 2D a "marcada".
+
+"BUGS" del ataque a melee:
+/Se puede "spamear".
+/Se puede redireccionar mientras se realiza.
+/No hay penalización alguna por su uso.
+
+
+MISCELÁNEA:
+
+* Reajustados algunos elementos de la interfaz que eran solo parcialmente visibles o que estaban desalineados.
+
++ Añadido el archivo "changelog.txt" a la carpeta del proyecto.
+
+
+
+(He intentado ir anotando todos los cambios pero me he hecho un poco de lío y no sé si he documentado todo bien...) -_-
+
+
+
+
+
+NUEVO EN LA VERSION 1.9:
+////////////////////////
+
+
+MENÚ DE PAUSA:
+
++ Añadida la opción para pausar el juego
+	+ Añadido el campo privado booleano "menuPartidaSacado" en el GM (que indica si está desplegado el menú), así como un método público booleano para comprobar su estado "GetMenu" y otro vacío y privado "UpdateMenu" para modificarlo.
+	+ Añadido en el GM un método vacío privado llamado "CorreTiempo" que detiene y reanuda el tiempo.
+	+ Añadido el método Update en el GM para recoger la entrada del usuario.
+	+ Añadida una comprobación del estado del menú de pausa antes de voltear al jugador en el script PlayerController.
+
+
+CONTROLES:
+
+* Retocados los ejes y botones virtuales (ahora parece que todo funciona como debería).
+* Cambios en las teclas de cambio de personaje y salto para mando.
+
+
+MISCELÁNEA:
+
+* Cambiada la detección de entrada de usuario para cambiar de pastilla en ChangePill; ahora se emplean los botones virtuales.
+* Actualizado el archivo changelog.txt.
+
+
+
+
+
+NUEVO EN LA VERSION 2.5:
+////////////////////////
+
+
+MISCELÁNEA:
+
+* Bugs arreglados:
+	- el jugador no puede saltar desde la lava
+	- el ataque a melee no va
+	- hay dos formas de ver la dirección del jugador en "PlayerControllerWallJump.cs"
+	- no se controla bien la direccion del jugador en "PlayerControllerWallJump.cs"
+	- "PauseMenu.cs" no utilizaba el método de cambio de escena del GM
+	- el jugador puede girar y atacar mientras está pausado el juego
+* Actualizado el archivo changelog.txt
+
+
+
+
+
+NUEVO EN LA VERSION 2.6:
+////////////////////////
+
+
+CAMBIO DE NIVELES:
+
+* Renombrada la escena "Hito 1" a "Area_1".
++ Añadidas las escenas "Area_2" y "Fin".
++ Añadido el objeto "Finish" y su componente "Finish.cs" para cambiar entre niveles cuando el jugador lo toca.
+* Ajustadas las build settings y otras configuraciones necesarias.
+
+
+MISCELÁNEA:
+
+* Actualizado el archivo changelog.txt.

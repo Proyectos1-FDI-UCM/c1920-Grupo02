@@ -1,0 +1,114 @@
+﻿using UnityEngine;
+using UnityEngine.UI;
+
+public class UIManager : MonoBehaviour
+{
+    public static UIManager instance;
+
+    public Image[] pastillasUI;  //Interfaz del cambio de pastilla
+    public Text time;            //Contador para el cambio de pastilla
+
+    public Image[] hearts; //Corazon lleno
+    int maxLife;    //Vida máxima
+
+    //Interfaz glóbulos
+    public Text globulosRojosUI;
+    public Text globulosBlancosUI;
+
+    void Start()
+    {
+        maxLife = hearts.Length;    //Establecemos la çvida máxima
+        GameManager.instance.SetUIManager(this);
+    }
+
+    //Interfaz de la vida
+    public void LifeCount(int life)
+    {
+        if (life > 0)
+        {
+            for (int i = maxLife - 1; i >= life; i--)
+            {
+                hearts[i].enabled = false;
+            }
+            for (int i = 0; i < life; i++)  //Para recargar la vida en caso de sumarle corazones
+            {
+                hearts[i].enabled = true;
+            }
+        }
+        else
+        {
+            for (int i = maxLife - 1; i >= 0; i--)
+                hearts[i].enabled = false;
+        }
+    }
+    /// <summary>
+    /// Actualiza la puntuación del jugador
+    /// </summary>
+    /// <param name="points"></param>
+    public void UpdateScore(int points)
+    {
+        //ScoreText.text = points.ToString();
+    }
+    /// <summary>
+    /// Desactiva la imagen de la pastilla de la interfaz según cual seas
+    /// </summary>
+    /// <param name="pastilla"></param>
+    public void PillChange(int pastilla)     //Muestra las pastillas que hay disponibles
+    {
+        //0 = Homeopatica
+        //1 = Ibuprofeno
+        //2 = Extasis
+        if (pastilla == 0)
+        {
+            pastillasUI[0].enabled = false;
+            pastillasUI[1].enabled = true;
+            pastillasUI[2].enabled = true;
+        }
+        else if (pastilla == 1)
+        {
+            pastillasUI[0].enabled = true;
+            pastillasUI[1].enabled = false;
+            pastillasUI[2].enabled = true;
+        }
+        else if (pastilla == 2)
+        {
+            pastillasUI[0].enabled = true;
+            pastillasUI[1].enabled = true;
+            pastillasUI[2].enabled = false;
+        }
+    }
+    /// <summary>
+    /// Desactiva todas las pastillas de la interfaz hasta que el contador llegue a 0
+    /// </summary>
+    public void UnablePill()
+    {
+        pastillasUI[0].enabled = false;
+        pastillasUI[1].enabled = false;
+        pastillasUI[2].enabled = false;
+    }
+    /// <summary>
+    /// Muestra en pantalla el contador de espera del cambio de pastilla
+    /// </summary>
+    /// <param name="contador"></param>
+    public void Timing(float contador)
+    {
+        int tiempo = (int)contador;
+        time.text = (tiempo + "");
+    }
+    /// <summary>
+    /// Muestra en pantalla el numero de globulos rojos que posea el jugador
+    /// </summary>
+    /// <param name="globulos"></param>
+    public void UpdateGlobulosRojosUI(int globulos)
+    {
+        globulosRojosUI.text = globulos + "";
+    }
+    /// <summary>
+    /// Muestra en pantalla el numero de globulos blancos que posea el jugador
+    /// </summary>
+    /// <param name="globulos"></param>
+    public void UpdateGlobulosBlancosUI(int globulos)
+    {
+        globulosBlancosUI.text = globulos + "";
+    }
+}
