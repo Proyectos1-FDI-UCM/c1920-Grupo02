@@ -12,13 +12,12 @@ public class Enemy2Controller : MonoBehaviour
     PlayerDetection playerDetection;
     public EnemyPatrolLimit enemyLeftPatrolLimit;
     public EnemyPatrolLimit enemyRightPatrolLimit;
-    public GameObject disparar;
-    new Disparar disparo;
+    Disparar disparar;
 
     //Referencias
     void Start()
     {
-          disparo = disparar.GetComponent<Disparar>();
+          disparar = gameObject.GetComponentInChildren<Disparar>();
         enemyFollow = gameObject.GetComponent<EnemyFollow>();
         enemyPatrol = gameObject.GetComponentInChildren<EnemyPatrol>();
         playerDetection = gameObject.GetComponentInChildren<PlayerDetection>();
@@ -51,14 +50,14 @@ public class Enemy2Controller : MonoBehaviour
                     enemyLeftPatrolLimit.atLimit = false;
                     enemyRightPatrolLimit.atLimit = false;
                     enemyFollow.enabled = true;
-                    disparo.enabled = true;
+                    disparar.enabled = true;
                 }
                 if (enemyRightPatrolLimit.atLimit && playerDetection.direccion == -1)
                 {
                     enemyLeftPatrolLimit.atLimit = false;
                     enemyRightPatrolLimit.atLimit = false;
                     enemyFollow.enabled = true;
-                    disparo.enabled = true;
+                    disparar.enabled = true;
                 }
             }
         }
@@ -72,7 +71,7 @@ public class Enemy2Controller : MonoBehaviour
                 //Patrulla
                 enemyPatrol.enabled = true;
                 enemyFollow.enabled = false;
-                disparo.enabled = false; 
+                disparar.enabled = false;
             }
             //Si detecta al jugador
             else
@@ -80,7 +79,7 @@ public class Enemy2Controller : MonoBehaviour
                 //Le sigue
                 enemyFollow.enabled = true;
                 enemyPatrol.enabled = false;
-                disparo.enabled = true; 
+                disparar.enabled = true;
             }
         }
     }
