@@ -22,11 +22,15 @@ public class Enemy_MordiscoAbominable : MonoBehaviour
     Rigidbody2D rb;
     SpriteRenderer spriteRenderer;
     int direction;
+    QuitaVida quitavida;
+    int initialDamage;
+    public int dañoMordisco;
     public float dashSpeed;
     void Awake()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        quitavida = gameObject.GetComponent<QuitaVida>();
     }
 
     private void FixedUpdate()
@@ -44,10 +48,18 @@ public class Enemy_MordiscoAbominable : MonoBehaviour
         {
             direction = 1;
         }
+        initialDamage = quitavida.damage;
+        quitavida.damage = dañoMordisco;
     }
-
     private void OnDisable()
     {
-        //Spawnear el ataque a melee
+        quitavida.damage = initialDamage;
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.GetComponent<PlayerController>() != null)
+        {
+            gameObject.GetComponent<Enemy_MordiscoAbominable>().enabled = false;
+        }
     }
 }

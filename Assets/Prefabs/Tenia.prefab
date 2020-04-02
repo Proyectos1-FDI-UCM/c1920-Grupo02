@@ -397,9 +397,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4987726974811024218}
-  - component: {fileID: 4987726974811024221}
   - component: {fileID: 4987726974811024220}
   - component: {fileID: 6064699633134835788}
+  - component: {fileID: 1524877461034893754}
   m_Layer: 0
   m_Name: Tenia
   m_TagString: Untagged
@@ -425,20 +425,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4987726974811024221
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4987726974811024223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5492deca4b9ba5346924d0ebd996baf7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyLeftPatrolLimit: {fileID: 4987726974478047014}
-  enemyRightPatrolLimit: {fileID: 4987726973077203901}
 --- !u!114 &4987726974811024220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -467,3 +453,19 @@ MonoBehaviour:
   spawner: {fileID: 3426025126485288679, guid: 31213a50384bba3438df7cc9824131d6, type: 3}
   numGlobulosRojos: 1
   life: 6
+--- !u!114 &1524877461034893754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4987726974811024223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d6b579c12141e34a9589ac62bcb2fbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBeforeMordiscoAbominable: 3
+  executionTime: 2
+  enemyLeftPatrolLimit: {fileID: 4987726974478047014}
+  enemyRightPatrolLimit: {fileID: 4987726973077203901}
