@@ -53,6 +53,7 @@ public class Enemy_MordiscoAbominable : MonoBehaviour
     }
     private void OnDisable()
     {
+        rb.velocity = new Vector2(0, 0);
         quitavida.damage = initialDamage;
     }
     private void OnCollisionEnter2D(Collision2D collision)

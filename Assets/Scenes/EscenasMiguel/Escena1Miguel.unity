@@ -296,6 +296,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3765439610240424369, guid: ccb9b20901c047240bec1bd45d47b85c,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1558800093}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccb9b20901c047240bec1bd45d47b85c, type: 3}
 --- !u!1 &88085467
@@ -4782,6 +4787,11 @@ PrefabInstance:
         type: 3}
       propertyPath: "da\xF1oMordisco"
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524877461034893754, guid: 6aeeaca37c273044599976cb12892f12,
+        type: 3}
+      propertyPath: executionTime
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6aeeaca37c273044599976cb12892f12, type: 3}

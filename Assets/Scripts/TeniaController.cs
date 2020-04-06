@@ -7,17 +7,24 @@
 
 public class TeniaController : MonoBehaviour
 {
+    //Referencias a Scripts
     EnemyFollow enemyFollow;
     EnemyPatrol enemyPatrol;
     PlayerDetection playerDetection;
+    Enemy_MordiscoAbominable mordiscoAbominable;
+
+    //Variables de control
     bool detectingPlayer;
     float initialExecutionTime;
     float initialStartOfMovementTime;
     bool alreadyCounting;
+    Rigidbody2D rb;
 
+    //Variables de testeo
     public float timeBeforeMordiscoAbominable;
     public float executionTime;
-    Enemy_MordiscoAbominable mordiscoAbominable;
+    
+    //Referencias públicas
     public EnemyPatrolLimit enemyLeftPatrolLimit;
     public EnemyPatrolLimit enemyRightPatrolLimit;
     
@@ -29,28 +36,48 @@ public class TeniaController : MonoBehaviour
         enemyPatrol = gameObject.GetComponentInChildren<EnemyPatrol>();
         playerDetection = gameObject.GetComponentInChildren<PlayerDetection>();
         mordiscoAbominable = gameObject.GetComponentInChildren<Enemy_MordiscoAbominable>();
+        rb = gameObject.GetComponentInChildren<Rigidbody2D>();
     }
 
     private void Update()
     {
+        //Si está detectando al jugador
         if(detectingPlayer == true)
         {
+            //Si el enemigo ha visto al jugador durante timeBeforeMordiscoAbominable
+            //y no se encuentra en los límites de patrullaje:
             if (Time.time-initialExecutionTime > timeBeforeMordiscoAbominable && !enemyLeftPatrolLimit.atLimit && !enemyRightPatrolLimit.atLimit)
             {
+                //Habilita y deshabilita scripts
                 mordiscoAbominable.enabled = true;
                 enemyPatrol.enabled = false;
                 enemyFollow.enabled = false;
+
+                //Se establece el tiempo inicial como tiempo de inicio del movimiento
                 initialStartOfMovementTime = Time.time;
             }
         }
+        //Si no se detecta al jugador o el enemigo se encuentra en los límites
         else
         {
+            //Se asigna un valor imposible al tiempo inicial de ejecución para evitar bugs de una forma sencilla
             initialExecutionTime = Time.time + 78502345f;
+
+            //Ya no se está contando el tiempo
             alreadyCounting = false;
         }
+
+        //Situaciones anormales que pueden ocurrir:
+        //Si se está realizando mordiscoAbominable y ya se ha finalizado el tiempo del movimiento
         if (mordiscoAbominable.enabled && Time.time-initialStartOfMovementTime > executionTime)
         {
+            //Se desactiva el script
             mordiscoAbominable.enabled = false;
+
+            //Ya no se está contando y se asigna una variable imposible a initialExecutionTime
+            alreadyCounting = false;
+            initialExecutionTime = Time.time + 78502345f;
+            rb.velocity = new Vector2(0, 0);
         }
         if (Time.time - initialExecutionTime > timeBeforeMordiscoAbominable + executionTime)
         {
