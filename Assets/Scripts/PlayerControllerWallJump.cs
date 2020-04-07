@@ -320,5 +320,15 @@ public class PlayerControllerWallJump : MonoBehaviour
         {
             spawnpoint = collision.transform.position;
         }
+
+        // Si el jugador colisiona con una plataforma móvil, pasa a ser hijo de esta, si no, no es hijo de nadie
+        if (collision.gameObject.GetComponent<PlataformaMovil>() != null)
+            transform.parent = collision.transform;
+            
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        transform.parent = null;
     }
 }
