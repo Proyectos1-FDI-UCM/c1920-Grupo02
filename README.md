@@ -12,3 +12,7 @@ Creado un Sprite para las plataformas móviles
 Modificado el script playerControllerWallJump para que funcione la tracción con las plataformas móviles
 
 Creado prefab para plataformas móviles. Hay que modificar el número de puntos y su posición de forma local a ese gameObjects
+
+//Cambios hechos el 8 de abril
+
+Modificado PlayerConrollerWallJump para usar TryGetComponent en lugar de getcomponent por cuestiones de eficiencia

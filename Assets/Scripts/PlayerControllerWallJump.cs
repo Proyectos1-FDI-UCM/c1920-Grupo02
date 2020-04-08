@@ -322,7 +322,7 @@ public class PlayerControllerWallJump : MonoBehaviour
         }
 
         // Si el jugador colisiona con una plataforma móvil, pasa a ser hijo de esta, si no, no es hijo de nadie
-        if (collision.gameObject.GetComponent<PlataformaMovil>() != null)
+        if (collision.gameObject.TryGetComponent<PlataformaMovil>(out var plataforma))
             transform.parent = collision.transform;
             
     }
