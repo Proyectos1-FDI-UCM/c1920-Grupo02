@@ -16,3 +16,10 @@ Creado prefab para plataformas móviles. Hay que modificar el número de puntos 
 //Cambios hechos el 8 de abril
 
 Modificado PlayerConrollerWallJump para usar TryGetComponent en lugar de getcomponent por cuestiones de eficiencia
+
+//Cambio hechos el 9 de abril
+
+Cambiado el prefab del coágulo
+Duplicados y cambiados varios scripts referentes al coágulo
+Cambiado RecibeDanyo para que no precise spawnear un GameObject
+Cambiado el script de realizar daño al enemigo para que realice un caso especial si se trata de un coágulo

@@ -11,8 +11,12 @@ public class RecibeDanyo : MonoBehaviour
         life -= cant;
         if (life <= 0)
         {
-            //Spawnea globulos rojos
-            spawner.GetComponent<SpawnerGlobulosRojos>().SpawnGlobulosRojos(numGlobulosRojos,gameObject.GetComponentInChildren<EnemyPatrol>().GetComponent<Transform>());
+            if (spawner != null)
+            {
+                //Spawnea globulos rojos
+                spawner.GetComponent<SpawnerGlobulosRojos>().
+                    SpawnGlobulosRojos(numGlobulosRojos, gameObject.GetComponentInChildren<EnemyPatrol>().GetComponent<Transform>());
+            }
             //Destruye al enemigo
             Destroy(this.gameObject);
             print("Enemigo destruido");
