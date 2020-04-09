@@ -34,11 +34,9 @@ public class PlayerControllerWallJump : MonoBehaviour
     public float movementForceInAir;
     public float airDragMultiplier = 0.95f;
     public float variableJumpHeighMultiplier = 0.5f;
-    public float wallHopForce;
     public float wallJumpForce;
 
     //Dirección de los saltos
-    public Vector2 wallHopDirection;
     public Vector2 wallJumpDirection;
 
     //Transforms
@@ -65,7 +63,6 @@ public class PlayerControllerWallJump : MonoBehaviour
         characterScale = transform.localScale;
 
         //Normalizamos los vectores
-        wallHopDirection.Normalize();
         wallJumpDirection.Normalize();
     }
     void Update()
@@ -122,6 +119,9 @@ public class PlayerControllerWallJump : MonoBehaviour
     {
         isTouchingWall = Physics2D.Raycast(wallCheck.position, new Vector2(transform.localScale.x, 0), wallCheckDistance, whatIsGround);
     }
+    /// <summary>
+    /// Impide el funcionamiento del rebote entre paredes
+    /// </summary>
     private void CloseWallJump()
     {
         isTouchingWall = Physics2D.Raycast(wallCheck.position, new Vector2(transform.localScale.x, 0), 0, whatIsGround);
@@ -174,17 +174,21 @@ public class PlayerControllerWallJump : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             numJumpLeft--;
         }
-        else if (isWallSliding && movementInputDirection == 0 && canJump)   //Wall Hop
+        else if (isWallSliding && movementInputDirection==0 && canJump)   //Wall Hop
         {
             //facingDirection *= -1;
             characterScale = transform.localScale;
 
             isWallSliding = false;
             numJumpLeft--;
-            Vector2 forceToAdd = new Vector2(wallHopForce * wallHopDirection.x * -transform.localScale.x, wallJumpForce * wallHopDirection.y); // quitado "facingDirection" --- Javier
+            Vector2 forceToAdd = new Vector2(wallJumpForce * wallJumpDirection.x * -transform.localScale.x, wallJumpForce * wallJumpDirection.y); // quitado "facingDirection" --- Javier
             rb.AddForce(forceToAdd, ForceMode2D.Impulse);
+            characterScale.x *= -1;
+            transform.localScale = characterScale;
+
         }
-        else if ((isWallSliding || isTouchingWall) && movementInputDirection != 0 && canJump)  //Rebote de paredes
+        //Elimino el wallHop y limito el rebote entre paredes a solo una posibilidad
+        /*else if ((isWallSliding || isTouchingWall) && movementInputDirection != 0 && canJump)  //Rebote de paredes
         {
             if (Input.GetAxis("Horizontal") <= 0)    //Si mira hacia la izquierda...
             {
@@ -202,7 +206,7 @@ public class PlayerControllerWallJump : MonoBehaviour
                 rb.AddForce(forceToAdd, ForceMode2D.Impulse);
                 Flip();
             }
-        }
+        }*/
     }
 
     /// <summary>

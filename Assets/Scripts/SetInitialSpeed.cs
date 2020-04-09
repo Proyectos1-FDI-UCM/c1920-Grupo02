@@ -2,15 +2,22 @@
 
 public class SetInitialSpeed : MonoBehaviour
 {
-    public float initialVelocity = 15; //Velocidad del disparo
+    //Velocidad del disparo
+    public float initialVelocity = 20;
+
+    //Tiempo que tarda en destruirse
+    public float tiempo = 0.2f;
+
     private Rigidbody2D rb;
-    public float tiempo;
     void Start()
     {
+        //Cacheamos el rigidbody
         rb = gameObject.GetComponent<Rigidbody2D>();
-        GameManager.instance.UpdateCanAtack(false); // actualización del estado de ataque
 
-        //Realización del movimiento cuando el disparo está activoç
+        //Actualizamos el estado de ataque
+        GameManager.instance.UpdateCanAtack(false);
+
+        //Realización del movimiento cuando el disparo está activo
         if (GameManager.instance.GetPlayerLooking() ==1) rb.velocity = transform.right * initialVelocity; // comprobación del estado en el GM --- Javier
         else rb.velocity = -transform.right * initialVelocity;
 

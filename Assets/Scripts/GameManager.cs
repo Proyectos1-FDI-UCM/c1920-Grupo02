@@ -10,7 +10,6 @@ public class GameManager : MonoBehaviour
     private int life = 12;
     int globulosRojos = 0;
     int globulosBlancos = 0;
-    bool playerLookingRight = true; // variable para registrar hacia dónde mira el jugador --- Javier
     bool playerCanAtMelee = true; // variable para registrar cuándo puede atacar a melee el jugador --- Javier
     bool menuPartidaSacado = false; // variable para saber si se ha desplegado el menú durante una partida --- Javier
 

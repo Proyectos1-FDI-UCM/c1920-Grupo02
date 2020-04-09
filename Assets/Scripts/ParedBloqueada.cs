@@ -1,9 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ParedBloqueada : MonoBehaviour
 {
+    //Globulos necesarios para abrir la puerta
     public int globulosBlancosNecesarios;
     private void Update()
     {

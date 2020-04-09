@@ -23,4 +23,10 @@ public class ZonaDañina : MonoBehaviour
             timer = 1;
         }
     }
+    //Cuando te sales de la zona dañina...
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        //Reseteas el timer para que vuelva a hacer daño
+        timer = 0;
+    }
 }
