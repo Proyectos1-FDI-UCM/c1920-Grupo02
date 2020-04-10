@@ -23,3 +23,11 @@ Cambiado el prefab del coágulo
 Duplicados y cambiados varios scripts referentes al coágulo
 Cambiado RecibeDanyo para que no precise spawnear un GameObject
 Cambiado el script de realizar daño al enemigo para que realice un caso especial si se trata de un coágulo
+
+//Cambios hecho el 10 de abril
+
+Unificados Scripts BalaIz y BalaDcha en BalaSpeed
+Arreglado bug que provocaba que las balas se audestruyeran nada más instanciarse
+(había que cambiar las capas de colisión de DañoEnemigo y PlayerDeteccion para que no colisionaran)
+Optimizado script BalaSpeed (antes de ser unificado, la velocidad de asignaba en el FixedUpdate, ahora se hace
+en el Start porque con asignarla una vez basta)

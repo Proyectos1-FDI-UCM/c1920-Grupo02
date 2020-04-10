@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialVelocity: 10
-  tiempo: 3
+  tiempo: 13
 --- !u!114 &-8971701157187237123
 MonoBehaviour:
   m_ObjectHideFlags: 0
