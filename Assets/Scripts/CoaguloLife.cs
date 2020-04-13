@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CoaguloLife : MonoBehaviour
 {
     private DispararCoagulo disparo;
-    private int life = 2;
+    public int parts = 2;
 
     private void Awake()
     {
@@ -13,14 +11,14 @@ public class CoaguloLife : MonoBehaviour
     }
     public void PartLost()
     {
-        life--;
-        if (life == 0)
+        parts--;
+        if (parts == 0)
         {
             Destroy(gameObject);
         }
         else
         {
-            //Cambiar disparo
+            disparo.tiempo *= 2;
         }
     }
 }

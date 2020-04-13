@@ -31,3 +31,8 @@ Arreglado bug que provocaba que las balas se audestruyeran nada más instanciars
 (había que cambiar las capas de colisión de DañoEnemigo y PlayerDeteccion para que no colisionaran)
 Optimizado script BalaSpeed (antes de ser unificado, la velocidad de asignaba en el FixedUpdate, ahora se hace
 en el Start porque con asignarla una vez basta)
+
+//Cambios hechos el 13 de abril
+
+Ahora el coágulo disminuye su velocidad de disparo considerablemente cuando pierde una de sus partes
+Creado el prefab de Gran Coágulo (se precisa hablar con el grupo para especificar sus funciones)
