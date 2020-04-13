@@ -36,3 +36,7 @@ en el Start porque con asignarla una vez basta)
 
 Ahora el coágulo disminuye su velocidad de disparo considerablemente cuando pierde una de sus partes
 Creado el prefab de Gran Coágulo (se precisa hablar con el grupo para especificar sus funciones)
+
+Ahora cuando abres las opciones dentro del menú y le das a escape te vuelve al menú en vez de reanudar el juego con la interfaz puesta- Samuel
+Ahora cuando cambias de nivel la interfaz actualiza correctamente las vidas - Samuel
+Ahora cuando cambias la resolución del juego la interfaz no se ve modificada -Samuel
