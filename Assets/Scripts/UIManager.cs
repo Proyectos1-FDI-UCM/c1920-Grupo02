@@ -47,7 +47,7 @@ public class UIManager : MonoBehaviour
     /// <param name="points"></param>
     public void UpdateScore(int points)
     {
-        //ScoreText.text = points.ToString();
+        //ScoreText.text = points.ToString();       (es mejor scoretext.tect = "" + points; att.Samuel)
     }
     /// <summary>
     /// Desactiva la imagen de la pastilla de la interfaz según cual seas

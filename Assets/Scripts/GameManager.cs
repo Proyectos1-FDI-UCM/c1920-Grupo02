@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     public void SetUIManager(UIManager uim)
     {
         theUIManager = uim;
+        theUIManager.LifeCount(life);
     }
 
     /// <summary>

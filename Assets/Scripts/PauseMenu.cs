@@ -14,17 +14,19 @@ public class PauseMenu : MonoBehaviour
         if (Input.GetButtonDown("Cancel"))
         {
             //Si el juego está pausado...
-            if (GameManager.instance.GetMenu())
+            if (GameManager.instance.GetMenu() && (!OptionsUI.activeSelf))
             {
                 //Vuelves a jugar
                 Resume();
             }
             //Si no está pausado...
-            else
+            else if (OptionsUI.activeSelf)
             {
+                BackOptions();
+            }
+            else
                 //Se pausa
                 Pause();
-            }
         }
     }
 
