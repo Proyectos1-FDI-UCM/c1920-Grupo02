@@ -2,14 +2,16 @@
 
 public class DistorsionCamera : MonoBehaviour
 {
-    private Camera maincamara; // Asociamos camara
+   public Camera maincamara; // Asociamos camara
     public float cantidad = 0; // Cantidad de movimento 
     public int tiempo; // Variable para decidir cuanto dura la distorsion
+
+
     private void Start()
     {
         //Cacheamos la camara
-        maincamara = gameObject.GetComponent<Camera>();
     }
+       
     public void Shake(float amt, float length) // Metodo que conecta la invocacion de el movimiento y tras un tiempo lo quita con el Cancel Invoke
 
     {
@@ -34,12 +36,18 @@ public class DistorsionCamera : MonoBehaviour
     {
         CancelInvoke("DoShake");
     }
-    void Update() // Llamada al efecto de distorsion solo cuando pulsas tecla (forma de probar si funciona , con el enemico estara asociado a una colision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        //Testeo, en un futuro cambiaremos el GetKey
-        if (Input.GetKey(KeyCode.P))
+        int aleatorio = Random.Range(0, 2);
+        if (collision.gameObject.GetComponent<PlayerController>()!=null && aleatorio == 1 )
         {
             Shake(cantidad, tiempo);
         }
+
+
+
     }
+
+
+
 }

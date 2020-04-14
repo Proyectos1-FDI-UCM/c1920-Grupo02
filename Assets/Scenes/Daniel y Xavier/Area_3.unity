@@ -3962,6 +3962,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4987726974811024218, guid: 6aeeaca37c273044599976cb12892f12,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4987726974811024218, guid: 6aeeaca37c273044599976cb12892f12,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 717814560322123377, guid: 6aeeaca37c273044599976cb12892f12,
         type: 3}
       propertyPath: "da\xF1oMordisco"
@@ -5354,6 +5364,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sizeMultiplier: 5
+--- !u!114 &1902483024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902483015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6ee26ba830305e4b809a84325975b0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maincamara: {fileID: 519420031}
+  cantidad: 0.2
+  tiempo: 3
 --- !u!1 &1905175304
 GameObject:
   m_ObjectHideFlags: 0
