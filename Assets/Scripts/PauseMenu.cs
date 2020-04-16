@@ -6,27 +6,37 @@ public class PauseMenu : MonoBehaviour
 
     public AudioMixer audioMixer;
 
-    public GameObject PauseUI;
-    public GameObject OptionsUI;
+    public GameObject pauseUI;
+    public GameObject optionsUI;
+    public GameObject controles;
     void Update()
     {
         //Si pulsas Escape...
         if (Input.GetButtonDown("Cancel"))
         {
             //Si el juego está pausado...
-            if (GameManager.instance.GetMenu() && (!OptionsUI.activeSelf))
+            if (GameManager.instance.GetMenu() && (!optionsUI.activeSelf))
             {
                 //Vuelves a jugar
                 Resume();
             }
             //Si no está pausado...
-            else if (OptionsUI.activeSelf)
+            else if (optionsUI.activeSelf)
             {
                 BackOptions();
             }
             else
                 //Se pausa
                 Pause();
+        }
+        //Si presionas tabulador....
+        if (Input.GetButtonDown("Controles"))   //NO SE COMO HACER QUE SOLO APAREZCA CUANDO ESTÁ SIENDO PRESIONADO CON EL BUTTON
+        {
+            controles.SetActive(true);
+        }
+        if (Input.GetButtonUp("Controles"))
+        {
+            controles.SetActive(false);
         }
     }
 
@@ -35,7 +45,7 @@ public class PauseMenu : MonoBehaviour
     /// </summary>
     public void Resume()
     {
-        PauseUI.SetActive(false);
+        pauseUI.SetActive(false);
         Time.timeScale = 1;
         GameManager.instance.UpdateMenu(false);
     }
@@ -45,7 +55,7 @@ public class PauseMenu : MonoBehaviour
     /// </summary>
     void Pause()
     {
-        PauseUI.SetActive(true);
+        pauseUI.SetActive(true);
         Time.timeScale = 0;
         GameManager.instance.UpdateMenu(true);
     }
@@ -71,8 +81,8 @@ public class PauseMenu : MonoBehaviour
     /// </summary>
     public void LoadOptions()
     {
-        OptionsUI.SetActive(true);
-        PauseUI.SetActive(false);
+        optionsUI.SetActive(true);
+        pauseUI.SetActive(false);
     }
 
     /// <summary>
@@ -98,7 +108,7 @@ public class PauseMenu : MonoBehaviour
     /// </summary>
     public void BackOptions()
     {
-        OptionsUI.SetActive(false);
-        PauseUI.SetActive(true);
+        optionsUI.SetActive(false);
+        pauseUI.SetActive(true);
     }
 }
