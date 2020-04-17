@@ -10454,7 +10454,7 @@ PrefabInstance:
     - target: {fileID: 3506906532033016778, guid: df993602d0c64084f8c5773a83d529e3,
         type: 3}
       propertyPath: travelTo
-      value: Area_2
+      value: Boss_1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df993602d0c64084f8c5773a83d529e3, type: 3}
