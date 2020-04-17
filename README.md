@@ -52,3 +52,4 @@ falta hacer que guarde el si tienes poderes o no y cual tenías cuando guardaste
 Creado script para cambiar color de camara - Javi
 Creada la sala del boss -  Nico
 Las plataformas ahora se atraviesan desde abajo
+Los enemigos ya no pueden ser empujados por el jugador - Miguel

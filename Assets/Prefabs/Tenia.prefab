@@ -191,7 +191,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4987726973829580521}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -203,7 +203,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 6
 --- !u!114 &4987726973829580518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,6 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5803f2eb22c65d5429bd8fc75fcf5243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  "da\xF1oMordisco": 0
   dashSpeed: 2
 --- !u!1 &4987726973855456812
 GameObject:
@@ -453,6 +454,7 @@ MonoBehaviour:
   spawner: {fileID: 3426025126485288679, guid: 31213a50384bba3438df7cc9824131d6, type: 3}
   numGlobulosRojos: 1
   life: 6
+  puerta: {fileID: 0}
 --- !u!114 &1524877461034893754
 MonoBehaviour:
   m_ObjectHideFlags: 0
