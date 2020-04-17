@@ -175,7 +175,7 @@ public class GameManager : MonoBehaviour
         else
         {
             cam.backgroundColor = new Color(47f / 255f, 75f/255f, 118f / 255f);
-            Debug.Log("tienes mas de 10 corazones");
+            //Debug.Log("tienes mas de 10 corazones");
         }
     }
 }

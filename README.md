@@ -51,3 +51,4 @@ El sistema para guardar partida ahora guarda la vida, el nivel, el número de gl
 falta hacer que guarde el si tienes poderes o no y cual tenías cuando guardaste. - Nico
 Creado script para cambiar color de camara - Javi
 Creada la sala del boss -  Nico
+Las plataformas ahora se atraviesan desde abajo
