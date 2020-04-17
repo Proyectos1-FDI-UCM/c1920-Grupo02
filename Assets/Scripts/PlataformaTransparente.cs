@@ -4,14 +4,7 @@ using UnityEngine;
 
 public class PlataformaTransparente : MonoBehaviour
 {
-    public GameObject plataforma;
-    private BoxCollider2D collider;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        collider = plataforma.GetComponent<BoxCollider2D>();
-    }
+    public BoxCollider2D collider;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
