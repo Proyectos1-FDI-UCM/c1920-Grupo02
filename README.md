@@ -48,4 +48,6 @@ Ahora el Gran Coágulo puede disparar en todas las direcciones, falta limpiar lo
 //Cambios hechos el 17 de abril
 Se ha creado un sistema para guardar y cargar partida - Nico
 El sistema para guardar partida ahora guarda la vida, el nivel, el número de glóbulos rojos y blancos,
-falta hacer que guarde el si tienes poderes o no y cual tenías cuando guardaste.
+falta hacer que guarde el si tienes poderes o no y cual tenías cuando guardaste. - Nico
+Creado script para cambiar color de camara - Javi
+Creada la sala del boss -  Nico
