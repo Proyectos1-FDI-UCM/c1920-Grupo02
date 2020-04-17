@@ -153,23 +153,25 @@ public class GameManager : MonoBehaviour
         }
 
     }
-    public void ColorCamara()
+    public void ColorCamara(float time)
     {
-        cam = GetComponent<Camera>();
         cam = Camera.main;
         if (getLife < 10 && getLife > 6)
         {
-            cam.backgroundColor = new Color(54f / 255f, 0f, 85f / 255f);
+            cam.backgroundColor = Color.Lerp(new Color(47f / 255f, 75f / 255f, 118f / 255f), new Color(54f / 255f, 0f, 85f / 255f), time);
+            //cam.backgroundColor = new Color(54f / 255f, 0f, 85f / 255f);
             Debug.Log("tienes mas de 6 corazones");
         }
         else if (life < 7 && getLife > 3)
         {
-            cam.backgroundColor = new Color(90f / 255f, 0f, 50f / 255f);
+            cam.backgroundColor = Color.Lerp(new Color(54f / 255f, 0f, 85f / 255f), new Color(90f / 255f, 0f, 50f / 255f), time);
+            //cam.backgroundColor = new Color(90f / 255f, 0f, 50f / 255f);
             Debug.Log("tienes mas de 3 corazones");
         }
         else if (life < 4 && getLife >= 0)
         {
-            cam.backgroundColor = new Color(133f / 255f, 0f, 6f / 255f);
+            cam.backgroundColor = Color.Lerp(new Color(90f / 255f, 0f, 50f / 255f), new Color(133f / 255f, 0f, 6f / 255f), time);
+            //cam.backgroundColor = new Color(133f / 255f, 0f, 6f / 255f);
             Debug.Log("tienes mas de 0 corazones");
         }
         else

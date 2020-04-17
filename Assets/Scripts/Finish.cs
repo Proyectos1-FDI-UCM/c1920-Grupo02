@@ -6,9 +6,7 @@ public class Finish : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) // al chocar con una cosa
     {
-        PlayerControllerWallJump play = other.GetComponent<PlayerControllerWallJump>(); // se guarda el componente característico de un jugador
-
-        if (play != null) // si este no es nulo, se trata de un jugador de verdad
+        if (other.GetComponent<PlayerControllerWallJump>() != null) // si este no es nulo, se trata de un jugador de verdad
         {
             GameManager.instance.ChangeScene(travelTo); // se avanza de nivel
             //Tambien se guarda la partida
