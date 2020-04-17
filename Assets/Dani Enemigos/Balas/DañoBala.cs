@@ -15,7 +15,7 @@ public class DañoBala : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (collision.gameObject.GetComponent<PlayerController>() != null) GameManager.instance.LoseLife(1);
+        if (collision.gameObject.GetComponent<PlayerControllerWallJump>() != null) GameManager.instance.LoseLife(1);
         Destroy(this.gameObject);
 
 
