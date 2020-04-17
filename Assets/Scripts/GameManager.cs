@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     private UIManager theUIManager;         //LA HE HECHO PRIVADA- SAMUEL
     private int life = 12;
     public int getLife { get { return life; } private set { life = value; } } //Propiedad para obtener la vida de forma segura
+    private Camera cam;  //Obtener la cámara
 
     int globulosRojos = 0;
     int globulosBlancos = 0;
@@ -49,7 +50,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Has muerto");         
+            Debug.Log("Has muerto");
             vivo = false;
         }
         return vivo;
@@ -150,6 +151,31 @@ public class GameManager : MonoBehaviour
             Debug.Log(data.level);
             SceneManager.LoadScene(data.level, LoadSceneMode.Single);
         }
-     
+
+    }
+    public void ColorCamara()
+    {
+        cam = GetComponent<Camera>();
+        cam = Camera.main;
+        if (getLife < 10 && getLife > 6)
+        {
+            cam.backgroundColor = new Color(54f / 255f, 0f, 85f / 255f);
+            Debug.Log("tienes mas de 6 corazones");
+        }
+        else if (life < 7 && getLife > 3)
+        {
+            cam.backgroundColor = new Color(90f / 255f, 0f, 50f / 255f);
+            Debug.Log("tienes mas de 3 corazones");
+        }
+        else if (life < 4 && getLife >= 0)
+        {
+            cam.backgroundColor = new Color(133f / 255f, 0f, 6f / 255f);
+            Debug.Log("tienes mas de 0 corazones");
+        }
+        else
+        {
+            cam.backgroundColor = new Color(47f / 255f, 75f/255f, 118f / 255f);
+            Debug.Log("tienes mas de 10 corazones");
+        }
     }
 }
