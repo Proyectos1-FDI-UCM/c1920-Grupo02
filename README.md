@@ -44,3 +44,8 @@ Ahora cuando cambias la resolución del juego la interfaz no se ve modificada -S
 //Cambios hechos el 15 de abril
 
 Ahora el Gran Coágulo puede disparar en todas las direcciones, falta limpiar los Scripts y determinar el comportamiento de las partes
+
+//Cambios hechos el 17 de abril
+Se ha creado un sistema para guardar y cargar partida - Nico
+El sistema para guardar partida ahora guarda la vida, el nivel, el número de glóbulos rojos y blancos,
+falta hacer que guarde el si tienes poderes o no y cual tenías cuando guardaste.

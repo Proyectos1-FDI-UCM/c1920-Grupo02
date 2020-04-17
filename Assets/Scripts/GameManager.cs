@@ -8,8 +8,11 @@ public class GameManager : MonoBehaviour
     public Transform player;
     private UIManager theUIManager;         //LA HE HECHO PRIVADA- SAMUEL
     private int life = 12;
+    public int getLife { get { return life; } private set { life = value; } } //Propiedad para obtener la vida de forma segura
+
     int globulosRojos = 0;
     int globulosBlancos = 0;
+
     bool playerCanAtMelee = true; // variable para registrar cuándo puede atacar a melee el jugador --- Javier
     bool menuPartidaSacado = false; // variable para saber si se ha desplegado el menú durante una partida --- Javier
 
@@ -96,6 +99,8 @@ public class GameManager : MonoBehaviour
     }
     public int ReturnGlobulosBlancos() { return globulosBlancos; }
 
+    public int ReturnGlobulosRojos() { return globulosRojos; }
+
     public float GetPlayerLooking() { return player.localScale.x; } // comprobación del estado de "playerLookingRight" --- Javier
 
     public void UpdateCanAtack(bool val) { playerCanAtMelee = val; } // actualización del estado de "playerCanAtMelee" --- Javier
@@ -110,5 +115,41 @@ public class GameManager : MonoBehaviour
     {
         //Cambia la escena
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+    }
+
+    /// <summary>
+    /// Guarda la partida
+    /// </summary>
+    public void SavePlayer()
+    {
+        SaveSystem.SavePlayer(this);
+    }
+
+    //Nico No borreis esto, lo uso para depurar
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.E))
+    //    { SavePlayer(); Debug.Log("Guardando"); }
+
+    //    if (Input.GetKeyDown(KeyCode.L))
+    //        LoadPlayer();
+    //}
+
+    /// <summary>
+    /// Carga la partida
+    /// </summary>
+    public void LoadPlayer()
+    {
+        PlayerData data = SaveSystem.LoadData();
+
+        if (data.level != null)
+        {
+            life = data.health;
+            globulosRojos = data.globulosRojos;
+            globulosBlancos = data.globulsoBlancos;
+            Debug.Log(data.level);
+            SceneManager.LoadScene(data.level, LoadSceneMode.Single);
+        }
+     
     }
 }

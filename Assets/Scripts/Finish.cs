@@ -11,6 +11,8 @@ public class Finish : MonoBehaviour
         if (play != null) // si este no es nulo, se trata de un jugador de verdad
         {
             GameManager.instance.ChangeScene(travelTo); // se avanza de nivel
+            //Tambien se guarda la partida
+            //Falta implementar
         }
     }
 }
