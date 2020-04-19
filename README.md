@@ -57,3 +57,4 @@ El fondo de pantalla cambia de color progresivamente cuando pierdes X vidas -Sam
 
 //Cambios hechos el 19 de abril 
 Actualizado prefab plataforma móvil para que por defecto esté configurado para moverse entre dos puntos
+Cambiado por completo el sistema de Input. Primera versión del Input Keyboard. Cambios acordes en varios scripts.

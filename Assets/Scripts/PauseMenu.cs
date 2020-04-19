@@ -3,16 +3,29 @@ using UnityEngine.Audio;
 
 public class PauseMenu : MonoBehaviour
 {
+    PlayerInputActions inputActions;
+    bool cancel;
 
     public AudioMixer audioMixer;
 
     public GameObject pauseUI;
     public GameObject optionsUI;
     public GameObject controles;
+
+    private void Awake()
+    {
+        inputActions = new PlayerInputActions();
+        inputActions.PlayerControls.Cancel.started += ctx => cancel = true;
+        inputActions.PlayerControls.Cancel.canceled += ctx => cancel = false;
+        inputActions.PlayerControls.Cancel.performed += ctx => cancel = false;
+        inputActions.PlayerControls.Controles.started += ctx => controles.SetActive(true);
+        inputActions.PlayerControls.Controles.canceled += ctx => controles.SetActive(false);
+        inputActions.PlayerControls.Controles.performed += ctx => controles.SetActive(false);
+    }
     void Update()
     {
         //Si pulsas Escape...
-        if (Input.GetButtonDown("Cancel"))
+        if (cancel)
         {
             //Si el juego está pausado...
             if (GameManager.instance.GetMenu() && (!optionsUI.activeSelf))
@@ -28,15 +41,6 @@ public class PauseMenu : MonoBehaviour
             else
                 //Se pausa
                 Pause();
-        }
-        //Si presionas tabulador....
-        if (Input.GetButtonDown("Controles"))   //NO SE COMO HACER QUE SOLO APAREZCA CUANDO ESTÁ SIENDO PRESIONADO CON EL BUTTON
-        {
-            controles.SetActive(true);
-        }
-        if (Input.GetButtonUp("Controles"))
-        {
-            controles.SetActive(false);
         }
     }
 
@@ -110,5 +114,13 @@ public class PauseMenu : MonoBehaviour
     {
         optionsUI.SetActive(false);
         pauseUI.SetActive(true);
+    }
+    private void OnEnable()
+    {
+        inputActions.Enable();
+    }
+    private void OnDisable()
+    {
+        inputActions.Disable();
     }
 }
