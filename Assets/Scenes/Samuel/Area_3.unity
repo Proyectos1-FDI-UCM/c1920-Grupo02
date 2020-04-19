@@ -3346,6 +3346,7 @@ MonoBehaviour:
   spawner: {fileID: 3426025126485288679, guid: 31213a50384bba3438df7cc9824131d6, type: 3}
   numGlobulosRojos: 5
   life: 6
+  puerta: {fileID: 0}
 --- !u!1 &1210103811
 GameObject:
   m_ObjectHideFlags: 0
@@ -10523,6 +10524,11 @@ PrefabInstance:
     - target: {fileID: 4927277637599704284, guid: 1993bd78c1f88254f874d6832e1a14d3,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4927277637599704286, guid: 1993bd78c1f88254f874d6832e1a14d3,
+        type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

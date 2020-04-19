@@ -20,7 +20,7 @@ public class ZonaDañina : MonoBehaviour
             //Restas una vida
             GameManager.instance.LoseLife(1);
             //Y reseteas el timer
-            timer = 1;
+            timer = 0.3f;
         }
     }
     //Cuando te sales de la zona dañina...
