@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
 
     bool playerCanAtMelee = true; // variable para registrar cuándo puede atacar a melee el jugador --- Javier
     bool menuPartidaSacado = false; // variable para saber si se ha desplegado el menú durante una partida --- Javier
+    float time = 0;
+    bool done = true;   //Comprueba si ha realizado el cambio de color del fondo
 
     void Awake()
     {
@@ -28,6 +30,17 @@ public class GameManager : MonoBehaviour
         }
         else
             Destroy(this.gameObject);
+    }
+    private void Update()
+    {
+        //Cambio de color del fondo según la vida que tengas
+        if (time <1)
+        {
+            ColorCamara(time);
+            time += Time.deltaTime;
+        }
+        else
+            time = 0;
     }
 
     public void SetUIManager(UIManager uim)
@@ -158,33 +171,26 @@ public class GameManager : MonoBehaviour
     public void ColorCamara(float time)
     {
         cam = Camera.main;
-
         if (life < 13 && life > 9 )
         {
             cam.backgroundColor = new Color(47f / 255f, 75f / 255f, 118f / 255f);
-            //Debug.Log("tienes mas de 10 corazones");
         }
         else if (getLife < 10 && getLife > 6 && pasado == 0)
         {
             cam.backgroundColor = Color.Lerp(new Color(47f / 255f, 75f / 255f, 118f / 255f), new Color(54f / 255f, 0f, 85f / 255f), time);
-            //cam.backgroundColor = new Color(54f / 255f, 0f, 85f / 255f);
-            Debug.Log("tienes mas de 6 corazones");
             if (Mathf.Round(time * 10) / 10 == 1)
                 pasado++;
+            done = true;
         }
         else if (life < 7 && getLife > 3 && pasado == 1)
         {
             cam.backgroundColor = Color.Lerp(new Color(54f / 255f, 0f, 85f / 255f), new Color(90f / 255f, 0f, 50f / 255f), time);
-            //cam.backgroundColor = new Color(90f / 255f, 0f, 50f / 255f);
-            Debug.Log("tienes mas de 3 corazones");
             if (Mathf.Round(time * 10) / 10 == 1)
                 pasado++;
         }
         else if (life < 4 && getLife >= 0 && pasado == 2)
         {
             cam.backgroundColor = Color.Lerp(new Color(90f / 255f, 0f, 50f / 255f), new Color(133f / 255f, 0f, 6f / 255f), time);
-            //cam.backgroundColor = new Color(133f / 255f, 0f, 6f / 255f);
-            Debug.Log("tienes mas de 0 corazones");
             if (Mathf.Round(time * 10) / 10 == 1)
                 pasado++;
         }
