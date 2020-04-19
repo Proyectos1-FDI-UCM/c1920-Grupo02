@@ -54,3 +54,6 @@ Creada la sala del boss -  Nico
 Las plataformas ahora se atraviesan desde abajo
 Los enemigos ya no pueden ser empujados por el jugador - Miguel
 El fondo de pantalla cambia de color progresivamente cuando pierdes X vidas -Samuel y Javier
+
+//Cambios hechos el 19 de abril 
+Actualizado prefab plataforma móvil para que por defecto esté configurado para moverse entre dos puntos
