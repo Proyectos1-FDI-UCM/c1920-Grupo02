@@ -58,3 +58,6 @@ El fondo de pantalla cambia de color progresivamente cuando pierdes X vidas -Sam
 //Cambios hechos el 19 de abril 
 Actualizado prefab plataforma móvil para que por defecto esté configurado para moverse entre dos puntos
 Cambiado por completo el sistema de Input. Primera versión del Input Keyboard. Cambios acordes en varios scripts.
+
+//Cambios hechos el 21 de abril
+Añadido el input de GamePad. Ahora se puede jugar al proyecto con un mando de Xbox One. Debería de funcionar con otros tipos de GamePad.
