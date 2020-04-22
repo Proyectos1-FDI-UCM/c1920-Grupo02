@@ -45,6 +45,7 @@ public class ChangePill : MonoBehaviour
             if (contador <= 0)
             {
                 contador = 0;
+                GameManager.instance.ColorPills();
             }
             else
             {

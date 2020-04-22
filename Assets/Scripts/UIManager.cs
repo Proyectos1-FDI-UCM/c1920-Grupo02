@@ -90,11 +90,11 @@ public class UIManager : MonoBehaviour
     /// <summary>
     /// Desactiva todas las pastillas de la interfaz hasta que el contador llegue a 0
     /// </summary>
-    public void UnablePill()
+    public void ColorfulPill()
     {
-        pastillasUI[0].enabled = false;
-        pastillasUI[1].enabled = false;
-        pastillasUI[2].enabled = false;
+        pastillasUI[0].color = new Color(1, 1, 1);
+        pastillasUI[1].color = new Color(1, 1, 1);
+        pastillasUI[2].color = new Color(1, 1, 1);
     }
     /// <summary>
     /// Muestra en pantalla el contador de espera del cambio de pastilla

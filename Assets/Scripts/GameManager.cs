@@ -81,9 +81,9 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Manda a la UI que desactive las pastillas de la interfaz
     /// </summary>
-    public void DesactivatePill()
+    public void ColorPills()
     {
-        theUIManager.UnablePill();
+        theUIManager.ColorfulPill();
     }
     /// <summary>
     /// Manda a la UI el contador para que lo muestre en pantalla
