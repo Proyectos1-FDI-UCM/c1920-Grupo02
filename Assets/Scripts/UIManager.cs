@@ -17,6 +17,13 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
+        //Desactivamos todo
+        pastillasUI[0].enabled = false;
+        pastillasUI[1].enabled = false;
+        pastillasUI[2].enabled = false;
+        time.enabled = false;
+
+
         maxLife = hearts.Length;    //Establecemos la çvida máxima
         GameManager.instance.SetUIManager(this);
     }
@@ -55,26 +62,29 @@ public class UIManager : MonoBehaviour
     /// <param name="pastilla"></param>
     public void PillChange(int pastilla)     //Muestra las pastillas que hay disponibles
     {
+        pastillasUI[0].enabled = true;
+        pastillasUI[1].enabled = true;
+        pastillasUI[2].enabled = true;
         //0 = Homeopatica
         //1 = Ibuprofeno
         //2 = Extasis
         if (pastilla == 0)
         {
-            pastillasUI[0].enabled = false;
-            pastillasUI[1].enabled = true;
-            pastillasUI[2].enabled = true;
+            pastillasUI[0].color = new Color(1,1,1);
+            pastillasUI[1].color = new Color(0.5f, 0.5f, 0.5f);
+            pastillasUI[2].color = new Color(0.5f, 0.5f, 0.5f);
         }
         else if (pastilla == 1)
         {
-            pastillasUI[0].enabled = true;
-            pastillasUI[1].enabled = false;
-            pastillasUI[2].enabled = true;
+            pastillasUI[0].color = new Color(0.5f, 0.5f, 0.5f);
+            pastillasUI[1].color = new Color(1, 1, 1);
+            pastillasUI[2].color = new Color(0.5f, 0.5f, 0.5f);
         }
         else if (pastilla == 2)
         {
-            pastillasUI[0].enabled = true;
-            pastillasUI[1].enabled = true;
-            pastillasUI[2].enabled = false;
+            pastillasUI[0].color = new Color(0.5f, 0.5f, 0.5f);
+            pastillasUI[1].color = new Color(0.5f, 0.5f, 0.5f);
+            pastillasUI[2].color = new Color(1, 1, 1);
         }
     }
     /// <summary>
@@ -92,8 +102,11 @@ public class UIManager : MonoBehaviour
     /// <param name="contador"></param>
     public void Timing(float contador)
     {
+        time.enabled = true;
         int tiempo = (int)contador;
         time.text = (tiempo + "");
+        if (tiempo == 0)
+            time.enabled = false;
     }
     /// <summary>
     /// Muestra en pantalla el numero de globulos rojos que posea el jugador

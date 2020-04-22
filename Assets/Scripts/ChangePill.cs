@@ -44,7 +44,6 @@ public class ChangePill : MonoBehaviour
         {
             if (contador <= 0)
             {
-                GameManager.instance.ActualPill(pastilla);
                 contador = 0;
             }
             else
@@ -66,6 +65,7 @@ public class ChangePill : MonoBehaviour
 
         if (cambio) //Si has recogido el powerUp...
         {
+            
             if (GameManager.instance != null)
             {
                 //Puedes cambiar de pastilla
@@ -75,7 +75,8 @@ public class ChangePill : MonoBehaviour
                     pastilla = 2;
                     spriteRenderer.sprite = pastis[pastilla];
                     contador = 10;
-                    GameManager.instance.DesactivatePill();
+                    //GameManager.instance.DesactivatePill();
+                    GameManager.instance.ActualPill(pastilla);
                 }
                 else if (((prevCharacter && (pastilla == 1)) || ((nextCharacter && (pastilla == 2)))) && contador == 0)   //Homeopatica
                 {
@@ -83,7 +84,9 @@ public class ChangePill : MonoBehaviour
                     pastilla = 0;
                     spriteRenderer.sprite = pastis[pastilla];
                     contador = 10;
-                    GameManager.instance.DesactivatePill();
+                    //GameManager.instance.DesactivatePill();
+                    GameManager.instance.ActualPill(pastilla);
+
                 }
                 else if (((prevCharacter && (pastilla == 2)) || ((nextCharacter && (pastilla == 0)))) && contador == 0)  //Extasis
                 {
@@ -91,7 +94,9 @@ public class ChangePill : MonoBehaviour
                     pastilla = 1;
                     spriteRenderer.sprite = pastis[pastilla];
                     contador = 10;
-                    GameManager.instance.DesactivatePill();
+                    //GameManager.instance.DesactivatePill();
+                    GameManager.instance.ActualPill(pastilla);
+
                 }
             }
             else
@@ -116,6 +121,7 @@ public class ChangePill : MonoBehaviour
         if (collision.gameObject.GetComponent<ActivatePill>())
         {
             cambio = true;
+            //IMPLEMENTAR TEXTO AYUDA
         }
     }
     private void OnEnable()

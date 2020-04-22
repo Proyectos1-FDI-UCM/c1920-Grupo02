@@ -118,6 +118,9 @@
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>C:/GitHub/c1920-Grupo02/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.InputSystem">
+      <HintPath>C:/GitHub/c1920-Grupo02/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/GitHub/c1920-Grupo02/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -150,9 +153,6 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>C:/GitHub/c1920-Grupo02/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.InputSystem">
-      <HintPath>C:/GitHub/c1920-Grupo02/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
