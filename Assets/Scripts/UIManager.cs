@@ -5,6 +5,7 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
 
+    public Image currentPill;   //Borde dorado que muestra la pastilla que has seleccionado
     public Image[] pastillasUI;  //Interfaz del cambio de pastilla
     public Text time;            //Contador para el cambio de pastilla
 
@@ -22,6 +23,7 @@ public class UIManager : MonoBehaviour
         pastillasUI[1].enabled = false;
         pastillasUI[2].enabled = false;
         time.enabled = false;
+        currentPill.enabled = false;
 
 
         maxLife = hearts.Length;    //Establecemos la çvida máxima
@@ -65,23 +67,28 @@ public class UIManager : MonoBehaviour
         pastillasUI[0].enabled = true;
         pastillasUI[1].enabled = true;
         pastillasUI[2].enabled = true;
+        currentPill.enabled = true;
+
         //0 = Homeopatica
         //1 = Ibuprofeno
         //2 = Extasis
         if (pastilla == 0)
         {
+            currentPill.transform.position = pastillasUI[0].transform.position;
             pastillasUI[0].color = new Color(1,1,1);
             pastillasUI[1].color = new Color(0.5f, 0.5f, 0.5f);
             pastillasUI[2].color = new Color(0.5f, 0.5f, 0.5f);
         }
         else if (pastilla == 1)
         {
+            currentPill.transform.position = pastillasUI[1].transform.position;
             pastillasUI[0].color = new Color(0.5f, 0.5f, 0.5f);
             pastillasUI[1].color = new Color(1, 1, 1);
             pastillasUI[2].color = new Color(0.5f, 0.5f, 0.5f);
         }
         else if (pastilla == 2)
         {
+            currentPill.transform.position = pastillasUI[2].transform.position;
             pastillasUI[0].color = new Color(0.5f, 0.5f, 0.5f);
             pastillasUI[1].color = new Color(0.5f, 0.5f, 0.5f);
             pastillasUI[2].color = new Color(1, 1, 1);
