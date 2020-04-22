@@ -72,7 +72,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""id"": ""5a205b4b-f312-4bf8-990b-6a82adbf69f5"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": ""Tap(duration=0.001)""
                 },
                 {
                     ""name"": ""Controles"",

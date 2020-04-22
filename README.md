@@ -66,3 +66,4 @@ Añadido el input de GamePad. Ahora se puede jugar al proyecto con un mando de X
 Cambiado la interfaz del cambio de pastilla, Ahora no aparece hasta que coges la pastilla, y te dice cual llevas equipada -Samuel
 Ahora las puertas indican la candidad de objetos a recoger para que se desbloqueen -Samuel
 Añadido el input del numPad.
+Cambiado el Script de PauseMenu, ahora se llama directamente al menú en vez de utilizar un bool.
