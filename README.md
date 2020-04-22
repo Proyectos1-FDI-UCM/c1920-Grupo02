@@ -61,3 +61,7 @@ Cambiado por completo el sistema de Input. Primera versión del Input Keyboard. 
 
 //Cambios hechos el 21 de abril
 Añadido el input de GamePad. Ahora se puede jugar al proyecto con un mando de Xbox One. Debería de funcionar con otros tipos de GamePad.
+
+//Cambios hechos el 22 de abril
+Cambiado la interfaz del cambio de pastilla, Ahora no aparece hasta que coges la pastilla, y te dice cual llevas equipada -Samuel
+Ahora las puertas indican la candidad de objetos a recoger para que se desbloqueen -Samuel
