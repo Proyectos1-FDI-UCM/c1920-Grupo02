@@ -3,14 +3,24 @@ using UnityEngine.Audio;
 
 public class RestartMenu : MonoBehaviour
 {
+    PlayerInputActions inputActions;
+    bool cancel;
+
     public AudioMixer audioMixer;
 
     public GameObject PauseUI;
     public GameObject OptionsUI;
+    private void Awake()
+    {
+        inputActions = new PlayerInputActions();
+        inputActions.PlayerControls.Cancel.started += ctx => cancel = true;
+        inputActions.PlayerControls.Cancel.canceled += ctx => cancel = false;
+        inputActions.PlayerControls.Cancel.performed += ctx => cancel = false;
+    }
     void Update()
     {
         //Si pulsas Escape...
-        if (Input.GetButtonDown("Cancel"))
+        if (cancel)
         {
             //Si el juego está pausado...
             if (GameManager.instance.GetMenu())
@@ -97,5 +107,13 @@ public class RestartMenu : MonoBehaviour
     {
         OptionsUI.SetActive(false);
         PauseUI.SetActive(true);
+    }
+    private void OnEnable()
+    {
+        inputActions.Enable();
+    }
+    private void OnDisable()
+    {
+        inputActions.Disable();
     }
 }

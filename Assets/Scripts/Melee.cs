@@ -2,15 +2,26 @@
 
 public class Melee : MonoBehaviour
 {
+    PlayerInputActions inputActions;
+
+    bool meleeAtacking;
+
     public GameObject ataque; // prefab a invocar para atacar
 
+    private void Awake()
+    {
+        inputActions = new PlayerInputActions();
+        inputActions.PlayerControls.AtqMelee.started += ctx => meleeAtacking = true;
+        inputActions.PlayerControls.AtqMelee.canceled += ctx => meleeAtacking = false;
+        inputActions.PlayerControls.AtqMelee.performed += ctx => meleeAtacking = false;
+    }
     void Update()
     {
         if (!GameManager.instance.GetMenu())
         {
             if (ataque != null) // si se configuró bien el componente:
             {
-                if (Input.GetButtonDown("At. melee") && GameManager.instance.GetPlayerCanAtack()) // si se desea atacar a melee y se puede:
+                if (meleeAtacking && GameManager.instance.GetPlayerCanAtack()) // si se desea atacar a melee y se puede:
                 {
                     if (gameObject.transform.localScale.x == 1) // si el personaje mira a dchas.:
                     {
@@ -24,6 +35,14 @@ public class Melee : MonoBehaviour
             }
             else print("ERROR: no se configuró vía inspector el prefab de ataque"); // de lo contrario: no se configuró bien el componente
         }
+    }
+    private void OnEnable()
+    {
+        inputActions.Enable();
+    }
+    private void OnDisable()
+    {
+        inputActions.Disable();
     }
 }
 // --- Javier

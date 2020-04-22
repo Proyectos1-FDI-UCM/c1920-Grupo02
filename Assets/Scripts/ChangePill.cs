@@ -2,6 +2,12 @@
 
 public class ChangePill : MonoBehaviour
 {
+    PlayerInputActions inputActions;
+
+    private bool nextCharacter;
+    private bool prevCharacter;
+    private bool shootOrDash;
+
     //Contador para cambiar de pastilla
     public float contador = 0;
 
@@ -14,6 +20,16 @@ public class ChangePill : MonoBehaviour
     public Transform firePoint; //Lugar de Spawn
 
     Dash dash;
+    private void Awake()
+    {
+        inputActions = new PlayerInputActions();
+        inputActions.PlayerControls.NextCharacter.started += ctx => nextCharacter = true;
+        inputActions.PlayerControls.NextCharacter.canceled+= ctx => nextCharacter = false;
+        inputActions.PlayerControls.PrevCharacter.started += ctx => prevCharacter = true;
+        inputActions.PlayerControls.PrevCharacter.canceled += ctx => prevCharacter = false;
+        inputActions.PlayerControls.ShootOrDash.started += ctx => shootOrDash = true;
+        inputActions.PlayerControls.ShootOrDash.canceled += ctx => shootOrDash = false;
+    }
     void Start()
     {
         //Cacheo
@@ -45,7 +61,7 @@ public class ChangePill : MonoBehaviour
         //pills[2] = Extasis
 
         //Disparo       Al empezar con el ibuprofeno puedes disparar desde el inicio
-        if (Input.GetButtonDown("Dash | At. ranged") && pastilla == 1 && GameManager.instance.GetPlayerCanAtack()) //Si se pulsas una tecla de disparo y eres Ibuprofeno...
+        if (shootOrDash && pastilla == 1 && GameManager.instance.GetPlayerCanAtack()) //Si se pulsas una tecla de disparo y eres Ibuprofeno...
             Shoot(); //Dispara
 
         if (cambio) //Si has recogido el powerUp...
@@ -53,7 +69,7 @@ public class ChangePill : MonoBehaviour
             if (GameManager.instance != null)
             {
                 //Puedes cambiar de pastilla
-                if (((Input.GetButtonDown("PrevCharacter") && (pastilla == 0)) || ((Input.GetButtonDown("NextCharacter") && (pastilla == 1)))) && contador == 0)   //Ibuprofeno
+                if (((prevCharacter && (pastilla == 0)) || ((nextCharacter && (pastilla == 1)))) && contador == 0)   //Ibuprofeno
                 {
                     Debug.Log("Pastilla 3");
                     pastilla = 2;
@@ -61,7 +77,7 @@ public class ChangePill : MonoBehaviour
                     contador = 10;
                     GameManager.instance.DesactivatePill();
                 }
-                else if (((Input.GetButtonDown("PrevCharacter") && (pastilla == 1)) || ((Input.GetButtonDown("NextCharacter") && (pastilla == 2)))) && contador == 0)   //Homeopatica
+                else if (((prevCharacter && (pastilla == 1)) || ((nextCharacter && (pastilla == 2)))) && contador == 0)   //Homeopatica
                 {
                     Debug.Log("Pastilla 1");
                     pastilla = 0;
@@ -69,7 +85,7 @@ public class ChangePill : MonoBehaviour
                     contador = 10;
                     GameManager.instance.DesactivatePill();
                 }
-                else if (((Input.GetButtonDown("PrevCharacter") && (pastilla == 2)) || ((Input.GetButtonDown("NextCharacter") && (pastilla == 0)))) && contador == 0)  //Extasis
+                else if (((prevCharacter && (pastilla == 2)) || ((nextCharacter && (pastilla == 0)))) && contador == 0)  //Extasis
                 {
                     Debug.Log("Pastilla 2");
                     pastilla = 1;
@@ -83,7 +99,7 @@ public class ChangePill : MonoBehaviour
                 Debug.LogError("GameManager no se encuentra en la escena");
             }
             //Dash
-            if (Input.GetButtonDown("Dash | At. ranged") && pastilla == 2) //Si se pulsas una tecla de disparo y eres Extasis...
+            if (shootOrDash && pastilla == 2) //Si se pulsas una tecla de disparo y eres Extasis...
                 dash.enabled = true;
 
         }
@@ -101,5 +117,13 @@ public class ChangePill : MonoBehaviour
         {
             cambio = true;
         }
+    }
+    private void OnEnable()
+    {
+        inputActions.Enable();
+    }
+    private void OnDisable()
+    {
+        inputActions.Disable();
     }
 }

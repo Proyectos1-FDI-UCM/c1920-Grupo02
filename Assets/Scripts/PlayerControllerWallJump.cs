@@ -4,6 +4,9 @@ public class PlayerControllerWallJump : MonoBehaviour
 {
     #region Variables
 
+    //Input System
+    PlayerInputActions inputActions;
+
     //-1 si mira a la izquierda y 1 si mira a la derecha
     private float movementInputDirection;
 
@@ -50,6 +53,14 @@ public class PlayerControllerWallJump : MonoBehaviour
     private Vector2 spawnpoint;
 
     #endregion
+
+    private void Awake()
+    {
+        inputActions = new PlayerInputActions();
+        inputActions.PlayerControls.Horizontal.performed += ctx => movementInputDirection = ctx.ReadValue<float>();
+        inputActions.PlayerControls.Vertical.started += ctx => Jump();
+        inputActions.PlayerControls.Vertical.canceled += ctx => FinalizeJump();
+    }
     void Start()
     {
         //Cacheamos
@@ -64,11 +75,10 @@ public class PlayerControllerWallJump : MonoBehaviour
 
         //Normalizamos los vectores
         wallJumpDirection.Normalize();
+
     }
     void Update()
     {
-
-        CheckInput();
         CheckMovementDirection();
         CheckIfCanJump();
         CheckIfWallSliding();
@@ -149,18 +159,9 @@ public class PlayerControllerWallJump : MonoBehaviour
     /// <summary>
     /// Recibe el input para saltar y aplicamos el salto prolongado
     /// </summary>
-    private void CheckInput()
+    private void FinalizeJump()
     {
-        movementInputDirection = Input.GetAxisRaw("Horizontal");
-        if (Input.GetButtonDown("Vertical"))
-        {
-            Jump();
-        }
-        //GetButtonUp para conseguir así el salto prolongado
-        if (Input.GetButtonUp("Vertical"))
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * variableJumpHeighMultiplier);
-        }
+        rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * variableJumpHeighMultiplier);
     }
 
     /// <summary>
@@ -334,5 +335,15 @@ public class PlayerControllerWallJump : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         transform.parent = null;
+    }
+
+    private void OnEnable()
+    {
+        inputActions.Enable();
+    }
+
+    private void OnDisable()
+    {
+        inputActions.Disable();
     }
 }
