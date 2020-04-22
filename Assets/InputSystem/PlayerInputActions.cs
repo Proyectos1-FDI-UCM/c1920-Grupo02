@@ -67,6 +67,14 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""interactions"": ""Tap(duration=0.1)""
                 },
                 {
+                    ""name"": ""Submit"",
+                    ""type"": ""Button"",
+                    ""id"": ""4cfeb277-097e-432b-a98c-69aaf65b15b1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
                     ""name"": ""Cancel"",
                     ""type"": ""Button"",
                     ""id"": ""5a205b4b-f312-4bf8-990b-6a82adbf69f5"",
@@ -457,6 +465,28 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""action"": ""Cancel"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ec9ab794-1d44-4aaf-9cc2-4eba3c984eb5"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Submit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3392dad1-6971-4a42-86d2-67b6f77dcfea"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""GamePad"",
+                    ""action"": ""Submit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -482,6 +512,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         m_PlayerControls_PrevCharacter = m_PlayerControls.FindAction("PrevCharacter", throwIfNotFound: true);
         m_PlayerControls_ShootOrDash = m_PlayerControls.FindAction("ShootOrDash", throwIfNotFound: true);
         m_PlayerControls_AtqMelee = m_PlayerControls.FindAction("AtqMelee", throwIfNotFound: true);
+        m_PlayerControls_Submit = m_PlayerControls.FindAction("Submit", throwIfNotFound: true);
         m_PlayerControls_Cancel = m_PlayerControls.FindAction("Cancel", throwIfNotFound: true);
         m_PlayerControls_Controles = m_PlayerControls.FindAction("Controles", throwIfNotFound: true);
     }
@@ -539,6 +570,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
     private readonly InputAction m_PlayerControls_PrevCharacter;
     private readonly InputAction m_PlayerControls_ShootOrDash;
     private readonly InputAction m_PlayerControls_AtqMelee;
+    private readonly InputAction m_PlayerControls_Submit;
     private readonly InputAction m_PlayerControls_Cancel;
     private readonly InputAction m_PlayerControls_Controles;
     public struct PlayerControlsActions
@@ -551,6 +583,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         public InputAction @PrevCharacter => m_Wrapper.m_PlayerControls_PrevCharacter;
         public InputAction @ShootOrDash => m_Wrapper.m_PlayerControls_ShootOrDash;
         public InputAction @AtqMelee => m_Wrapper.m_PlayerControls_AtqMelee;
+        public InputAction @Submit => m_Wrapper.m_PlayerControls_Submit;
         public InputAction @Cancel => m_Wrapper.m_PlayerControls_Cancel;
         public InputAction @Controles => m_Wrapper.m_PlayerControls_Controles;
         public InputActionMap Get() { return m_Wrapper.m_PlayerControls; }
@@ -580,6 +613,9 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @AtqMelee.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnAtqMelee;
                 @AtqMelee.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnAtqMelee;
                 @AtqMelee.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnAtqMelee;
+                @Submit.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnSubmit;
+                @Submit.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnSubmit;
+                @Submit.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnSubmit;
                 @Cancel.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnCancel;
                 @Cancel.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnCancel;
                 @Cancel.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnCancel;
@@ -608,6 +644,9 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @AtqMelee.started += instance.OnAtqMelee;
                 @AtqMelee.performed += instance.OnAtqMelee;
                 @AtqMelee.canceled += instance.OnAtqMelee;
+                @Submit.started += instance.OnSubmit;
+                @Submit.performed += instance.OnSubmit;
+                @Submit.canceled += instance.OnSubmit;
                 @Cancel.started += instance.OnCancel;
                 @Cancel.performed += instance.OnCancel;
                 @Cancel.canceled += instance.OnCancel;
@@ -644,6 +683,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         void OnPrevCharacter(InputAction.CallbackContext context);
         void OnShootOrDash(InputAction.CallbackContext context);
         void OnAtqMelee(InputAction.CallbackContext context);
+        void OnSubmit(InputAction.CallbackContext context);
         void OnCancel(InputAction.CallbackContext context);
         void OnControles(InputAction.CallbackContext context);
     }

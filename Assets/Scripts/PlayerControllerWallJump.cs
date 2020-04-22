@@ -19,7 +19,10 @@ public class PlayerControllerWallJump : MonoBehaviour
     public bool canJump;            //Comprueba si puede saltar
 
     //Numero de saltos disponibles
-    private int numJumpLeft = 1;
+    int numJumpLeft = 1;
+    //Variables de control para el salto
+    bool gettingOffFloor = false;
+    float timeToGetOffFloor = 0.5f;
 
     //Rigidbody para comprobar la velocidad del player
     private Rigidbody2D rb;
@@ -41,6 +44,10 @@ public class PlayerControllerWallJump : MonoBehaviour
 
     //Dirección de los saltos
     public Vector2 wallJumpDirection;
+    [SerializeField]
+    private float wallJumpTimeOffImpulse;
+
+    private bool playerIsJumpingOffWall = false;
 
     //Transforms
     public Transform groundCheck;
@@ -82,10 +89,6 @@ public class PlayerControllerWallJump : MonoBehaviour
         CheckMovementDirection();
         CheckIfCanJump();
         CheckIfWallSliding();
-        if (sprite.sprite.name == "Homeopatica")
-        {
-
-        }
     }
     private void FixedUpdate()
     {
@@ -99,7 +102,6 @@ public class PlayerControllerWallJump : MonoBehaviour
         {
             CloseWallJump();
         }
-
     }
 
     /// <summary>
@@ -107,10 +109,9 @@ public class PlayerControllerWallJump : MonoBehaviour
     /// </summary>
     private void CheckIfWallSliding()
     {
-        if (isTouchingWall && !isGrounded && rb.velocity.y < 0)
+        if (isTouchingWall && !isGrounded)
         {
             isWallSliding = true;
-            numJumpLeft = 1;
         }
         else
         {
@@ -142,7 +143,7 @@ public class PlayerControllerWallJump : MonoBehaviour
     /// </summary>
     private void CheckIfCanJump()
     {
-        if ((isGrounded && rb.velocity.y <= 0) || isWallSliding)
+        if (isGrounded && !gettingOffFloor)
         {
             numJumpLeft = 1;
         }
@@ -173,20 +174,22 @@ public class PlayerControllerWallJump : MonoBehaviour
         if (canJump && !isWallSliding)  //Salto desde el suelo
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            gettingOffFloor = true;
             numJumpLeft--;
+            Invoke("ResetJumpGetOffCounter", timeToGetOffFloor);
         }
-        else if (isWallSliding && movementInputDirection==0 && canJump)   //Wall Hop
+        else if (isWallSliding)   //Wall Hop
         {
             //facingDirection *= -1;
             characterScale = transform.localScale;
 
             isWallSliding = false;
-            numJumpLeft--;
-            Vector2 forceToAdd = new Vector2(wallJumpForce * wallJumpDirection.x * -transform.localScale.x, wallJumpForce * wallJumpDirection.y); // quitado "facingDirection" --- Javier
-            rb.AddForce(forceToAdd, ForceMode2D.Impulse);
             characterScale.x *= -1;
+            rb.velocity = new Vector2(1, 1);
+            rb.AddForce(new Vector2(wallJumpForce * characterScale.x, wallJumpForce), ForceMode2D.Impulse); // quitado "facingDirection" --- Javier
             transform.localScale = characterScale;
-
+            playerIsJumpingOffWall = true;
+            Invoke("FinalizeJumpOffWall", wallJumpTimeOffImpulse);
         }
         //Elimino el wallHop y limito el rebote entre paredes a solo una posibilidad
         /*else if ((isWallSliding || isTouchingWall) && movementInputDirection != 0 && canJump)  //Rebote de paredes
@@ -210,38 +213,51 @@ public class PlayerControllerWallJump : MonoBehaviour
         }*/
     }
 
+    void ResetJumpGetOffCounter()
+    {
+        gettingOffFloor = false;
+    }
+
+    void FinalizeJumpOffWall()
+    {
+        playerIsJumpingOffWall = false;
+    }
+
     /// <summary>
     /// Aplica el movimiento si estás en el suelo y lo reduce cuando te estás deslizando
     /// </summary>
     private void ApplyMovement()
     {
-        //Si estás en el suelo...
-        if (isGrounded)
+        if (!playerIsJumpingOffWall)
         {
-            rb.velocity = new Vector2(movementSpeed * movementInputDirection, rb.velocity.y);
-        }
-        else if (!isGrounded && !isWallSliding && movementInputDirection != 0)
-        {
-            Vector2 forceToAdd = new Vector2(movementForceInAir * movementInputDirection, 0);
-            rb.AddForce(forceToAdd, ForceMode2D.Impulse);
-
-            if (Mathf.Abs(rb.velocity.x) > movementSpeed)
+            //Si estás en el suelo...
+            if (isGrounded)
             {
                 rb.velocity = new Vector2(movementSpeed * movementInputDirection, rb.velocity.y);
             }
-        }
-        else if (!isGrounded && !isWallSliding && movementInputDirection == 0)
-        {
-            rb.velocity = new Vector2(rb.velocity.x * airDragMultiplier, rb.velocity.y);
-        }
-
-        //Si te estás deslizando...
-        if (isWallSliding)
-        {
-            if (rb.velocity.y < -wallSlideSpeed)
+            else if (!isGrounded && !isWallSliding && movementInputDirection != 0)
             {
-                //Aplicamos fricción
-                rb.velocity = new Vector2(rb.velocity.x, -wallSlideSpeed);
+                Vector2 forceToAdd = new Vector2(movementForceInAir * movementInputDirection, 0);
+                rb.AddForce(forceToAdd, ForceMode2D.Impulse);
+
+                if (Mathf.Abs(rb.velocity.x) > movementSpeed)
+                {
+                    rb.velocity = new Vector2(movementSpeed * movementInputDirection, rb.velocity.y);
+                }
+            }
+            else if (!isGrounded && !isWallSliding && movementInputDirection == 0)
+            {
+                rb.velocity = new Vector2(rb.velocity.x * airDragMultiplier, rb.velocity.y);
+            }
+
+            //Si te estás deslizando...
+            if (isWallSliding)
+            {
+                if (rb.velocity.y < -wallSlideSpeed)
+                {
+                    //Aplicamos fricción
+                    rb.velocity = new Vector2(movementSpeed * movementInputDirection, -wallSlideSpeed);
+                }
             }
         }
     }
@@ -313,7 +329,7 @@ public class PlayerControllerWallJump : MonoBehaviour
     {
         if (GameManager.instance != null)
         {
-            this.transform.position = spawnpoint;
+            transform.position = spawnpoint;
         }
     }
     /// <summary>

@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 1957192534687642430}
   - component: {fileID: 1957192534687642431}
   - component: {fileID: 1957192534687642425}
-  m_Layer: 15
+  m_Layer: 8
   m_Name: Plataforma
   m_TagString: Untagged
   m_Icon: {fileID: 0}

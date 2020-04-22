@@ -90,14 +90,15 @@ MonoBehaviour:
   canJump: 0
   movementSpeed: 10
   jumpForce: 25
-  groundCheckRadius: 0.5
+  groundCheckRadius: 0.3
   wallCheckDistance: 0.6
   wallSlideSpeed: 2
   movementForceInAir: 100
   airDragMultiplier: 0.95
   variableJumpHeighMultiplier: 0.5
-  wallJumpForce: 25
+  wallJumpForce: 20
   wallJumpDirection: {x: 1, y: 2}
+  wallJumpTimeOffImpulse: 0.2
   groundCheck: {fileID: 6519990183263965948}
   wallCheck: {fileID: 6519990181636063999}
   whatIsGround:

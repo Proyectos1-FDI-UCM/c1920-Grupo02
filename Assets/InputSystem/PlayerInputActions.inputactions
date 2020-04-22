@@ -54,6 +54,14 @@
                     "interactions": "Tap(duration=0.1)"
                 },
                 {
+                    "name": "Submit",
+                    "type": "Button",
+                    "id": "4cfeb277-097e-432b-a98c-69aaf65b15b1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
                     "name": "Cancel",
                     "type": "Button",
                     "id": "5a205b4b-f312-4bf8-990b-6a82adbf69f5",
@@ -442,6 +450,28 @@
                     "processors": "",
                     "groups": "GamePad",
                     "action": "Cancel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ec9ab794-1d44-4aaf-9cc2-4eba3c984eb5",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Submit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3392dad1-6971-4a42-86d2-67b6f77dcfea",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "GamePad",
+                    "action": "Submit",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

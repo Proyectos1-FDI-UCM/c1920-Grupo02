@@ -67,3 +67,4 @@ Cambiado la interfaz del cambio de pastilla, Ahora no aparece hasta que coges la
 Ahora las puertas indican la candidad de objetos a recoger para que se desbloqueen -Samuel
 Añadido el input del numPad.
 Cambiado el Script de PauseMenu, ahora se llama directamente al menú en vez de utilizar un bool.
+WallJump Actualizado y pequeños cambios al resto del script PlayerControllerWallJump.
