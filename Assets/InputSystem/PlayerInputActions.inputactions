@@ -315,6 +315,17 @@
                 },
                 {
                     "name": "",
+                    "id": "dd775643-fd11-4866-9f7b-a9b449517989",
+                    "path": "<Keyboard>/numpad2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "ShootOrDash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "1b296798-9ef3-4910-944e-3b1570c29a76",
                     "path": "<Gamepad>/leftShoulder",
                     "interactions": "",
@@ -350,6 +361,17 @@
                     "name": "",
                     "id": "e5cc3c88-5aaf-443d-8bad-3aa5a01fa9b8",
                     "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "AtqMelee",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2a42f63d-c577-4bf1-8958-7e2a2e240754",
+                    "path": "<Keyboard>/numpad1",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",

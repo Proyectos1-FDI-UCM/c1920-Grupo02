@@ -65,3 +65,4 @@ Añadido el input de GamePad. Ahora se puede jugar al proyecto con un mando de X
 //Cambios hechos el 22 de abril
 Cambiado la interfaz del cambio de pastilla, Ahora no aparece hasta que coges la pastilla, y te dice cual llevas equipada -Samuel
 Ahora las puertas indican la candidad de objetos a recoger para que se desbloqueen -Samuel
+Añadido el input del numPad.

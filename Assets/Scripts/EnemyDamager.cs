@@ -7,6 +7,8 @@ public class EnemyDamager : MonoBehaviour
 
     ParteCoaguloVida coagulo; //datos del posible coágulo con el que colisionará    --> Miguel
 
+    DanyoEnemigo2 colesterol; //datos del posible colesterol con el que colisionará
+
     // cantidad de daño infligida:
     public int danyoNormal; // en condiciones normales
 
@@ -25,16 +27,17 @@ public class EnemyDamager : MonoBehaviour
 
         coagulo = objChocado.GetComponent<ParteCoaguloVida>();      // --> Miguel
 
+        colesterol = objChocado.GetComponentInParent<DanyoEnemigo2>();
+
         if (enem != null) // si este no es nulo, se trata de un enemigo de verdad
-        {
             enem.Dañado(danyoNormal); // se le pide al enemigo que baje su salud "danyoNormal" puntos
-        }
 
         //Miguel
         if (coagulo != null) // si este no es nulo, se trata de un coágulo de verdad
-        {
             coagulo.Dañado(danyoNormal); // se le pide al coágulo que baju su salud "danyoNormal" puntos
-        }
+
+        if (colesterol != null)
+            colesterol.Dañado(danyoNormal);
     }
 
     private void OnDestroy()

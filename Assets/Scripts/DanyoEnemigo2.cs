@@ -5,13 +5,6 @@ public class DanyoEnemigo2 : MonoBehaviour
     public GameObject spawner;
     public int numGlobulosRojos;
     public int life;
-    
-    Random rnd;
-
-    private void Start()
-    {
-        
-    }
     public void Dañado(int cant) // se recibe "cant" puntos de daño
     {
         // Variable booleana para que se bloquee uno de cada dos ataques
