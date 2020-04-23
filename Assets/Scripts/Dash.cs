@@ -15,6 +15,11 @@ public class Dash : MonoBehaviour
     //Gravedad
     float gravity;
 
+    //Cooldown
+    float lastTimeOfActivation;
+    [SerializeField]
+    float cooldown;
+
     /*De momento me funcionan bien los valores:
      * 
      * dashspeed = 8
@@ -24,6 +29,7 @@ public class Dash : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         gravity = rb.gravityScale;
+        lastTimeOfActivation = -10f;
     }
 
     void FixedUpdate()
@@ -46,12 +52,20 @@ public class Dash : MonoBehaviour
     //Activación del dash
     private void OnEnable()
     {
-        //Cambio de la capa física de player
-        gameObject.layer = 11;   /*La capa física en cuestión debe de:
+        if (lastTimeOfActivation < Time.time - cooldown)
+        {
+            //Cambio de la capa física de player
+            gameObject.layer = 11;   /*La capa física en cuestión debe de:
                                     -Colisionar con el suelo y resto de obstáculos
                                     -No colisionar con disparos o ataques enemigos*/
-        rb.gravityScale = 0;
-        dashmovement = new Vector2(dashspeed, 0);        
+            rb.gravityScale = 0;
+            dashmovement = new Vector2(dashspeed, 0);
+            lastTimeOfActivation = Time.time;
+        }
+        else
+        {
+            enabled = false;
+        }
     }
 
 

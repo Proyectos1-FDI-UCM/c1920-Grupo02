@@ -68,3 +68,6 @@ Ahora las puertas indican la candidad de objetos a recoger para que se desbloque
 Añadido el input del numPad.
 Cambiado el Script de PauseMenu, ahora se llama directamente al menú en vez de utilizar un bool.
 WallJump Actualizado y pequeños cambios al resto del script PlayerControllerWallJump.
+
+//Cambios hechos el 23 de abril
+Ahora el dash tiene un cooldown configurable desde el editor

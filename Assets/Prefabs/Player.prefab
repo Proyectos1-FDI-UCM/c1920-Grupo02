@@ -214,6 +214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dashspeed: 15
   executionSpeed: 0.4
+  cooldown: 1
 --- !u!114 &6519990181680491808
 MonoBehaviour:
   m_ObjectHideFlags: 0
