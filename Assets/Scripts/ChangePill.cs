@@ -35,7 +35,6 @@ public class ChangePill : MonoBehaviour
         //Cacheo
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         dash = gameObject.GetComponent<Dash>();
-
     }
     void Update()
     {
@@ -66,7 +65,6 @@ public class ChangePill : MonoBehaviour
 
         if (cambio) //Si has recogido el powerUp...
         {
-            
             if (GameManager.instance != null)
             {
                 //Puedes cambiar de pastilla

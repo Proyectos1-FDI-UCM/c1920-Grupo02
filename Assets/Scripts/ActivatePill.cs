@@ -9,8 +9,11 @@ public class ActivatePill : MonoBehaviour
         if (collision.gameObject.GetComponent<PlayerControllerWallJump>())   //Si el jugador la toca...
         {
             Destroy(this.gameObject);
-            if(GameManager.instance !=null)
+            if(GameManager.instance != null)
+            {
                 GameManager.instance.ActualPill(1);
+                collision.gameObject.GetComponent<tutorial>();
+            }
         }
     }
 }

@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public Transform player;
+
     private UIManager theUIManager;         //LA HE HECHO PRIVADA- SAMUEL
     private int life = 12;
     public int getLife { get { return life; } private set { life = value; } } //Propiedad para obtener la vida de forma segura
