@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
     public Image currentPill;   //Borde dorado que muestra la pastilla que has seleccionado
     public Image[] pastillasUI;  //Interfaz del cambio de pastilla
     public Text time;            //Contador para el cambio de pastilla
+    public Text tutorial;       //Texto para el tutorial inicial
 
     public Image[] hearts; //Corazon lleno
     int maxLife;    //Vida máxima

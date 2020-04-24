@@ -71,3 +71,6 @@ WallJump Actualizado y pequeños cambios al resto del script PlayerControllerWal
 
 //Cambios hechos el 23 de abril
 Ahora el dash tiene un cooldown configurable desde el editor
+
+//Cambios hechos el 24 de abril
+Añadido left click al input para que se pueda llamar desde la interfaz
