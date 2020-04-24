@@ -89,6 +89,14 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""LeftClick"",
+                    ""type"": ""Button"",
+                    ""id"": ""9cce0bfd-276e-4821-8b01-e4762ac293d2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -487,6 +495,17 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""action"": ""Submit"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""178da535-3814-4496-8dee-f6415f3d24a3"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""LeftClick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -515,6 +534,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         m_PlayerControls_Submit = m_PlayerControls.FindAction("Submit", throwIfNotFound: true);
         m_PlayerControls_Cancel = m_PlayerControls.FindAction("Cancel", throwIfNotFound: true);
         m_PlayerControls_Controles = m_PlayerControls.FindAction("Controles", throwIfNotFound: true);
+        m_PlayerControls_LeftClick = m_PlayerControls.FindAction("LeftClick", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -573,6 +593,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
     private readonly InputAction m_PlayerControls_Submit;
     private readonly InputAction m_PlayerControls_Cancel;
     private readonly InputAction m_PlayerControls_Controles;
+    private readonly InputAction m_PlayerControls_LeftClick;
     public struct PlayerControlsActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -586,6 +607,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         public InputAction @Submit => m_Wrapper.m_PlayerControls_Submit;
         public InputAction @Cancel => m_Wrapper.m_PlayerControls_Cancel;
         public InputAction @Controles => m_Wrapper.m_PlayerControls_Controles;
+        public InputAction @LeftClick => m_Wrapper.m_PlayerControls_LeftClick;
         public InputActionMap Get() { return m_Wrapper.m_PlayerControls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -622,6 +644,9 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @Controles.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnControles;
                 @Controles.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnControles;
                 @Controles.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnControles;
+                @LeftClick.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnLeftClick;
+                @LeftClick.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnLeftClick;
+                @LeftClick.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnLeftClick;
             }
             m_Wrapper.m_PlayerControlsActionsCallbackInterface = instance;
             if (instance != null)
@@ -653,6 +678,9 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @Controles.started += instance.OnControles;
                 @Controles.performed += instance.OnControles;
                 @Controles.canceled += instance.OnControles;
+                @LeftClick.started += instance.OnLeftClick;
+                @LeftClick.performed += instance.OnLeftClick;
+                @LeftClick.canceled += instance.OnLeftClick;
             }
         }
     }
@@ -686,5 +714,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         void OnSubmit(InputAction.CallbackContext context);
         void OnCancel(InputAction.CallbackContext context);
         void OnControles(InputAction.CallbackContext context);
+        void OnLeftClick(InputAction.CallbackContext context);
     }
 }
