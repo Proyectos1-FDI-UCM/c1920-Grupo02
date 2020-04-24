@@ -20,8 +20,6 @@ public class GameManager : MonoBehaviour
     bool playerCanAtMelee = true; // variable para registrar cuándo puede atacar a melee el jugador --- Javier
     bool menuPartidaSacado = false; // variable para saber si se ha desplegado el menú durante una partida --- Javier
     float time = 0;
-    bool done = true;   //Comprueba si ha realizado el cambio de color del fondo
-
     void Awake()
     {
         if (instance == null)
@@ -186,7 +184,6 @@ public class GameManager : MonoBehaviour
             cam.backgroundColor = Color.Lerp(new Color(47f / 255f, 75f / 255f, 118f / 255f), new Color(54f / 255f, 0f, 85f / 255f), time);
             if (Mathf.Round(time * 10) / 10 == 1)
                 pasado++;
-            done = true;
         }
         else if (life < 7 && getLife > 3 && pasado == 1)
         {
