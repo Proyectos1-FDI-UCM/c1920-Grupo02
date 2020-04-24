@@ -109,6 +109,13 @@ public class PauseMenu : MonoBehaviour
         optionsUI.SetActive(false);
         pauseUI.SetActive(true);
     }
+    /// <summary>
+    /// Te muestra los controles MIENTRAS TIENES PULSADO tabulador
+    /// </summary>
+    void Controles()
+    {
+        controles.SetActive(true);
+    }
     private void OnEnable()
     {
         inputActions.Enable();

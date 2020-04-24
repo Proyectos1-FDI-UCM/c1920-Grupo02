@@ -58,6 +58,11 @@ public class UIManager : MonoBehaviour
         }
         else if (num == 5 && tutorialHecho == 4)
             tutorial.enabled = false;
+        else if (num == -1)
+        {
+            tutorial.enabled = true;
+            tutorial.text = "HAS MUERTO";
+        }
     }
     //Interfaz de la vida
     public void LifeCount(int life)

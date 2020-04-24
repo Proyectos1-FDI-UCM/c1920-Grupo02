@@ -76,3 +76,5 @@ Ahora el dash tiene un cooldown configurable desde el editor
 Añadido left click al input para que se pueda llamar desde la interfaz
 Tutorial CASI acabado, falta pulsar TAB con la explicacion de las pastillas -Samuel
 FINALLY el jugador se muere cuando se queda sin vidas - Samuel
+Creado prototipo Controles pulsando tabulador - Samuel
+Tutorial completado (aunque no finaliza por culpa de que el tabulador no funciona) -Samuel
