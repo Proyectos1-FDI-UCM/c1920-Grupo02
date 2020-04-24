@@ -18,6 +18,12 @@ public class TeniaController : MonoBehaviour
     float initialExecutionTime;
     float initialStartOfMovementTime;
     bool alreadyCounting;
+    bool collidedWithPlayer = false;
+    bool inBreakTime = false;
+
+    [SerializeField]
+    float timeInBreakTime;
+
     Rigidbody2D rb;
 
     //Variables de testeo
@@ -83,11 +89,7 @@ public class TeniaController : MonoBehaviour
         {
             alreadyCounting = false;
         }
-        
-    }
 
-    private void FixedUpdate()
-    {
         //Si el enemigo está en los limites de patrullaje:
         if (enemyLeftPatrolLimit.atLimit || enemyRightPatrolLimit.atLimit)
         {
@@ -108,24 +110,31 @@ public class TeniaController : MonoBehaviour
             //Si el enemigo detecta al jugador:
             else
             {
-                //Si puede acercarse al jugador sin salirse de los limites lo hace
-                if (enemyLeftPatrolLimit.atLimit && playerDetection.direccion == 1)
+                if (collidedWithPlayer)
                 {
-                    enemyLeftPatrolLimit.atLimit = false;
-                    enemyRightPatrolLimit.atLimit = false;
-                    enemyFollow.enabled = true;
-                    detectingPlayer = true;
-                    if (!alreadyCounting && !mordiscoAbominable.enabled)
-                        StartMordiscoCD();
+                    mordiscoAbominable.enabled = false;
                 }
-                if (enemyRightPatrolLimit.atLimit && playerDetection.direccion == -1)
+                else
                 {
-                    enemyLeftPatrolLimit.atLimit = false;
-                    enemyRightPatrolLimit.atLimit = false;
-                    enemyFollow.enabled = true;
-                    detectingPlayer = true;
-                    if (!alreadyCounting && !mordiscoAbominable.enabled)
-                        StartMordiscoCD();
+                    //Si puede acercarse al jugador sin salirse de los limites lo hace
+                    if (enemyLeftPatrolLimit.atLimit && playerDetection.direccion == 1)
+                    {
+                        enemyLeftPatrolLimit.atLimit = false;
+                        enemyRightPatrolLimit.atLimit = false;
+                        enemyFollow.enabled = true;
+                        detectingPlayer = true;
+                        if (!alreadyCounting && !mordiscoAbominable.enabled)
+                            StartMordiscoCD();
+                    }
+                    if (enemyRightPatrolLimit.atLimit && playerDetection.direccion == -1)
+                    {
+                        enemyLeftPatrolLimit.atLimit = false;
+                        enemyRightPatrolLimit.atLimit = false;
+                        enemyFollow.enabled = true;
+                        detectingPlayer = true;
+                        if (!alreadyCounting && !mordiscoAbominable.enabled)
+                            StartMordiscoCD();
+                    }
                 }
             }
         }
@@ -145,12 +154,24 @@ public class TeniaController : MonoBehaviour
             //Si detecta al jugador
             else
             {
-                //Le sigue
-                enemyFollow.enabled = true;
-                enemyPatrol.enabled = false;
-                detectingPlayer = true;
-                if (!alreadyCounting && !mordiscoAbominable.enabled)
-                    StartMordiscoCD();
+                //Obliga a la tenia a no perseguir al jugador de forma temporal
+                //si este ya ha chocado con ella
+                if (collidedWithPlayer)
+                {
+                    enemyFollow.enabled = false;
+                    enemyPatrol.enabled = true;
+                    detectingPlayer = false;
+                    mordiscoAbominable.enabled = false;
+                }
+                else
+                {
+                    //Le sigue
+                    enemyFollow.enabled = true;
+                    enemyPatrol.enabled = false;
+                    detectingPlayer = true;
+                    if (!alreadyCounting && !mordiscoAbominable.enabled)
+                        StartMordiscoCD();
+                }
             }
         }
     }
@@ -158,5 +179,18 @@ public class TeniaController : MonoBehaviour
     {
         alreadyCounting = true;
         initialExecutionTime = Time.time;
+    }
+
+    public void CollidedWithPlayer()
+    {
+        collidedWithPlayer = true;
+        Invoke("BreakTimeEnd", timeInBreakTime);
+    }
+    /// <summary>
+    /// Marca el final del tiempo de no perseguir al jugador
+    /// </summary>
+    void BreakTimeEnd()
+    {
+        collidedWithPlayer = false;
     }
 }

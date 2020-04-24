@@ -78,3 +78,4 @@ Tutorial CASI acabado, falta pulsar TAB con la explicacion de las pastillas -Sam
 FINALLY el jugador se muere cuando se queda sin vidas - Samuel
 Creado prototipo Controles pulsando tabulador - Samuel
 Tutorial completado (aunque no finaliza por culpa de que el tabulador no funciona) -Samuel
+Ahora las Tenias tienen un tiempo configurable de BreakTime, en el que no siguen al jugador después de colisionar con el.

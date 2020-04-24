@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 7569626872517266821}
   - component: {fileID: 717814560322123377}
   - component: {fileID: 894532591711100573}
+  - component: {fileID: 785628630855308510}
   m_Layer: 17
   m_Name: Body
   m_TagString: Untagged
@@ -259,6 +260,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sizeMultiplier: 1
+--- !u!114 &785628630855308510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4987726973829580521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76e753d0fa23ab14793f9fbb3cf26679, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4987726973855456812
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,6 +494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d6b579c12141e34a9589ac62bcb2fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeInBreakTime: 1
   timeBeforeMordiscoAbominable: 3
   executionTime: 2
   enemyLeftPatrolLimit: {fileID: 4987726974478047014}
