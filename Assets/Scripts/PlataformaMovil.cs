@@ -26,8 +26,8 @@ public class PlataformaMovil : MonoBehaviour
     {
         //Si han pasado timeToMove segundos desde el último movimiento, se inicia el movimiento a la posición correspondiente
         if (canMove)
-                transform.position = Vector2.MoveTowards(transform.position, destino[nextPos].position, vMovimiento * Time.deltaTime);
-        
+            transform.position = Vector2.MoveTowards(transform.position, destino[nextPos].position, vMovimiento * Time.deltaTime);
+
         //Finalizado el movimiento, se cambia nextPos para que apuntes al siguiente punto, si está al final, regresa al punto inicial
         if (Vector2.Distance(transform.position, destino[nextPos].position) <= 0)
         {
@@ -37,7 +37,7 @@ public class PlataformaMovil : MonoBehaviour
 
             if (nextPos > destino.Length - 1) nextPos = 0;
         }
-        
+
     }
 
     /// <summary>
@@ -50,5 +50,4 @@ public class PlataformaMovil : MonoBehaviour
         yield return new WaitForSeconds(timeToMove);
         canMove = true;
     }
-
 }

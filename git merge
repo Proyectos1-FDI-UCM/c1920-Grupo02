@@ -1,0 +1,146 @@
+[1mdiff --git a/.vs/c1920-Grupo02/v16/.suo b/.vs/c1920-Grupo02/v16/.suo[m
+[1mindex 0ba2046..7131e6a 100644[m
+Binary files a/.vs/c1920-Grupo02/v16/.suo and b/.vs/c1920-Grupo02/v16/.suo differ
+[1mdiff --git a/.vs/c1920-Grupo02/v16/Server/sqlite3/storage.ide b/.vs/c1920-Grupo02/v16/Server/sqlite3/storage.ide[m
+[1mindex a00f659..26b3d9a 100644[m
+Binary files a/.vs/c1920-Grupo02/v16/Server/sqlite3/storage.ide and b/.vs/c1920-Grupo02/v16/Server/sqlite3/storage.ide differ
+[1mdiff --git a/Assets/InputSystem/PlayerInputActions.cs b/Assets/InputSystem/PlayerInputActions.cs[m
+[1mindex a386113..b0b64a8 100644[m
+[1m--- a/Assets/InputSystem/PlayerInputActions.cs[m
+[1m+++ b/Assets/InputSystem/PlayerInputActions.cs[m
+[36m@@ -89,14 +89,6 @@[m [mpublic class @PlayerInputActions : IInputActionCollection, IDisposable[m
+                     ""expectedControlType"": ""Button"",[m
+                     ""processors"": """",[m
+                     ""interactions"": """"[m
+[31m-                },[m
+[31m-                {[m
+[31m-                    ""name"": ""LeftClick"",[m
+[31m-                    ""type"": ""Button"",[m
+[31m-                    ""id"": ""9cce0bfd-276e-4821-8b01-e4762ac293d2"",[m
+[31m-                    ""expectedControlType"": ""Button"",[m
+[31m-                    ""processors"": """",[m
+[31m-                    ""interactions"": """"[m
+                 }[m
+             ],[m
+             ""bindings"": [[m
+[36m@@ -495,17 +487,6 @@[m [mpublic class @PlayerInputActions : IInputActionCollection, IDisposable[m
+                     ""action"": ""Submit"",[m
+                     ""isComposite"": false,[m
+                     ""isPartOfComposite"": false[m
+[31m-                },[m
+[31m-                {[m
+[31m-                    ""name"": """",[m
+[31m-                    ""id"": ""178da535-3814-4496-8dee-f6415f3d24a3"",[m
+[31m-                    ""path"": ""<Mouse>/leftButton"",[m
+[31m-                    ""interactions"": """",[m
+[31m-                    ""processors"": """",[m
+[31m-                    ""groups"": ""Keyboard"",[m
+[31m-                    ""action"": ""LeftClick"",[m
+[31m-                    ""isComposite"": false,[m
+[31m-                    ""isPartOfComposite"": false[m
+                 }[m
+             ][m
+         }[m
+[36m@@ -534,7 +515,6 @@[m [mpublic class @PlayerInputActions : IInputActionCollection, IDisposable[m
+         m_PlayerControls_Submit = m_PlayerControls.FindAction("Submit", throwIfNotFound: true);[m
+         m_PlayerControls_Cancel = m_PlayerControls.FindAction("Cancel", throwIfNotFound: true);[m
+         m_PlayerControls_Controles = m_PlayerControls.FindAction("Controles", throwIfNotFound: true);[m
+[31m-        m_PlayerControls_LeftClick = m_PlayerControls.FindAction("LeftClick", throwIfNotFound: true);[m
+     }[m
+ [m
+     public void Dispose()[m
+[36m@@ -593,7 +573,6 @@[m [mpublic class @PlayerInputActions : IInputActionCollection, IDisposable[m
+     private readonly InputAction m_PlayerControls_Submit;[m
+     private readonly InputAction m_PlayerControls_Cancel;[m
+     private readonly InputAction m_PlayerControls_Controles;[m
+[31m-    private readonly InputAction m_PlayerControls_LeftClick;[m
+     public struct PlayerControlsActions[m
+     {[m
+         private @PlayerInputActions m_Wrapper;[m
+[36m@@ -607,7 +586,6 @@[m [mpublic class @PlayerInputActions : IInputActionCollection, IDisposable[m
+         public InputAction @Submit => m_Wrapper.m_PlayerControls_Submit;[m
+         public InputAction @Cancel => m_Wrapper.m_PlayerControls_Cancel;[m
+         public InputAction @Controles => m_Wrapper.m_PlayerControls_Controles;[m
+[31m-        public InputAction @LeftClick => m_Wrapper.m_PlayerControls_LeftClick;[m
+         public InputActionMap Get() { return m_Wrapper.m_PlayerControls; }[m
+         public void Enable() { Get().Enable(); }[m
+         public void Disable() { Get().Disable(); }[m
+[36m@@ -644,9 +622,6 @@[m [mpublic class @PlayerInputActions : IInputActionCollection, IDisposable[m
+                 @Controles.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnControles;[m
+                 @Controles.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnControles;[m
+                 @Controles.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnControles;[m
+[31m-                @LeftClick.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnLeftClick;[m
+[31m-                @LeftClick.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnLeftClick;[m
+[31m-                @LeftClick.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnLeftClick;[m
+             }[m
+             m_Wrapper.m_PlayerControlsActionsCallbackInterface = instance;[m
+             if (instance != null)[m
+[36m@@ -678,9 +653,6 @@[m [mpublic class @PlayerInputActions : IInputActionCollection, IDisposable[m
+                 @Controles.started += instance.OnControles;[m
+                 @Controles.performed += instance.OnControles;[m
+                 @Controles.canceled += instance.OnControles;[m
+[31m-                @LeftClick.started += instance.OnLeftClick;[m
+[31m-                @LeftClick.performed += instance.OnLeftClick;[m
+[31m-                @LeftClick.canceled += instance.OnLeftClick;[m
+             }[m
+         }[m
+     }[m
+[36m@@ -714,6 +686,5 @@[m [mpublic class @PlayerInputActions : IInputActionCollection, IDisposable[m
+         void OnSubmit(InputAction.CallbackContext context);[m
+         void OnCancel(InputAction.CallbackContext context);[m
+         void OnControles(InputAction.CallbackContext context);[m
+[31m-        void OnLeftClick(InputAction.CallbackContext context);[m
+     }[m
+ }[m
+[1mdiff --git a/Assets/InputSystem/PlayerInputActions.inputactions b/Assets/InputSystem/PlayerInputActions.inputactions[m
+[1mindex fa87917..5b3de52 100644[m
+[1m--- a/Assets/InputSystem/PlayerInputActions.inputactions[m
+[1m+++ b/Assets/InputSystem/PlayerInputActions.inputactions[m
+[36m@@ -76,14 +76,6 @@[m
+                     "expectedControlType": "Button",[m
+                     "processors": "",[m
+                     "interactions": ""[m
+[31m-                },[m
+[31m-                {[m
+[31m-                    "name": "LeftClick",[m
+[31m-                    "type": "Button",[m
+[31m-                    "id": "9cce0bfd-276e-4821-8b01-e4762ac293d2",[m
+[31m-                    "expectedControlType": "Button",[m
+[31m-                    "processors": "",[m
+[31m-                    "interactions": ""[m
+                 }[m
+             ],[m
+             "bindings": [[m
+[36m@@ -482,17 +474,6 @@[m
+                     "action": "Submit",[m
+                     "isComposite": false,[m
+                     "isPartOfComposite": false[m
+[31m-                },[m
+[31m-                {[m
+[31m-                    "name": "",[m
+[31m-                    "id": "178da535-3814-4496-8dee-f6415f3d24a3",[m
+[31m-                    "path": "<Mouse>/leftButton",[m
+[31m-                    "interactions": "",[m
+[31m-                    "processors": "",[m
+[31m-                    "groups": "Keyboard",[m
+[31m-                    "action": "LeftClick",[m
+[31m-                    "isComposite": false,[m
+[31m-                    "isPartOfComposite": false[m
+                 }[m
+             ][m
+         }[m
+[1mdiff --git a/README.md b/README.md[m
+[1mindex 1e95d76..a360137 100644[m
+[1m--- a/README.md[m
+[1m+++ b/README.md[m
+[36m@@ -70,7 +70,4 @@[m [mCambiado el Script de PauseMenu, ahora se llama directamente al menú en vez de[m
+ WallJump Actualizado y pequeños cambios al resto del script PlayerControllerWallJump.[m
+ [m
+ //Cambios hechos el 23 de abril[m
+[31m-Ahora el dash tiene un cooldown configurable desde el editor[m
+[31m-[m
+[31m-//Cambios hechos el 24 de abril[m
+[31m-Añadido left click al input para que se pueda llamar desde la interfaz[m
+\ No newline at end of file[m
+[32m+[m[32mAhora el dash tiene un cooldown configurable desde el editor[m
+\ No newline at end of file[m
