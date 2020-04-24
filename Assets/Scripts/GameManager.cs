@@ -43,6 +43,10 @@ public class GameManager : MonoBehaviour
         else
             time = 0;
     }
+    public void sumaTutorial(int num)
+    {
+        theUIManager.Tutorial(num);
+    }
 
     public void SetUIManager(UIManager uim)
     {
@@ -66,6 +70,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            player.gameObject.SetActive(false);
             Debug.Log("Has muerto");
             vivo = false;
         }

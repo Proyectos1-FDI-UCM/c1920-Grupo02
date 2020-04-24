@@ -10,7 +10,6 @@ public class ParedBloqueada : MonoBehaviour
     private void Start()
     {
         numGlobulos = gameObject.GetComponentInChildren<TextMesh>();
-
         //Si ha cogido el texto correctamente
         if (numGlobulos != null)
             //Te pone los numeros de globulos necesarios para desbloquear la puerta

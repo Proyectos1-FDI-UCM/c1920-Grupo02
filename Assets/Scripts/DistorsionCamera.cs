@@ -2,7 +2,7 @@
 
 public class DistorsionCamera : MonoBehaviour
 {
-   public Camera maincamara; // Asociamos camara
+   private Camera maincamara; // Asociamos camara
     public float cantidad = 0; // Cantidad de movimento 
     public int tiempo; // Variable para decidir cuanto dura la distorsion
 
@@ -10,6 +10,7 @@ public class DistorsionCamera : MonoBehaviour
     private void Start()
     {
         //Cacheamos la camara
+        maincamara = Camera.main;   //Samuel- Antes la tenias publica y ni si quiera estaba asociada
     }
        
     public void Shake(float amt, float length) // Metodo que conecta la invocacion de el movimiento y tras un tiempo lo quita con el Cancel Invoke

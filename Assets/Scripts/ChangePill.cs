@@ -79,6 +79,7 @@ public class ChangePill : MonoBehaviour
                 }
                 else if (((prevCharacter && (pastilla == 1)) || ((nextCharacter && (pastilla == 2)))) && contador == 0)   //Homeopatica
                 {
+                    GameManager.instance.sumaTutorial(6);   //Tutorial
                     Debug.Log("Pastilla 1");
                     pastilla = 0;
                     spriteRenderer.sprite = pastis[pastilla];
@@ -89,6 +90,7 @@ public class ChangePill : MonoBehaviour
                 }
                 else if (((prevCharacter && (pastilla == 2)) || ((nextCharacter && (pastilla == 0)))) && contador == 0)  //Extasis
                 {
+                    GameManager.instance.sumaTutorial(5);   //Tutorial
                     Debug.Log("Pastilla 2");
                     pastilla = 1;
                     spriteRenderer.sprite = pastis[pastilla];
@@ -113,6 +115,8 @@ public class ChangePill : MonoBehaviour
     /// </summary>
     void Shoot()
     {
+        //La primera vez que dispara lo manda al GM para continuar con el tutorial
+        GameManager.instance.sumaTutorial(3);
         if (!GameManager.instance.GetMenu()) Instantiate<GameObject>(fire, firePoint.position, firePoint.rotation); //Spawn de disparo
     }
     private void OnCollisionEnter2D(Collision2D collision)

@@ -112,7 +112,6 @@
     <Compile Include="Assets\Scripts\TeniaController.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\ZonaDañina.cs" />
-    <Compile Include="Assets\tutorial.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/GitHub/c1920-Grupo02/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

@@ -10,6 +10,10 @@ public class UIManager : MonoBehaviour
     public Text time;            //Contador para el cambio de pastilla
     public Text tutorial;       //Texto para el tutorial inicial
 
+    int tutorialHecho = 0;
+
+
+
     public Image[] hearts; //Corazon lleno
     int maxLife;    //Vida máxima
 
@@ -30,7 +34,31 @@ public class UIManager : MonoBehaviour
         maxLife = hearts.Length;    //Establecemos la çvida máxima
         GameManager.instance.SetUIManager(this);
     }
-
+    public void Tutorial(int num)
+    {
+        if (num == 1 && tutorialHecho == 0)
+        {
+            tutorial.text = "Pulsa W o UpArrow para saltar";
+            tutorialHecho = 1;
+        }
+        else if (num == 2 && tutorialHecho == 1)
+        {
+            tutorial.text = "Ahora eres una pastilla de ibuprofeno \n Pulsa Z o Shift para disparar con ella";
+            tutorialHecho = 2;
+        }
+        else if (num == 3 && tutorialHecho == 2)
+        {
+            tutorial.text = "Genial, Coge el PowerUp \n para conseguir mas pastillas";
+            tutorialHecho = 3;
+        }
+        else if (num == 4 && tutorialHecho == 3)
+        {
+            tutorial.text = "Ahora puedes cambiar de pastillas \n pulsa tab para ver los controles";
+            tutorialHecho = 4;
+        }
+        else if (num == 5 && tutorialHecho == 4)
+            tutorial.enabled = false;
+    }
     //Interfaz de la vida
     public void LifeCount(int life)
     {
@@ -76,7 +104,7 @@ public class UIManager : MonoBehaviour
         if (pastilla == 0)
         {
             currentPill.transform.position = pastillasUI[0].transform.position;
-            pastillasUI[0].color = new Color(1,1,1);
+            pastillasUI[0].color = new Color(1, 1, 1);
             pastillasUI[1].color = new Color(0.5f, 0.5f, 0.5f);
             pastillasUI[2].color = new Color(0.5f, 0.5f, 0.5f);
         }
