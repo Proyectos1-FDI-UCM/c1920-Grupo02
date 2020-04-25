@@ -6427,18 +6427,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6519990182298569665}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1560100028 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3765439610240424369, guid: ccb9b20901c047240bec1bd45d47b85c,
-    type: 3}
-  m_PrefabInstance: {fileID: 85623289}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf399da7cf6078f4a9fc4f652b98445e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1573500822
 GameObject:
   m_ObjectHideFlags: 0
@@ -6632,7 +6620,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1560100028}
+      - m_Target: {fileID: 3765439610240424369, guid: ccb9b20901c047240bec1bd45d47b85c,
+          type: 3}
         m_MethodName: ChangeScene
         m_Mode: 5
         m_Arguments:
@@ -21424,6 +21413,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6519990181680491802, guid: ab2fd3b895f75ae4e9eb0e10f0124b6a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3946082813658733388, guid: ab2fd3b895f75ae4e9eb0e10f0124b6a,
         type: 3}

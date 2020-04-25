@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 06a50bf06a7ace640940d9fb56cd8256
   - enabled: 1
+    path: Assets/Scenes/Area_Hito.unity
+    guid: ea60858a4c1dd7c499dda7958cc2be8e
+  - enabled: 1
     path: Assets/Scenes/Nico/Prototipo Niveles/Prototipo_Nivel_1.unity
     guid: 221c5a2a5ebf5644ba32ff19ab0604e8
   - enabled: 1
@@ -22,14 +25,5 @@ EditorBuildSettings:
     guid: 926d8f3b7e7b65b42b5d6a502bf252b8
   - enabled: 0
     path: 
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
-    path: Assets/Scenes/Area_1.unity
-    guid: f066ee5a1327ece419aae9f2d4f5f8ce
-  - enabled: 0
-    path: Assets/Scenes/Area_2.unity
-    guid: ac4a621227395dd45bea44602e4a8c70
-  - enabled: 1
-    path: Assets/Scenes/Area_Hito.unity
-    guid: ea60858a4c1dd7c499dda7958cc2be8e
+    guid: 00000000000000000000000000000000
   m_configObjects: {}

@@ -85,3 +85,5 @@ Arreglado el input de la interfaz y los controles
 Arreglado anclas del menu e imagen de fondo de tenia - Samuel
 Tutorial Finalizado y arreglado a la perfección -Samuel
 Creado Boton reintentar al morir - Samuel
+Corregido Anclas y Background escena Fin -Samuel
+HE DESCUBIERTO QUE HAY PROBLEMAS AL CAMBIAR DE ESCENAS IN GAME -SAMUEL
