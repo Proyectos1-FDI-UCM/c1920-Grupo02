@@ -17,7 +17,6 @@ public class PauseMenu : MonoBehaviour
         inputActions.PlayerControls.Cancel.started += ctx => CallMenu();
         inputActions.PlayerControls.Controles.started += ctx => controles.SetActive(true);
         inputActions.PlayerControls.Controles.canceled += ctx => controles.SetActive(false);
-        inputActions.PlayerControls.Controles.performed += ctx => controles.SetActive(false);
     }
 
     void CallMenu()
