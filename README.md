@@ -83,3 +83,5 @@ Ahora las Tenias tienen un tiempo configurable de BreakTime, en el que no siguen
 //Cambios hechos el 25 de abril
 Arreglado el input de la interfaz y los controles
 Arreglado anclas del menu e imagen de fondo de tenia - Samuel
+Tutorial Finalizado y arreglado a la perfección -Samuel
+Creado Boton reintentar al morir - Samuel

@@ -10,7 +10,6 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseUI;
     public GameObject optionsUI;
     public GameObject controles;
-
     private void Awake()
     {
         inputActions = new PlayerInputActions();

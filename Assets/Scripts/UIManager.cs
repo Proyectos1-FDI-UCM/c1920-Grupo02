@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
     private Text tutorial;
     int tutorialHecho = 0;
 
+    public GameObject returnMenu;   //Boton de reintentar
 
 
     public Image[] hearts; //Corazon lleno
@@ -51,20 +52,23 @@ public class UIManager : MonoBehaviour
         else if (num == 3 && tutorialHecho == 2)
         {
             tutorial.text = "Genial, Coge el PowerUp \n para conseguir mas pastillas";
-            tutorialHecho = 3;
         }
-        else if (num == 4 && tutorialHecho == 3)
+        else if (num == 4)
         {
             tutorial.text = "Ahora puedes cambiar de pastillas \n pulsa tab para ver los controles";
-            tutorialHecho = 4;
+            tutorialHecho = 3;
         }
-        else if (num == 5 && tutorialHecho == 4)
+        else if (num == 5 && tutorialHecho == 3)
             tutorialText.SetActive(false);
         else if (num == -1)
         {
-            tutorial.enabled = true;
+            tutorialText.SetActive(true);
             tutorial.text = "HAS MUERTO";
         }
+    }
+    public void Dead()
+    {
+        returnMenu.SetActive(true);
     }
     //Interfaz de la vida
     public void LifeCount(int life)

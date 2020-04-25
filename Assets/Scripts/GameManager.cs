@@ -70,6 +70,7 @@ public class GameManager : MonoBehaviour
         {
             player.gameObject.SetActive(false);
             theUIManager.Tutorial(-1);
+            theUIManager.Dead();
             Debug.Log("Has muerto");
             vivo = false;
         }
