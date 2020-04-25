@@ -120,6 +120,20 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!115 &160008765
+MonoScript:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  serializedVersion: 5
+  m_Script: 
+  m_DefaultReferences: {}
+  m_Icon: {fileID: 0}
+  m_ExecutionOrder: 0
+  m_ClassName: InputSystemUIInputModule
+  m_Namespace: UnityEngine.InputSystem.UI
 --- !u!1 &161087926
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,7 +567,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 874296026}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1459882373}
+  m_Script: {fileID: 160008765}
   m_Name: 
   m_EditorClassIdentifier: 
   m_MoveRepeatDelay: 0.5
@@ -805,20 +819,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1083822884}
   m_CullTransparentMesh: 0
---- !u!115 &1459882373
-MonoScript:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  serializedVersion: 5
-  m_Script: 
-  m_DefaultReferences: {}
-  m_Icon: {fileID: 0}
-  m_ExecutionOrder: 0
-  m_ClassName: InputSystemUIInputModule
-  m_Namespace: UnityEngine.InputSystem.UI
 --- !u!1 &1655911218
 GameObject:
   m_ObjectHideFlags: 0

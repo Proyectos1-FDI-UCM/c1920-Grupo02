@@ -8,8 +8,8 @@ public class UIManager : MonoBehaviour
     public Image currentPill;   //Borde dorado que muestra la pastilla que has seleccionado
     public Image[] pastillasUI;  //Interfaz del cambio de pastilla
     public Text time;            //Contador para el cambio de pastilla
-    public Text tutorial;       //Texto para el tutorial inicial
-
+    public GameObject tutorialText;       //Texto para el tutorial inicial
+    private Text tutorial;
     int tutorialHecho = 0;
 
 
@@ -23,6 +23,7 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
+        tutorial = tutorialText.GetComponentInChildren<Text>();
         //Desactivamos todo
         pastillasUI[0].enabled = false;
         pastillasUI[1].enabled = false;
@@ -38,6 +39,7 @@ public class UIManager : MonoBehaviour
     {
         if (num == 1 && tutorialHecho == 0)
         {
+
             tutorial.text = "Pulsa W o UpArrow para saltar";
             tutorialHecho = 1;
         }
@@ -57,7 +59,7 @@ public class UIManager : MonoBehaviour
             tutorialHecho = 4;
         }
         else if (num == 5 && tutorialHecho == 4)
-            tutorial.enabled = false;
+            tutorialText.SetActive(false);
         else if (num == -1)
         {
             tutorial.enabled = true;
