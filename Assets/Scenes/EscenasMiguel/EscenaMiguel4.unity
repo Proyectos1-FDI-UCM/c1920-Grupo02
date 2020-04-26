@@ -2881,7 +2881,8 @@ MonoBehaviour:
   - {fileID: 1087696670}
   - {fileID: 382577278}
   time: {fileID: 705382487}
-  tutorial: {fileID: 1088549732}
+  tutorialText: {fileID: 0}
+  returnMenu: {fileID: 0}
   hearts:
   - {fileID: 1302058285}
   - {fileID: 2115263364}

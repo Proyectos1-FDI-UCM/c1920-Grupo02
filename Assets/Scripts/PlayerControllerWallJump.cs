@@ -59,6 +59,9 @@ public class PlayerControllerWallJump : MonoBehaviour
     //Para saber las coordenadas del último checkpoint
     private Vector2 spawnpoint;
 
+    //Animaciones
+    private Animator animator;
+
     #endregion
 
     private void Awake()
@@ -67,6 +70,7 @@ public class PlayerControllerWallJump : MonoBehaviour
         inputActions.PlayerControls.Horizontal.performed += ctx => movementInputDirection = ctx.ReadValue<float>();
         inputActions.PlayerControls.Vertical.started += ctx => Jump();
         inputActions.PlayerControls.Vertical.canceled += ctx => FinalizeJump();
+        animator = gameObject.GetComponent<Animator>();
     }
     void Start()
     {
@@ -89,6 +93,7 @@ public class PlayerControllerWallJump : MonoBehaviour
         CheckMovementDirection();
         CheckIfCanJump();
         CheckIfWallSliding();
+        animator.SetFloat("MovementX", Mathf.Abs(movementInputDirection));
     }
     private void FixedUpdate()
     {

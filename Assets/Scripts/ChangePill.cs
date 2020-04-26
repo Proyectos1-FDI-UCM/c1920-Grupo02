@@ -20,6 +20,10 @@ public class ChangePill : MonoBehaviour
     public Transform firePoint; //Lugar de Spawn
 
     Dash dash;
+
+    //Animaciones
+    private Animator animator;
+
     private void Awake()
     {
         inputActions = new PlayerInputActions();
@@ -29,6 +33,7 @@ public class ChangePill : MonoBehaviour
         inputActions.PlayerControls.PrevCharacter.canceled += ctx => prevCharacter = false;
         inputActions.PlayerControls.ShootOrDash.started += ctx => shootOrDash = true;
         inputActions.PlayerControls.ShootOrDash.canceled += ctx => shootOrDash = false;
+        animator = gameObject.GetComponent<Animator>();
     }
     void Start()
     {
@@ -115,6 +120,7 @@ public class ChangePill : MonoBehaviour
     /// </summary>
     void Shoot()
     {
+        animator.SetTrigger("Shoot");
         //La primera vez que dispara lo manda al GM para continuar con el tutorial
         GameManager.instance.sumaTutorial(3);
         if (!GameManager.instance.GetMenu()) Instantiate<GameObject>(fire, firePoint.position, firePoint.rotation); //Spawn de disparo

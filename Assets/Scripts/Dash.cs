@@ -20,6 +20,9 @@ public class Dash : MonoBehaviour
     [SerializeField]
     float cooldown;
 
+    //Animaciones
+    Animator animator;
+
     /*De momento me funcionan bien los valores:
      * 
      * dashspeed = 8
@@ -30,6 +33,7 @@ public class Dash : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
         gravity = rb.gravityScale;
         lastTimeOfActivation = -10f;
+        animator = gameObject.GetComponent<Animator>();
     }
 
     void FixedUpdate()
@@ -54,6 +58,7 @@ public class Dash : MonoBehaviour
     {
         if (lastTimeOfActivation < Time.time - cooldown)
         {
+            animator.SetTrigger("Dash");
             //Cambio de la capa física de player
             gameObject.layer = 11;   /*La capa física en cuestión debe de:
                                     -Colisionar con el suelo y resto de obstáculos
