@@ -93,7 +93,8 @@ public class PlayerControllerWallJump : MonoBehaviour
         CheckMovementDirection();
         CheckIfCanJump();
         CheckIfWallSliding();
-        animator.SetFloat("MovementX", Mathf.Abs(movementInputDirection));
+        if (animator != null)
+            animator.SetFloat("MovementX", Mathf.Abs(movementInputDirection));
     }
     private void FixedUpdate()
     {

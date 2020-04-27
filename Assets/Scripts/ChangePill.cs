@@ -28,7 +28,7 @@ public class ChangePill : MonoBehaviour
     {
         inputActions = new PlayerInputActions();
         inputActions.PlayerControls.NextCharacter.started += ctx => nextCharacter = true;
-        inputActions.PlayerControls.NextCharacter.canceled+= ctx => nextCharacter = false;
+        inputActions.PlayerControls.NextCharacter.canceled += ctx => nextCharacter = false;
         inputActions.PlayerControls.PrevCharacter.started += ctx => prevCharacter = true;
         inputActions.PlayerControls.PrevCharacter.canceled += ctx => prevCharacter = false;
         inputActions.PlayerControls.ShootOrDash.started += ctx => shootOrDash = true;
@@ -120,7 +120,8 @@ public class ChangePill : MonoBehaviour
     /// </summary>
     void Shoot()
     {
-        animator.SetTrigger("Shoot");
+        if (animator != null)
+            animator.SetTrigger("Shoot");
         //La primera vez que dispara lo manda al GM para continuar con el tutorial
         GameManager.instance.sumaTutorial(3);
         if (!GameManager.instance.GetMenu()) Instantiate<GameObject>(fire, firePoint.position, firePoint.rotation); //Spawn de disparo

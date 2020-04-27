@@ -39,7 +39,7 @@ public class Dash : MonoBehaviour
     void FixedUpdate()
     {
         //Realización del movimiento mientras el dash esté activo
-        if(transform.localScale.x==1) rb.velocity = dashmovement * transform.right;
+        if (transform.localScale.x == 1) rb.velocity = dashmovement * transform.right;
         else rb.velocity = dashmovement * -transform.right;
     }
     private void Update()
@@ -58,7 +58,8 @@ public class Dash : MonoBehaviour
     {
         if (lastTimeOfActivation < Time.time - cooldown)
         {
-            animator.SetTrigger("Dash");
+            if (animator != null)
+                animator.SetTrigger("Dash");
             //Cambio de la capa física de player
             gameObject.layer = 11;   /*La capa física en cuestión debe de:
                                     -Colisionar con el suelo y resto de obstáculos
@@ -79,6 +80,6 @@ public class Dash : MonoBehaviour
         //Cambia la capa física del player a la original
         gameObject.layer = 10;
         rb.gravityScale = gravity;
-        dashmovement = new Vector2(0,0);
+        dashmovement = new Vector2(0, 0);
     }
 }
