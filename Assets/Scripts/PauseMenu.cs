@@ -10,6 +10,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseUI;
     public GameObject optionsUI;
     public GameObject controles;
+    public GameObject teclas;
     private void Awake()
     {
         inputActions = new PlayerInputActions();
@@ -21,20 +22,24 @@ public class PauseMenu : MonoBehaviour
 
     void CallMenu()
     {
-            //Si el juego está pausado...
-            if (GameManager.instance.GetMenu() && (!optionsUI.activeSelf))
-            {
-                //Vuelves a jugar
-                Resume();
-            }
-            //Si no está pausado...
-            else if (optionsUI.activeSelf)
-            {
-                BackOptions();
-            }
-            else
-                //Se pausa
-                Pause();
+        //Si el juego está pausado...
+        if (GameManager.instance.GetMenu() && (!optionsUI.activeSelf))
+        {
+            //Vuelves a jugar
+            Resume();
+        }
+        //Si no está pausado...
+        else if (optionsUI.activeSelf)
+        {
+            BackOptions();
+        }
+        else if (teclas.activeSelf)
+        {
+            BackControls();
+        }
+        else
+            //Se pausa
+            Pause();
     }
 
     /// <summary>
@@ -122,5 +127,18 @@ public class PauseMenu : MonoBehaviour
     private void OnDisable()
     {
         inputActions.Disable();
+    }
+    /// <summary>
+    /// Desactiva las opciones y muestra controles
+    /// </summary>
+    public void LoadControls()
+    {
+        teclas.SetActive(true);
+        pauseUI.SetActive(false);
+    }
+    public void BackControls()
+    {
+        teclas.SetActive(false);
+        pauseUI.SetActive(true);
     }
 }
