@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour
         }
         else
             Destroy(this.gameObject);
+
+            SavePlayer();
     }
     private void Update()
     {
@@ -72,6 +74,7 @@ public class GameManager : MonoBehaviour
             theUIManager.Tutorial(-1);
             theUIManager.Dead();
             Debug.Log("Has muerto");
+            LoadPlayer();
             vivo = false;
         }
         return vivo;
@@ -168,7 +171,7 @@ public class GameManager : MonoBehaviour
         {
             life = data.health;
             globulosRojos = data.globulosRojos;
-            globulosBlancos = data.globulsoBlancos;
+            //globulosBlancos = data.globulsoBlancos;
             Debug.Log(data.level);
             SceneManager.LoadScene(data.level, LoadSceneMode.Single);
         }
