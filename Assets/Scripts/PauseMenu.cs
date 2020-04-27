@@ -111,7 +111,8 @@ public class PauseMenu : MonoBehaviour
     public void BackOptions()
     {
         optionsUI.SetActive(false);
-        pauseUI.SetActive(true);
+        if(pauseUI!=null)
+            pauseUI.SetActive(true);
     }
     /// <summary>
     /// Te muestra los controles MIENTRAS TIENES PULSADO tabulador
@@ -134,11 +135,13 @@ public class PauseMenu : MonoBehaviour
     public void LoadControls()
     {
         teclas.SetActive(true);
-        pauseUI.SetActive(false);
+        if (pauseUI != null)
+            pauseUI.SetActive(false);
     }
     public void BackControls()
     {
         teclas.SetActive(false);
-        pauseUI.SetActive(true);
+        if (pauseUI != null)
+            pauseUI.SetActive(true);
     }
 }
