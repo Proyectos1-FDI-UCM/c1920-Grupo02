@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
     public Image currentPill;   //Borde dorado que muestra la pastilla que has seleccionado
     public Image[] pastillasUI;  //Interfaz del cambio de pastilla
     public Text time;            //Contador para el cambio de pastilla
+    public GameObject arrows;
     public GameObject tutorialText;       //Texto para el tutorial inicial
     private Text tutorial;
     int tutorialHecho = 0;
@@ -31,6 +32,7 @@ public class UIManager : MonoBehaviour
         pastillasUI[2].enabled = false;
         time.enabled = false;
         currentPill.enabled = false;
+        arrows.SetActive(false);
 
 
         maxLife = hearts.Length;    //Establecemos la çvida máxima
@@ -108,6 +110,7 @@ public class UIManager : MonoBehaviour
         pastillasUI[1].enabled = true;
         pastillasUI[2].enabled = true;
         currentPill.enabled = true;
+        arrows.SetActive(true);
 
         //0 = Homeopatica
         //1 = Ibuprofeno
