@@ -14,7 +14,7 @@ public class PlayerData
     public PlayerData(GameManager player)
     {
         level = SceneManager.GetActiveScene().name;
-        health = player.getLife;
+        health = player.getMaxHP();
         globulosRojos = player.ReturnGlobulosRojos();
         //globulsoBlancos = player.ReturnGlobulosBlancos();
     }

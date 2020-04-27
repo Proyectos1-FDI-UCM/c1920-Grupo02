@@ -8,7 +8,8 @@ public class GameManager : MonoBehaviour
     public Transform player;
 
     private UIManager theUIManager;         //LA HE HECHO PRIVADA- SAMUEL
-    private int life = 12;
+    private const int MAXHP = 12;
+    private int life = MAXHP;
     public int getLife { get { return life; } private set { life = value; } } //Propiedad para obtener la vida de forma segura
     private Camera cam;  //Obtener la cámara
 
@@ -125,6 +126,8 @@ public class GameManager : MonoBehaviour
     public int ReturnGlobulosBlancos() { return globulosBlancos; }
 
     public int ReturnGlobulosRojos() { return globulosRojos; }
+
+    public int getMaxHP() {return MAXHP;}
 
     public float GetPlayerLooking() { return player.localScale.x; } // comprobación del estado de "playerLookingRight" --- Javier
 
