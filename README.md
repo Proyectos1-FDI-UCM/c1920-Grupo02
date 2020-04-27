@@ -87,3 +87,6 @@ Tutorial Finalizado y arreglado a la perfección -Samuel
 Creado Boton reintentar al morir - Samuel
 Corregido Anclas y Background escena Fin -Samuel
 HE DESCUBIERTO QUE HAY PROBLEMAS AL CAMBIAR DE ESCENAS IN GAME -SAMUEL
+
+//Cambios hechos el 26 de abril
+Añadidas las animaciones: Idle, Run y Shoot
