@@ -37,7 +37,7 @@ public class PauseMenu : MonoBehaviour
         {
             BackControls();
         }
-        else
+        else if (pauseUI != null)
             //Se pausa
             Pause();
     }
@@ -84,7 +84,8 @@ public class PauseMenu : MonoBehaviour
     public void LoadOptions()
     {
         optionsUI.SetActive(true);
-        pauseUI.SetActive(false);
+        if(pauseUI!=null)
+            pauseUI.SetActive(false);
     }
 
     /// <summary>
