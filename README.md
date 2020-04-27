@@ -90,3 +90,12 @@ HE DESCUBIERTO QUE HAY PROBLEMAS AL CAMBIAR DE ESCENAS IN GAME -SAMUEL
 
 //Cambios hechos el 26 de abril
 Añadidas las animaciones: Idle, Run y Shoot
+
+//Cambios hechos el 27 de abril
+Ahora la pastilla tiene las animaciones asignadas.
+Animaciones añadidas: ataque a melee.
+Cambiado el cambio de pastilla.
+Solucionado un error del WallJump relacionado con el cambio de pastilla.
+Cambiada la imagen de los controles.
+Ahora se puede acceder a los controles desde el menú.
+Habilitado el botón de Opciones del menú.

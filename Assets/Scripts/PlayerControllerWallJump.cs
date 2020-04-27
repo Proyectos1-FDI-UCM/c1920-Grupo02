@@ -100,7 +100,7 @@ public class PlayerControllerWallJump : MonoBehaviour
     {
         ApplyMovement();
         CheckGround();
-        if (sprite.sprite.name == "Homeopatica")
+        if (sprite.color == Color.cyan)
         {
             CheckWall();
         }

@@ -975,11 +975,6 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 1957192534687642430, guid: f8416108d1b36864b8a4df3c68c65884,
-        type: 3}
-      propertyPath: vMovimiento
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1957192534687642431, guid: f8416108d1b36864b8a4df3c68c65884,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
@@ -1024,6 +1019,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.x
       value: 3.2663536
+      objectReference: {fileID: 0}
+    - target: {fileID: 1957192534687642430, guid: f8416108d1b36864b8a4df3c68c65884,
+        type: 3}
+      propertyPath: vMovimiento
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8416108d1b36864b8a4df3c68c65884, type: 3}
@@ -2753,11 +2753,6 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 1957192534687642430, guid: f8416108d1b36864b8a4df3c68c65884,
-        type: 3}
-      propertyPath: vMovimiento
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1957192534687642431, guid: f8416108d1b36864b8a4df3c68c65884,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
@@ -2802,6 +2797,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.x
       value: 3.2663536
+      objectReference: {fileID: 0}
+    - target: {fileID: 1957192534687642430, guid: f8416108d1b36864b8a4df3c68c65884,
+        type: 3}
+      propertyPath: vMovimiento
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8416108d1b36864b8a4df3c68c65884, type: 3}
@@ -4641,11 +4641,6 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 1957192534687642430, guid: f8416108d1b36864b8a4df3c68c65884,
-        type: 3}
-      propertyPath: vMovimiento
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1957192534687642431, guid: f8416108d1b36864b8a4df3c68c65884,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
@@ -4690,6 +4685,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.x
       value: 3.2663536
+      objectReference: {fileID: 0}
+    - target: {fileID: 1957192534687642430, guid: f8416108d1b36864b8a4df3c68c65884,
+        type: 3}
+      propertyPath: vMovimiento
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8416108d1b36864b8a4df3c68c65884, type: 3}
@@ -5156,11 +5156,6 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 1957192534687642430, guid: f8416108d1b36864b8a4df3c68c65884,
-        type: 3}
-      propertyPath: vMovimiento
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1957192534687642431, guid: f8416108d1b36864b8a4df3c68c65884,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
@@ -5205,6 +5200,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.x
       value: 3.2663536
+      objectReference: {fileID: 0}
+    - target: {fileID: 1957192534687642430, guid: f8416108d1b36864b8a4df3c68c65884,
+        type: 3}
+      propertyPath: vMovimiento
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8416108d1b36864b8a4df3c68c65884, type: 3}
@@ -5381,11 +5381,6 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 1957192534687642430, guid: f8416108d1b36864b8a4df3c68c65884,
-        type: 3}
-      propertyPath: vMovimiento
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1957192534687642431, guid: f8416108d1b36864b8a4df3c68c65884,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
@@ -5430,6 +5425,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.x
       value: 3.2663536
+      objectReference: {fileID: 0}
+    - target: {fileID: 1957192534687642430, guid: f8416108d1b36864b8a4df3c68c65884,
+        type: 3}
+      propertyPath: vMovimiento
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8416108d1b36864b8a4df3c68c65884, type: 3}
@@ -7868,11 +7868,6 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 1957192534687642430, guid: f8416108d1b36864b8a4df3c68c65884,
-        type: 3}
-      propertyPath: vMovimiento
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1957192534687642431, guid: f8416108d1b36864b8a4df3c68c65884,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
@@ -7917,6 +7912,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.x
       value: 3.2663536
+      objectReference: {fileID: 0}
+    - target: {fileID: 1957192534687642430, guid: f8416108d1b36864b8a4df3c68c65884,
+        type: 3}
+      propertyPath: vMovimiento
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8416108d1b36864b8a4df3c68c65884, type: 3}
@@ -11277,11 +11277,6 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 1957192534687642430, guid: f8416108d1b36864b8a4df3c68c65884,
-        type: 3}
-      propertyPath: vMovimiento
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1957192534687642431, guid: f8416108d1b36864b8a4df3c68c65884,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
@@ -11326,6 +11321,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.x
       value: 3.2663536
+      objectReference: {fileID: 0}
+    - target: {fileID: 1957192534687642430, guid: f8416108d1b36864b8a4df3c68c65884,
+        type: 3}
+      propertyPath: vMovimiento
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8416108d1b36864b8a4df3c68c65884, type: 3}
@@ -11931,11 +11931,6 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 1957192534687642430, guid: f8416108d1b36864b8a4df3c68c65884,
-        type: 3}
-      propertyPath: vMovimiento
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1957192534687642431, guid: f8416108d1b36864b8a4df3c68c65884,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
@@ -11980,6 +11975,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.x
       value: 3.2663536
+      objectReference: {fileID: 0}
+    - target: {fileID: 1957192534687642430, guid: f8416108d1b36864b8a4df3c68c65884,
+        type: 3}
+      propertyPath: vMovimiento
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8416108d1b36864b8a4df3c68c65884, type: 3}

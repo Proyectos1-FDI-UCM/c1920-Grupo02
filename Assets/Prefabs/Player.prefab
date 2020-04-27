@@ -62,7 +62,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6519990181680491802}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.93, y: 5.89, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6519990182271726856}
@@ -230,10 +230,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contador: 0
-  pastis:
-  - {fileID: 21300000, guid: e1bcd1ee7aaac6c448497f59fea65d06, type: 3}
-  - {fileID: 21300000, guid: 88fb660524317e8438611102e5894a93, type: 3}
-  - {fileID: 21300000, guid: abdc7bbbc5aae66429741c21440d6547, type: 3}
   fire: {fileID: 5271028281960215529, guid: ef5686b09d54c4b46b77622a6bc93812, type: 3}
   firePoint: {fileID: 6519990181927552629}
 --- !u!114 &6519990181680491810
