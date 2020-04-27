@@ -12,7 +12,6 @@ public class ChangePill : MonoBehaviour
     public float contador = 0;
 
     private SpriteRenderer spriteRenderer;
-    public Sprite[] pastis = new Sprite[3]; //Cojo los sprites de las pastillas
     private int pastilla = 1; //Comprueba que pastilla somos (Empezamos con Ibuprofeno)
     bool cambio = false;    //Comprueba que podemos cambiar de pastilla
 
@@ -73,13 +72,12 @@ public class ChangePill : MonoBehaviour
             if (GameManager.instance != null)
             {
                 //Puedes cambiar de pastilla
-                if (((prevCharacter && (pastilla == 0)) || ((nextCharacter && (pastilla == 1)))) && contador == 0)   //Ibuprofeno
+                if (((prevCharacter && (pastilla == 0)) || ((nextCharacter && (pastilla == 1)))) && contador == 0)   //Extasis
                 {
                     Debug.Log("Pastilla 3");
                     pastilla = 2;
-                    spriteRenderer.sprite = pastis[pastilla];
+                    spriteRenderer.color = Color.magenta;
                     contador = 10;
-                    //GameManager.instance.DesactivatePill();
                     GameManager.instance.ActualPill(pastilla);
                 }
                 else if (((prevCharacter && (pastilla == 1)) || ((nextCharacter && (pastilla == 2)))) && contador == 0)   //Homeopatica
@@ -87,22 +85,18 @@ public class ChangePill : MonoBehaviour
                     GameManager.instance.sumaTutorial(6);   //Tutorial
                     Debug.Log("Pastilla 1");
                     pastilla = 0;
-                    spriteRenderer.sprite = pastis[pastilla];
+                    spriteRenderer.color = Color.cyan;
                     contador = 10;
-                    //GameManager.instance.DesactivatePill();
                     GameManager.instance.ActualPill(pastilla);
-
                 }
-                else if (((prevCharacter && (pastilla == 2)) || ((nextCharacter && (pastilla == 0)))) && contador == 0)  //Extasis
+                else if (((prevCharacter && (pastilla == 2)) || ((nextCharacter && (pastilla == 0)))) && contador == 0)  //Ibuprofeno
                 {
                     GameManager.instance.sumaTutorial(5);   //Tutorial
                     Debug.Log("Pastilla 2");
                     pastilla = 1;
-                    spriteRenderer.sprite = pastis[pastilla];
+                    spriteRenderer.color = Color.white;
                     contador = 10;
-                    //GameManager.instance.DesactivatePill();
                     GameManager.instance.ActualPill(pastilla);
-
                 }
             }
             else
