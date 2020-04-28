@@ -9,12 +9,12 @@ public class GameManager : MonoBehaviour
 
     private UIManager theUIManager;         //LA HE HECHO PRIVADA- SAMUEL
     private const int MAXHP = 12;
-    private int life = MAXHP;
+    static private int life = MAXHP;
     public int getLife { get { return life; } private set { life = value; } } //Propiedad para obtener la vida de forma segura
     private Camera cam;  //Obtener la cámara
 
-    int globulosRojos = 0;
-    int globulosBlancos = 0;
+    static int globulosRojos = 0;
+    static int globulosBlancos = 0;
 
     int pasado = 0;     //Variable para cambiar el color del fondo --Samuel y Javi
 
@@ -55,6 +55,38 @@ public class GameManager : MonoBehaviour
         theUIManager = uim;
         theUIManager.LifeCount(life);
     }
+
+    //Resetea el GM
+    private void ResetGM()
+    {
+        //Asignamos parámetros
+        globulosBlancos = 0;
+        globulosRojos = 0;
+        life = MAXHP;
+
+        //Actualizamos el UIM
+        if(theUIManager != null)
+        {
+        theUIManager.LifeCount(life);
+        theUIManager.UpdateGlobulosRojosUI(globulosRojos);
+        theUIManager.UpdateGlobulosBlancosUI(globulosBlancos);
+        }
+    }
+
+    void ResetGM(GameManager gm)
+    {
+        gm.ResetGM();
+    }
+
+    //Crea una nueva partida en la escena designada
+    public void NewGame(string sceneName)
+    {
+        ResetGM();
+        ChangeScene(sceneName);
+        Destroy(this.gameObject);
+    }
+
+
 
     /// <summary>
     /// Comprueba si está vivo y aplica el daño a las vidas
@@ -130,7 +162,7 @@ public class GameManager : MonoBehaviour
 
     public int getMaxHP() {return MAXHP;}
 
-    public float GetPlayerLooking() { return player.localScale.x; } // comprobación del estado de "playerLookingRight" --- Javier
+    public float GetPlayerLooking() { return player.lossyScale.x; } // comprobación del estado de "playerLookingRight" --- Javier
 
     public void UpdateCanAtack(bool val) { playerCanAtMelee = val; } // actualización del estado de "playerCanAtMelee" --- Javier
     public bool GetPlayerCanAtack() { return playerCanAtMelee; } // comprobación del estado de "playerCanAtMelee" --- Javier
@@ -181,6 +213,7 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(data.level, LoadSceneMode.Single);
         }
     }
+
     public void NewGame()
     {
         PlayerData data = SaveSystem.LoadData();

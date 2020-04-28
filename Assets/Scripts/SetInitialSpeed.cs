@@ -18,8 +18,11 @@ public class SetInitialSpeed : MonoBehaviour
         GameManager.instance.UpdateCanAtack(false);
 
         //Realización del movimiento cuando el disparo está activo
-        if (GameManager.instance.GetPlayerLooking() ==1) rb.velocity = transform.right * initialVelocity; // comprobación del estado en el GM --- Javier
-        else rb.velocity = -transform.right * initialVelocity;
+        if (GameManager.instance.GetPlayerLooking() == 1) rb.velocity = transform.right * initialVelocity; // comprobación del estado en el GM --- Javier
+        else rb.velocity = transform.right * -initialVelocity;
+
+
+        Debug.Log(GameManager.instance.GetPlayerLooking());
 
         Destroy(this.gameObject, tiempo);
     }

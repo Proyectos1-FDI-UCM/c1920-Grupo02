@@ -279,11 +279,11 @@ public class PlayerControllerWallJump : MonoBehaviour
         {
             if (movementInputDirection < 0)
             {
-                Flip();
+                Flip(); 
             }
             else if (movementInputDirection > 0)
             {
-                Flip();
+                Flip(); 
             }
             if (rb.velocity.x != 0)
             {
@@ -313,7 +313,6 @@ public class PlayerControllerWallJump : MonoBehaviour
             {
                 characterScale.x = 1;
             }
-
             transform.localScale = characterScale;
         }
     }
