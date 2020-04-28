@@ -29,9 +29,10 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(this.gameObject);
         }
         else
+        {
             Destroy(this.gameObject);
-
-            SavePlayer();
+        }
+        SavePlayer();
     }
     private void Update()
     {
@@ -173,12 +174,22 @@ public class GameManager : MonoBehaviour
         if (data.level != null)
         {
             life = data.health;
+            globulosBlancos = 0;
             globulosRojos = data.globulosRojos;
             //globulosBlancos = data.globulsoBlancos;
             Debug.Log(data.level);
             SceneManager.LoadScene(data.level, LoadSceneMode.Single);
         }
-
+    }
+    public void NewGame()
+    {
+        PlayerData data = SaveSystem.LoadData();
+        if(data.level != null)
+        {
+            life = data.health;
+            globulosBlancos = 0;
+            globulosRojos = 0;
+        }
     }
     public void ColorCamara(float time)
     {
