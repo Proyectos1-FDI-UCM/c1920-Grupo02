@@ -262,4 +262,8 @@ public class GameManager : MonoBehaviour
                 pasado++;
         }
     }
+    public void Exit()
+    {
+        Application.Quit();
+    }
 }
