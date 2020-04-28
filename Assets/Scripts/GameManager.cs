@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public Transform player;
+    private Transform player;
 
     private UIManager theUIManager;         //LA HE HECHO PRIVADA- SAMUEL
     private const int MAXHP = 12;
@@ -34,6 +34,12 @@ public class GameManager : MonoBehaviour
         }
         SavePlayer();
     }
+
+    private void Start()
+    {
+        player = GameObject.Find("Player").transform;
+    }
+
     private void Update()
     {
         //Cambio de color del fondo según la vida que tengas
@@ -162,7 +168,13 @@ public class GameManager : MonoBehaviour
 
     public int getMaxHP() {return MAXHP;}
 
-    public float GetPlayerLooking() { return player.lossyScale.x; } // comprobación del estado de "playerLookingRight" --- Javier
+    public float GetPlayerLooking()
+
+    {
+        if(player == null) { player = GameObject.Find("Player").transform; }
+        return player.lossyScale.x;
+
+    } // comprobación del estado de "playerLookingRight" --- Javier
 
     public void UpdateCanAtack(bool val) { playerCanAtMelee = val; } // actualización del estado de "playerCanAtMelee" --- Javier
     public bool GetPlayerCanAtack() { return playerCanAtMelee; } // comprobación del estado de "playerCanAtMelee" --- Javier
