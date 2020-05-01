@@ -2,35 +2,47 @@
 
 public class DisparoDeSangre : MonoBehaviour
 {
-    // Start is called before the first frame update
     public GameObject bala;
     float initialTime;
     public float tiempo;
+    public int bulletsPerVolley;
+    public float timeBetweenBullets;
+    private float firedBullets = 0;
     private GameObject tempBala;
-    //private float timer = 2;
     Coagulo_PlayerDetection playerDetection;
     void Start()
     {
         playerDetection = GetComponentInChildren<Coagulo_PlayerDetection>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //Debug.Log(Time.time - initialTime+ " > " +tiempo);
         if (Time.time - initialTime > tiempo)
         {
-            //Creacion de la Bala 
+            StartVolley();
+            initialTime = Time.time;
+        }
+    }
 
+    private void StartVolley()
+    {
+            InvokeRepeating("FireBullet", 0f, timeBetweenBullets);
+    }
+    private void FireBullet()
+    {
+        if (firedBullets >= bulletsPerVolley)
+        {
+            firedBullets = 0;
+            CancelInvoke();
+        }
+        else
+        {
             tempBala = Instantiate(bala, new Vector3(transform.position.x - 1, transform.position.y, transform.position.z), transform.rotation);
 
             tempBala.gameObject.transform.right = playerDetection.attackDirection;
 
-            initialTime = Time.time;
+            firedBullets++;
         }
-        
-
-
     }
     private void OnEnable()
     {

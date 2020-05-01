@@ -511,7 +511,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1742511080}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &26337240
+--- !u!114 &26337241
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3149,7 +3149,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1742511080}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &564070517
+--- !u!114 &564070518
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3168,7 +3168,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1742511080}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &611228300
+--- !u!114 &611228301
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4762,9 +4762,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 115fe3af6aa3cfe40b0ce6ffef198886, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balaizq: {fileID: 0}
-  baladcha: {fileID: 0}
-  tiempo: 0
+  bala: {fileID: 5271028281960215529, guid: 1c7e744f352031946990d595ca84763b, type: 3}
+  tiempo: 4
+  bulletsPerVolley: 7
+  timeBetweenBullets: 0.1
 --- !u!114 &811776760
 MonoBehaviour:
   m_ObjectHideFlags: 0

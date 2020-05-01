@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5042459506126004602}
   - component: {fileID: 3061535195978236486}
   - component: {fileID: 9186390601681712900}
-  - component: {fileID: 3315309618163660727}
+  - component: {fileID: 611228301}
   m_Layer: 17
   m_Name: Der
   m_TagString: Untagged
@@ -122,7 +122,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.6054401, y: 3.6840413}
   m_EdgeRadius: 0
---- !u!114 &3315309618163660727
+--- !u!114 &611228301
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,10 +131,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7361085377247552011}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fc58c2a6c3ad6e4ba8a88a127738b13, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c3d5800eda67c443a755ac15ce3ead8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 3
+  life: 10
 --- !u!1 &7444546962577408489
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 444037992506015638}
   - component: {fileID: 2197933751708537321}
   - component: {fileID: 6115809152878626951}
-  - component: {fileID: 2051988870226532862}
+  - component: {fileID: 26337241}
   m_Layer: 17
   m_Name: Izq
   m_TagString: Untagged
@@ -257,7 +257,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.6054401, y: 3.6840413}
   m_EdgeRadius: 0
---- !u!114 &2051988870226532862
+--- !u!114 &26337241
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -266,10 +266,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7444546962577408489}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fc58c2a6c3ad6e4ba8a88a127738b13, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c3d5800eda67c443a755ac15ce3ead8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 3
+  life: 10
 --- !u!1 &7676719792947505185
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 5864602060929196845}
   - component: {fileID: 722128875106980542}
   - component: {fileID: 99620319915428653}
-  - component: {fileID: 1367123157483554695}
+  - component: {fileID: 564070518}
   m_Layer: 17
   m_Name: Mid
   m_TagString: Untagged
@@ -392,7 +392,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.6054401, y: 3.6840413}
   m_EdgeRadius: 0
---- !u!114 &1367123157483554695
+--- !u!114 &564070518
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -401,10 +401,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7676719792947505185}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fc58c2a6c3ad6e4ba8a88a127738b13, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c3d5800eda67c443a755ac15ce3ead8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 3
+  life: 10
 --- !u!1 &7837536500284150080
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,9 +487,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7837536502030534832}
-  - component: {fileID: 5616106617044930746}
-  - component: {fileID: 8744291019111929331}
-  - component: {fileID: 1437698146692349585}
+  - component: {fileID: 811776758}
+  - component: {fileID: 811776759}
+  - component: {fileID: 811776760}
   m_Layer: 17
   m_Name: Gran_Coagulo
   m_TagString: Untagged
@@ -515,7 +515,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5616106617044930746
+--- !u!114 &811776758
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -524,11 +524,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7837536502030534827}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cb2d6ade01f4404ba5295eaa50e55e8, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b6873c77f73a194f85ac8e0d7929f22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   parts: 3
---- !u!114 &8744291019111929331
+--- !u!114 &811776759
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -537,10 +537,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7837536502030534827}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63510110ce5d44c4f955a4bb5bb1f094, type: 3}
+  m_Script: {fileID: 11500000, guid: 115fe3af6aa3cfe40b0ce6ffef198886, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1437698146692349585
+  bala: {fileID: 5271028281960215529, guid: 1c7e744f352031946990d595ca84763b, type: 3}
+  tiempo: 4
+  bulletsPerVolley: 7
+  timeBetweenBullets: 0.1
+--- !u!114 &811776760
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -549,10 +553,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7837536502030534827}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2338ae8e63aaad94989e715da0b2fb89, type: 3}
+  m_Script: {fileID: 11500000, guid: df586f821bd604047867bc95d1c3daa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  balaizq: {fileID: 5271028281960215529, guid: 1c7e744f352031946990d595ca84763b, type: 3}
-  baladcha: {fileID: 5271028281960215529, guid: 1c7e744f352031946990d595ca84763b,
-    type: 3}
-  tiempo: 3
