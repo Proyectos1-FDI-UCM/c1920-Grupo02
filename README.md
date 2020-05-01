@@ -99,3 +99,8 @@ Solucionado un error del WallJump relacionado con el cambio de pastilla.
 Cambiada la imagen de los controles.
 Ahora se puede acceder a los controles desde el menú.
 Habilitado el botón de Opciones del menú.
+
+//Cambios hechos el 1 de mayo
+Creada la sala del Gran Coágulo - Miguel
+Purgado un Find del código, ahora no da problemas al morir el jugador - Miguel
+Añadida Sorting Layer para el background y el player - Miguel

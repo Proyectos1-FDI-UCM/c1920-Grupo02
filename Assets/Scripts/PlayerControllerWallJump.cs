@@ -87,6 +87,7 @@ public class PlayerControllerWallJump : MonoBehaviour
         //Normalizamos los vectores
         wallJumpDirection.Normalize();
 
+        GameManager.instance.SetPlayer(gameObject);
     }
     void Update()
     {
@@ -366,6 +367,8 @@ public class PlayerControllerWallJump : MonoBehaviour
     private void OnEnable()
     {
         inputActions.Enable();
+        if (GameManager.instance!=null)
+            GameManager.instance.SetPlayer(gameObject);
     }
 
     private void OnDisable()

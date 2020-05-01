@@ -169,11 +169,8 @@ public class GameManager : MonoBehaviour
     public int getMaxHP() {return MAXHP;}
 
     public float GetPlayerLooking()
-
     {
-        if(player == null) { player = GameObject.Find("Player").transform; }
         return player.lossyScale.x;
-
     } // comprobación del estado de "playerLookingRight" --- Javier
 
     public void UpdateCanAtack(bool val) { playerCanAtMelee = val; } // actualización del estado de "playerCanAtMelee" --- Javier
@@ -265,5 +262,14 @@ public class GameManager : MonoBehaviour
     public void Exit()
     {
         Application.Quit();
+    }
+    
+    /// <summary>
+    /// Establece el player en el GameManager
+    /// </summary>
+    /// <param name="newPlayer">Nuevo jugador</param>
+    public void SetPlayer(GameObject newPlayer)
+    {
+        player = newPlayer.transform;
     }
 }

@@ -26,12 +26,4 @@ public class RecibeDanyo : MonoBehaviour
         }
         print("enemigo es dañado por " + cant + " unidades"); /// PLACEHOLDER
     }
-
-
-
- 
-
-
-
-
 }
