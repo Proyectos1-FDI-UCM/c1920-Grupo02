@@ -104,3 +104,4 @@ Habilitado el botón de Opciones del menú.
 Creada la sala del Gran Coágulo - Miguel
 Purgado un Find del código, ahora no da problemas al morir el jugador - Miguel
 Añadida Sorting Layer para el background y el player - Miguel
+GranCoagulo apartado del resto de desarrollo para poder trabajar de forma más comoda
