@@ -106,3 +106,6 @@ Purgado un Find del código, ahora no da problemas al morir el jugador - Miguel
 Añadida Sorting Layer para el background y el player - Miguel
 GranCoagulo apartado del resto de desarrollo para poder trabajar de forma más comoda - Miguel
 Ahora el GranCoágulo puede usar Disparo De Sangre - Miguel
+
+//Cambios hechos el 2 de mayo
+Comenzado el desarrollo de las oleadas de Adds del Gran Coágulo - Miguel
