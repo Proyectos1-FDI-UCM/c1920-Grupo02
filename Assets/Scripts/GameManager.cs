@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
         }
         SavePlayer();
+
     }
 
     private void Start()
@@ -53,7 +54,10 @@ public class GameManager : MonoBehaviour
     }
     public void sumaTutorial(int num)
     {
-        theUIManager.Tutorial(num);
+        string tutorial = SceneManager.GetActiveScene().name;
+
+        if (tutorial == "Area_Hito")
+            theUIManager.Tutorial(num);
     }
 
     public void SetUIManager(UIManager uim)

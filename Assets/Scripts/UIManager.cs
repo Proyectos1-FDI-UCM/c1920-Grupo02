@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class UIManager : MonoBehaviour
     int tutorialHecho = 0;
 
     public GameObject returnMenu;   //Boton de reintentar
-
+    string areaTutorial;
 
     public Image[] hearts; //Corazon lleno
     int maxLife;    //Vida máxima
@@ -25,44 +26,54 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
+        areaTutorial = SceneManager.GetActiveScene().name;
         tutorial = tutorialText.GetComponentInChildren<Text>();
         //Desactivamos todo
+        tutorialText.SetActive(false);
         pastillasUI[0].enabled = false;
         pastillasUI[1].enabled = false;
         pastillasUI[2].enabled = false;
         time.enabled = false;
         currentPill.enabled = false;
         arrows.SetActive(false);
+        if (areaTutorial == "Area_Hito")
+            Tutorial(0);
 
-
-        maxLife = hearts.Length;    //Establecemos la çvida máxima
+            maxLife = hearts.Length;    //Establecemos la çvida máxima
         GameManager.instance.SetUIManager(this);
     }
     public void Tutorial(int num)
     {
-        if (num == 1 && tutorialHecho == 0)
+        if(areaTutorial == "Area_Hito")
         {
-
-            tutorial.text = "Pulsa W o UpArrow para saltar";
-            tutorialHecho = 1;
+            if (num == 0)
+            {
+                tutorialText.SetActive(true);
+                tutorial.text = "Pulsa A - D o LeftArrow-RightArrow \n para moverte";
+            }
+            else if (num == 1 && tutorialHecho == 0)
+            {
+                tutorial.text = "Pulsa W o UpArrow para saltar";
+                tutorialHecho = 1;
+            }
+            else if (num == 2 && tutorialHecho == 1)
+            {
+                tutorial.text = "Ahora eres una pastilla de ibuprofeno \n Pulsa Z o Shift para disparar con ella";
+                tutorialHecho = 2;
+            }
+            else if (num == 3 && tutorialHecho == 2)
+            {
+                tutorial.text = "Genial, Coge el PowerUp \n para conseguir mas pastillas";
+            }
+            else if (num == 4)
+            {
+                tutorial.text = "Ahora puedes cambiar de pastillas \n pulsa tab para ver los controles";
+                tutorialHecho = 3;
+            }
+            else if (num == 5 && tutorialHecho == 3)
+                tutorialText.SetActive(false);
         }
-        else if (num == 2 && tutorialHecho == 1)
-        {
-            tutorial.text = "Ahora eres una pastilla de ibuprofeno \n Pulsa Z o Shift para disparar con ella";
-            tutorialHecho = 2;
-        }
-        else if (num == 3 && tutorialHecho == 2)
-        {
-            tutorial.text = "Genial, Coge el PowerUp \n para conseguir mas pastillas";
-        }
-        else if (num == 4)
-        {
-            tutorial.text = "Ahora puedes cambiar de pastillas \n pulsa tab para ver los controles";
-            tutorialHecho = 3;
-        }
-        else if (num == 5 && tutorialHecho == 3)
-            tutorialText.SetActive(false);
-        else if (num == -1)
+        if (num == -1)
         {
             tutorialText.SetActive(true);
             tutorial.text = "HAS MUERTO";
