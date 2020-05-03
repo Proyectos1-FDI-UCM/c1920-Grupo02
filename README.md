@@ -114,3 +114,4 @@ Comenzado el desarrollo de las oleadas de Adds del Gran Coágulo - Miguel
 Ahora el tutorial solo se aplica en Area_Hito - Samuel
 Creado prototipo Oleada Dañiña -Samuel
 Creado sprites OleadaDañina - Samuel
+Ahora el Gran Coágulo spawnea los adds correctamente y te mata si no los matas lo suficientemente rápido - Miguel

@@ -2,19 +2,32 @@
 
 public class GranCoagulo_Add : MonoBehaviour
 {
-    GranCoagulo_AddWave wave;
+    GranCoagulo_FirstAddWave wave1;
+    GranCoagulo_SecondAddWave wave2;
 
     private void Awake()
     {
-        wave = gameObject.GetComponentInParent<GranCoagulo_AddWave>();
+        wave1 = gameObject.GetComponentInParent<GranCoagulo_FirstAddWave>();
+        wave2 = gameObject.GetComponentInParent<GranCoagulo_SecondAddWave>();
     }
     private void Start()
     {
-        wave.OneAddMore();
+        if (wave1 != null)
+            wave1.OneAddMore();
+        else
+        {
+            if (wave2 != null)
+                wave2.OneAddMore();
+        }
     }
     private void OnDestroy()
     {
-        if (wave != null)
-            wave.AddKilled();
+        if (wave1 != null)
+            wave1.AddKilled();
+        else
+        {
+            if (wave2 != null)
+                wave2.AddKilled();
+        }
     }
 }
