@@ -113,3 +113,4 @@ Comenzado el desarrollo de las oleadas de Adds del Gran Coágulo - Miguel
 //Cambios hechos el 3 de mayo
 Ahora el tutorial solo se aplica en Area_Hito - Samuel
 Creado prototipo Oleada Dañiña -Samuel
+Creado sprites OleadaDañina - Samuel
