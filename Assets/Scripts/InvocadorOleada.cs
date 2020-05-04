@@ -2,23 +2,25 @@
 
 public class InvocadorOleada : MonoBehaviour
 {
+    public bool rotate;
     public float contador;
     public GameObject blood;
-    private Transform bloodPoint;
+    private float time;
     private void OnEnable()
     {
-        bloodPoint = this.transform;
-        contador = 3;
+        if (rotate)
+            transform.Rotate(0, 180, 0);
+        time = contador;
         //Comienza la animacion
     }
 
     void Update()
     {
-        if (contador > 0)
-            contador -= Time.deltaTime;
+        if (time > 0)
+            time -= Time.deltaTime;
         else
         {
-            Instantiate<GameObject>(blood,bloodPoint.position,bloodPoint.rotation);
+            Instantiate<GameObject>(blood,transform.position,transform.rotation);
             this.gameObject.SetActive(false);
         }
     }
