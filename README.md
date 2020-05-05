@@ -106,3 +106,14 @@ Purgado un Find del código, ahora no da problemas al morir el jugador - Miguel
 Añadida Sorting Layer para el background y el player - Miguel
 GranCoagulo apartado del resto de desarrollo para poder trabajar de forma más comoda - Miguel
 Ahora el GranCoágulo puede usar Disparo De Sangre - Miguel
+
+//Cambios hechos el 2 de mayo
+Comenzado el desarrollo de las oleadas de Adds del Gran Coágulo - Miguel
+
+//Cambios hechos el 3 de mayo
+Ahora el tutorial solo se aplica en Area_Hito - Samuel
+Creado prototipo Oleada Dañiña -Samuel
+Creado sprites OleadaDañina - Samuel
+Ahora el Gran Coágulo spawnea los adds correctamente y te mata si no los matas lo suficientemente rápido - Miguel
+"Finalizado" ataque oleada Dañina - Samuel
+Ahora si quieres poner OleadaDañina en la pared de la derecha pon true el bool Rotate del GO- Samuel

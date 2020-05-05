@@ -1,0 +1,679 @@
+fileFormatVersion: 2
+guid: eccab4827811baa4fa3b866f332578a5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6000690848327130034
+    second: WallBleeding_0
+  - first:
+      213: -4750636654920791278
+    second: WallBleeding_1
+  - first:
+      213: -527929651456107009
+    second: WallBleeding_2
+  - first:
+      213: 1267586719720133163
+    second: WallBleeding_3
+  - first:
+      213: 5653960367522334940
+    second: WallBleeding_4
+  - first:
+      213: 2416817493930743461
+    second: WallBleeding_5
+  - first:
+      213: 4616977803640395137
+    second: WallBleeding_6
+  - first:
+      213: -4473308918271274990
+    second: WallBleeding_7
+  - first:
+      213: -2151030926850388560
+    second: WallBleeding_8
+  - first:
+      213: 4332655143201508140
+    second: WallBleeding_9
+  - first:
+      213: 4818215543947424030
+    second: WallBleeding_10
+  - first:
+      213: -5264669262166741402
+    second: WallBleeding_11
+  - first:
+      213: -9120561284242437106
+    second: WallBleeding_12
+  - first:
+      213: 4068578862026362991
+    second: WallBleeding_13
+  - first:
+      213: -2383445795424751546
+    second: WallBleeding_14
+  - first:
+      213: 2509504651080862378
+    second: WallBleeding_15
+  - first:
+      213: 7491535868694093613
+    second: WallBleeding_16
+  - first:
+      213: -7432207973119485343
+    second: WallBleeding_17
+  - first:
+      213: -8668740459106941128
+    second: WallBleeding_18
+  - first:
+      213: 161489754181478095
+    second: WallBleeding_19
+  - first:
+      213: 1480770826923663906
+    second: WallBleeding1
+  - first:
+      213: 4854377330338578428
+    second: WallBleeding2
+  - first:
+      213: -8093896161103167866
+    second: WallBleeding3
+  - first:
+      213: -8871589356834600792
+    second: WallBleeding4
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WallBleeding_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 279
+        width: 82
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed9bf6c98aeb2e342a5e6f447b61ebf5
+      internalID: 6000690848327130034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallBleeding_1
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 279
+        width: 82
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc1fee1c0c3430e449be18f3dd52e290
+      internalID: -4750636654920791278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallBleeding_2
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 279
+        width: 82
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cea8602b6a630d4e84dde0cb22c5d3b
+      internalID: -527929651456107009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallBleeding_3
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 279
+        width: 82
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66d91fd2c5266e44787daef805098082
+      internalID: 1267586719720133163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallBleeding_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 219
+        width: 90
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9d1d0051a7eb1c41945582b1ecd4c28
+      internalID: 5653960367522334940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallBleeding_5
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 219
+        width: 90
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18b1d1955dde6fb489c76ad95cdcc623
+      internalID: 2416817493930743461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallBleeding_6
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 219
+        width: 90
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c565ba3e1c14dc42847c073a6880b08
+      internalID: 4616977803640395137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallBleeding_7
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 219
+        width: 90
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bc98819c946c9342b9f66fb4e766732
+      internalID: -4473308918271274990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallBleeding_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 159
+        width: 90
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42eebf973a97ad647a0b1f92751b4d26
+      internalID: -2151030926850388560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallBleeding_9
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 159
+        width: 90
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 993d336756e076d4db46d835dd88b487
+      internalID: 4332655143201508140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallBleeding_10
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 159
+        width: 90
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff86c73932044134d994185347dc51bf
+      internalID: 4818215543947424030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallBleeding_11
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 159
+        width: 90
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 341fab46a4cd62e48874c63361873897
+      internalID: -5264669262166741402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallBleeding_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 99
+        width: 90
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a7bd4637fc2cca4f8c29336ae6d7fcc
+      internalID: -9120561284242437106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallBleeding_13
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 99
+        width: 90
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7b462058c9a0d9429e0f92202fa8199
+      internalID: 4068578862026362991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallBleeding_14
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 99
+        width: 90
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e30d0c753f8dca41963a945f6679269
+      internalID: -2383445795424751546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallBleeding_15
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 99
+        width: 90
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 327c6e2862b18d8449eb65bdb88ee1d9
+      internalID: 2509504651080862378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallBleeding_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 39
+        width: 90
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18bb8686053ec6145b5c8338ad4c926b
+      internalID: 7491535868694093613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallBleeding_17
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 39
+        width: 90
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 147957a042ac4f74fade0365fbb82f64
+      internalID: -7432207973119485343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallBleeding_18
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 39
+        width: 90
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bc1e804c3549a840b4ca28a41984dc5
+      internalID: -8668740459106941128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallBleeding_19
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 39
+        width: 90
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27803435e97a9f640bf3c6f5857697df
+      internalID: 161489754181478095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallBleeding1
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 256
+        width: 54
+        height: 82
+      alignment: 9
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1f461b721684274ea43ca706ea2894a
+      internalID: 1480770826923663906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallBleeding2
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 171
+        width: 54
+        height: 82
+      alignment: 9
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe267286e352cb3469729d11bc413a78
+      internalID: 4854377330338578428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallBleeding3
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 86
+        width: 54
+        height: 82
+      alignment: 9
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b37b42fc7baa58468bdba37fda19f07
+      internalID: -8093896161103167866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WallBleeding4
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 3
+        width: 54
+        height: 82
+      alignment: 9
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fc57dafc2dce614bb441bde8e226ac3
+      internalID: -8871589356834600792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
