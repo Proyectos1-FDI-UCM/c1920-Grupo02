@@ -10,13 +10,15 @@ public class TENIABOSS1 : MonoBehaviour
      
     private float timer = 20;
     SpriteRenderer tenia;
-  
+    EnemyPatrol patrulla;
+    private Rigidbody2D rb;
     Vector3 tamañoactual;
     void Start()
     {
         tamañoactual = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z); //Guardamos como de grande es al principio
         tenia= GetComponent<SpriteRenderer>();
-       
+        patrulla = GetComponent<EnemyPatrol>(); //Cacheamos el script de patrullaje
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -30,15 +32,19 @@ public class TENIABOSS1 : MonoBehaviour
             {
                               
                 tenia.enabled = false; // lo hacemos invisible
+                rb.velocity = new UnityEngine.Vector2(rb.velocity.x * 4, rb.velocity.y * 4); //Se le aplica una velocidad 3 veces la anterior
+               
             }
             else
             {
-               
+                rb.velocity = new UnityEngine.Vector2(rb.velocity.x / 4f, rb.velocity.y /4f); //Su velocidad vuelve a ser normal 
+
                 tenia.enabled = true;//Si esta invisible que deje de serlo 
             }
             timer = 10f;
 
-            //Quedaria aumentar la velocidad cachenado el script que le otorga una velocidad , si esa es variable publica
+             //He pensado en reducir su tamaño pero no se como hacerlo sin buguearlo  
+            
 
 
 
@@ -47,7 +53,4 @@ public class TENIABOSS1 : MonoBehaviour
 
 
     }
-}
-
-//El ataque puede ser que cada x tiempo , se vuelva invisible 
-//Podriamos cachear el script que mueve a la tenia para que vya mas rapido, yu sea mas pequeño  y obliguq al jugador 
+} 
