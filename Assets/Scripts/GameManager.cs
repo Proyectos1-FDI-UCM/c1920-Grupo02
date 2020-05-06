@@ -110,10 +110,12 @@ public class GameManager : MonoBehaviour
         theUIManager.LifeCount(life);
         if (life > 0)
         {
+            FXManager.PlaySound("deadSound");   //#audio
             vivo = true;
         }
         else
         {
+            
             player.gameObject.SetActive(false);
             theUIManager.Tutorial(-1);
             theUIManager.Dead();
