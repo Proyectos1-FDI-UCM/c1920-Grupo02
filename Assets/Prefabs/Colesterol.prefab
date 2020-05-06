@@ -145,15 +145,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fd10449d2dcb2134cb1570438401dcd2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 82b3fd67529db6b44b5a4b29997f281f, type: 3}
   m_Color: {r: 0.8773585, g: 0.8536066, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 0.18, y: 0.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &4987726973829580516
@@ -173,8 +173,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8.53, y: 6.05}
-    newSize: {x: 2.56, y: 2.56}
+    oldSize: {x: 0.18, y: 0.2}
+    newSize: {x: 0.18, y: 0.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 0
-  patrolSpeed: 1
+  patrolSpeed: 0
 --- !u!114 &7569626872517266821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,7 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 668255f841a61b148b549dd78e0043b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 3
 --- !u!1 &4987726973855456812
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,6 +385,7 @@ GameObject:
   - component: {fileID: 4987726974811024218}
   - component: {fileID: 4987726974811024221}
   - component: {fileID: 4987726974811024220}
+  - component: {fileID: 6849338981923007900}
   m_Layer: 0
   m_Name: Colesterol
   m_TagString: Untagged
@@ -437,3 +438,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followSpeed: 1
+--- !u!114 &6849338981923007900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4987726974811024223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0efc57ea2b8272c409291ff168e0f3c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawner: {fileID: 0}
+  numGlobulosRojos: 2
+  life: 9

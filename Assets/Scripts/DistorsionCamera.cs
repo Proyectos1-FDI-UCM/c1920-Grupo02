@@ -2,27 +2,30 @@
 
 public class DistorsionCamera : MonoBehaviour
 {
-   private Camera maincamara; // Asociamos camara
+    private Camera maincamara; // Asociamos camara
     public float cantidad = 0; // Cantidad de movimento 
     public int tiempo; // Variable para decidir cuanto dura la distorsion
-    
+    private Camara camera;
+
 
     private void Start()
     {
-        //Cacheamos la camara
-        maincamara = Camera.main;  //Samuel- Antes la tenias publica y ni si quiera estaba asociada
+        maincamara = Camera.main;
+        camera = maincamara.GetComponent<Camara>(); //Cacheo de el script camara de la camara principal
     }
-       
-    public void Shake(float amt, float length) // Metodo que conecta la invocacion de el movimiento y tras un tiempo lo quita con el Cancel Invoke
+    void Shake(float amt, float length) // Metodo que conecta la invocacion de el movimiento y tras un tiempo lo quita con el Cancel Invoke
 
     {
         cantidad = amt;
-        InvokeRepeating("DoShake", 0, 0.01f);
+        camera.enabled = false;
+        InvokeRepeating("DoShake", 0, 0.05f);
         Invoke("StopShake", length);
+        camera.enabled = true;
     }
 
     void DoShake()  //Ajustamos los ejex X e y y se los añadimso a la camara para crear este efecto de distorsion
     {
+        Debug.Log("HASTA LA TITA");
         if (cantidad > 0)
         {
             Vector3 posicioncamara = maincamara.transform.position;
@@ -39,10 +42,12 @@ public class DistorsionCamera : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        int aleatorio = Random.Range(0, 2);
-        if (collision.gameObject.GetComponent<PlayerController>()!=null  )
+
+        if (collision.gameObject.GetComponent<PlayerControllerWallJump>() != null)
         {
+          
             Shake(cantidad, tiempo);
+
         }
 
 

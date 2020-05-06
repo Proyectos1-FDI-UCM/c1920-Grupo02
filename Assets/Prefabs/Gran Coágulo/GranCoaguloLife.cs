@@ -8,6 +8,8 @@ public class GranCoaguloLife : MonoBehaviour
     //Ads
     private GameObject wave1;
     private GameObject wave2;
+    private GameObject oleadaDanina1;
+    private GameObject oleadaDanina2;
 
     public GameObject door;
 
@@ -18,6 +20,10 @@ public class GranCoaguloLife : MonoBehaviour
         wave1.SetActive(false);
         wave2 = gameObject.GetComponentInChildren<GranCoagulo_SecondAddWave>().gameObject;
         wave2.SetActive(false);
+        oleadaDanina1 = gameObject.GetComponentInChildren<GranCoagulo_OleadaDanina1>().gameObject;
+        oleadaDanina1.SetActive(false);
+        oleadaDanina2 = gameObject.GetComponentInChildren<GranCoagulo_OleadaDanina2>().gameObject;
+        oleadaDanina2.SetActive(false);
     }
     public void PartLost()
     {
@@ -32,6 +38,7 @@ public class GranCoaguloLife : MonoBehaviour
             if (parts == 2)
             {
                 wave1.SetActive(true);
+                oleadaDanina2.SetActive(true);
             }
             else
             {
