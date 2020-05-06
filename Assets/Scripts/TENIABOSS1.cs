@@ -10,14 +10,13 @@ public class TENIABOSS1 : MonoBehaviour
      
     private float timer = 20;
     SpriteRenderer tenia;
-    EnemyPatrol patrulla;
     private Rigidbody2D rb;
     Vector3 tamañoactual;
     void Start()
     {
         tamañoactual = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z); //Guardamos como de grande es al principio
         tenia= GetComponent<SpriteRenderer>();
-        patrulla = GetComponent<EnemyPatrol>(); //Cacheamos el script de patrullaje
+        
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -26,7 +25,7 @@ public class TENIABOSS1 : MonoBehaviour
     {
         Debug.Log("Tiempo hasta desaparecer :" + timer);
         timer -= Time.deltaTime;
-        if (timer <=0) //Una probabilidad entre 50
+        if (timer <=0) //Cuando llegue a cero 
         {
             if (tenia.enabled == true)
             {
