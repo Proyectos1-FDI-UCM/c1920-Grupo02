@@ -6,15 +6,21 @@ public class InvocadorOleada : MonoBehaviour
     public float contador;
     public GameObject blood;
     private float time;
-
+    private Transform wall;
     private Vector3 aux;
+    private void Awake()
+    {
+        wall = gameObject.GetComponent<Transform>();
+    }
     private void OnEnable()
     {
         //Si quieres rotar el GO...
         if (rotate)
         {
+            wall.rotation = Quaternion.Euler(0, 180f, 0);
+
             //Rotas el GO...
-            transform.Rotate(0, 180, 0);
+            transform.rotation = wall.rotation;
 
             aux = new Vector3(-2, 0);
         }
