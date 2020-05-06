@@ -163,7 +163,7 @@ public class TeniaController : MonoBehaviour
                     detectingPlayer = false;
                     mordiscoAbominable.enabled = false;
                 }
-                else
+                else if (!mordiscoAbominable.enabled)
                 {
                     //Le sigue
                     enemyFollow.enabled = true;

@@ -40,6 +40,7 @@ public class Enemy_MordiscoAbominable : MonoBehaviour
 
     private void OnEnable()
     {
+        spriteRenderer.color = Color.red;
         if (spriteRenderer.flipX)
         {
             direction = -1;
@@ -55,6 +56,7 @@ public class Enemy_MordiscoAbominable : MonoBehaviour
     {
         rb.velocity = new Vector2(0, 0);
         quitavida.damage = initialDamage;
+        spriteRenderer.color = Color.white;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
