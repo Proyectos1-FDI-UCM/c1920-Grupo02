@@ -173,7 +173,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.18, y: 0.2}
+    oldSize: {x: 2.25, y: 2.5}
     newSize: {x: 0.18, y: 0.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -230,6 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 3
+  time: 1
 --- !u!1 &4987726973855456812
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,7 +438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5737e4f5931706946aabf7c57a0a64d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSpeed: 1
+  followSpeed: 0.7
 --- !u!114 &6849338981923007900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -450,6 +451,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0efc57ea2b8272c409291ff168e0f3c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawner: {fileID: 0}
+  spawner: {fileID: 3426025126485288679, guid: 31213a50384bba3438df7cc9824131d6, type: 3}
   numGlobulosRojos: 2
   life: 9

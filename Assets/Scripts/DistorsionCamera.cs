@@ -25,7 +25,7 @@ public class DistorsionCamera : MonoBehaviour
 
     void DoShake()  //Ajustamos los ejex X e y y se los añadimso a la camara para crear este efecto de distorsion
     {
-        Debug.Log("HASTA LA TITA");
+
         if (cantidad > 0)
         {
             Vector3 posicioncamara = maincamara.transform.position;

@@ -19,7 +19,7 @@ public class TeniaController : MonoBehaviour
     float initialStartOfMovementTime;
     bool alreadyCounting;
     bool collidedWithPlayer = false;
-    bool inBreakTime = false;
+    //bool inBreakTime = false;
 
     [SerializeField]
     float timeInBreakTime;

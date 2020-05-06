@@ -86,9 +86,9 @@ GameObject:
   - component: {fileID: 4987726973829580519}
   - component: {fileID: 4987726973829580518}
   - component: {fileID: 7569626872517266821}
-  - component: {fileID: 717814560322123377}
   - component: {fileID: 894532591711100573}
   - component: {fileID: 785628630855308510}
+  - component: {fileID: 1147656864845654162}
   m_Layer: 17
   m_Name: Body
   m_TagString: Untagged
@@ -233,20 +233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
---- !u!114 &717814560322123377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4987726973829580521}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5803f2eb22c65d5429bd8fc75fcf5243, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  "da\xF1oMordisco": 0
-  dashSpeed: 2
+  time: 1
 --- !u!114 &894532591711100573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,6 +259,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76e753d0fa23ab14793f9fbb3cf26679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1147656864845654162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4987726973829580521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9c3720a18bc65049a98efad2241c501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "da\xF1oMordisco": 2
+  dashSpeed: 2
 --- !u!1 &4987726973855456812
 GameObject:
   m_ObjectHideFlags: 0
