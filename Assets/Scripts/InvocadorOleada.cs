@@ -2,31 +2,15 @@
 
 public class InvocadorOleada : MonoBehaviour
 {
-    public bool rotate;
+    public int rotate;
     public float contador;
     public GameObject blood;
     private float time;
-    private Transform wall;
-    private Vector3 aux;
-    private void Awake()
-    {
-        wall = gameObject.GetComponent<Transform>();
-    }
     private void OnEnable()
     {
-        //Si quieres rotar el GO...
-        if (rotate)
-        {
-            wall.rotation = Quaternion.Euler(0, 180f, 0);
 
-            //Rotas el GO...
-            transform.rotation = wall.rotation;
-
-            aux = new Vector3(-2, 0);
-        }
-        else
-            aux = new Vector3(2, 0);
-
+        //Rotas el GO...
+        transform.rotation = Quaternion.Euler(0,0,rotate);
 
         //Reestablecemos el contador
         time = contador;
@@ -41,7 +25,7 @@ public class InvocadorOleada : MonoBehaviour
             time -= Time.deltaTime;
         else
         {
-            Instantiate(blood,transform.position + aux,transform.rotation);
+            Instantiate(blood,transform.position + transform.right.normalized*1.5f,transform.rotation);
             this.gameObject.SetActive(false);
         }
     }
