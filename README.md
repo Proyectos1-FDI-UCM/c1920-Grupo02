@@ -109,6 +109,8 @@ Ahora el GranCoágulo puede usar Disparo De Sangre - Miguel
 
 //Cambios hechos el 2 de mayo
 Comenzado el desarrollo de las oleadas de Adds del Gran Coágulo - Miguel
+Comenzada a crear la sala de la tenia boss y ajustar el colesterol - Daniel
+
 
 //Cambios hechos el 3 de mayo
 Ahora el tutorial solo se aplica en Area_Hito - Samuel
@@ -117,10 +119,15 @@ Creado sprites OleadaDañina - Samuel
 Ahora el Gran Coágulo spawnea los adds correctamente y te mata si no los matas lo suficientemente rápido - Miguel
 "Finalizado" ataque oleada Dañina - Samuel
 Ahora si quieres poner OleadaDañina en la pared de la derecha pon true el bool Rotate del GO- Samuel
+Creada la base de un par de habilidades de la tenia Bossn - Daniel
+
 
 //Cambios hechos el 6 de mayo
 Terminado el desarrollo de la oleada dañina - Samuel
 JUntado el progreso del Gran Coágulo - Miguel
+Terminado de ajustar los ataques de la Tenia , ya se puede dar como completada a nivel de mecanicas / habilidades - Daniel 
 
 //Cambios hechos el 7 de mayo
 Escena tutorial al terminada al 50% - Samuel
+La tenia ahora es un prefab - Daniel
+Sala de la tenia terminada,con la respectiva tenia y las plataformas ajustadas (su posicion y movimiento) - Daniel
