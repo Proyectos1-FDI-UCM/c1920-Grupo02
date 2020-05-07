@@ -121,3 +121,6 @@ Ahora si quieres poner OleadaDañina en la pared de la derecha pon true el bool 
 //Cambios hechos el 6 de mayo
 Terminado el desarrollo de la oleada dañina - Samuel
 JUntado el progreso del Gran Coágulo - Miguel
+
+//Cambios hechos el 7 de mayo
+Escena tutorial al terminada al 50% - Samuel
