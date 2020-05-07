@@ -117,3 +117,7 @@ Creado sprites OleadaDañina - Samuel
 Ahora el Gran Coágulo spawnea los adds correctamente y te mata si no los matas lo suficientemente rápido - Miguel
 "Finalizado" ataque oleada Dañina - Samuel
 Ahora si quieres poner OleadaDañina en la pared de la derecha pon true el bool Rotate del GO- Samuel
+
+//Cambios hechos el 6 de mayo
+Terminado el desarrollo de la oleada dañina - Samuel
+JUntado el progreso del Gran Coágulo - Miguel

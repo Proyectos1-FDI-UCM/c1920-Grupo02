@@ -1,0 +1,824 @@
+[33mcommit 36043ea7ccb445a8955501f7ca5a4d07ee27aae1[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Nicolás Rosa Caballero <nrosa01@ucm.es>
+Date:   Wed May 6 11:29:56 2020 +0200
+
+    Actualizado el nivel 1 con sus sprite, falta testear mas
+
+[33mcommit 56080cc07e176b3705707273f2e3bb87d9932703[m
+Author: druiz07 <you@example.com>
+Date:   Wed May 6 10:44:13 2020 +0200
+
+    Casi ajustada por completo la tenia boss y su sala
+
+[33mcommit 7b59d743af87a40dac92467d0aa78b3c63c7b3da[m
+Merge: 44cb434 45db605
+Author: javimu06 <javimu06@ucm.es>
+Date:   Tue May 5 19:43:09 2020 +0200
+
+    Repito la subida por problemas que me estan dando
+
+[33mcommit 44cb4347704f9e701425c6e92d6b0aec669e243f[m
+Author: javimu06 <javimu06@ucm.es>
+Date:   Tue May 5 19:04:19 2020 +0200
+
+    Áñadido el código para implementar todos los FX y las pistas base
+
+[33mcommit 45db605b0911f7aeee9f86f150802cf3eeb9070d[m
+Author: druiz07 <you@example.com>
+Date:   Tue May 5 11:47:03 2020 +0200
+
+    Ajustada mas todavia la posible sala de la tenia Boss, y acabado el ataque nuevo
+
+[33mcommit 93c0c55bfa5f5b2d4e2f231eeb2c2ed584beb069[m
+Merge: c125ee5 b3eb932
+Author: samuebla <samuebla@ucm.es>
+Date:   Tue May 5 01:05:30 2020 +0200
+
+    Fallo subida por conflicto
+
+[33mcommit c125ee52bfa488b7078e8fbeaa34d8de0a79fda4[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Tue May 5 01:03:55 2020 +0200
+
+    Oleada Danina finalizado, ahora puede ser en ambas paredes
+
+[33mcommit 1b65e9e9c19daee3a5afe9c9255e22c763da08ff[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Tue May 5 00:48:22 2020 +0200
+
+    Animaciones WallBleeding hechas
+
+[33mcommit b3eb932862b5e7f82516b956d075d866600fff1c[m
+Author: Nicolás Rosa Caballero <nrosa01@ucm.es>
+Date:   Tue May 5 00:23:13 2020 +0200
+
+    Terminado de ajustar nivel 1, creado prefab spawner de globulos blancos, falta cambiar el tilemap
+
+[33mcommit 5fcdb5fb4e20eaa0214cdafe01b23bb2a490bf7b[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Tue May 5 00:12:05 2020 +0200
+
+    Sprite Pared Oleada dañina implementado
+
+[33mcommit 8cb1c641a1cc958f0b058abf9754cadabce70bfb[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Tue May 5 00:03:05 2020 +0200
+
+    Finalizado codigo Oleada Danina
+
+[33mcommit 07dab2c2d32c93ebf70199bded7e0ecb7275e799[m
+Author: druiz07 <you@example.com>
+Date:   Mon May 4 18:42:16 2020 +0200
+
+    Añadido habilidad extra a la tenia y terminada la sala en cuestion
+
+[33mcommit 897487c4d103298d82c298460fae9abadaa92665[m
+Author: Nicolás Rosa Caballero <nrosa01@ucm.es>
+Date:   Mon May 4 18:30:06 2020 +0200
+
+    Actualizado prefab player para que pueda pasar por sitios de una unidad de ancho, pequeños cambios en el nivel 1
+
+[33mcommit 203fde74a9389a2c37dad6583f5b1f04fa0c9a5c[m
+Author: Nicolás Rosa Caballero <nrosa01@ucm.es>
+Date:   Mon May 4 12:06:38 2020 +0200
+
+    Añadido tile pallete y realizado pequeños ajustes en el nivel 1
+
+[33mcommit 405de7da37ed3b5ce32f333a544f9cad8e5b1bc8[m
+Author: mihern07 <mihern07@ucm.es>
+Date:   Sun May 3 19:39:18 2020 +0200
+
+    Finalizado el desarrollo de los adds
+
+[33mcommit 45102871ce8f35675af83616a18139583bf1825e[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Sun May 3 13:54:41 2020 +0200
+
+    Prototipo 2 oleada mejorado implementado
+
+[33mcommit b2ae0431885f8aa366c84a44816e631d4954f9f5[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Sun May 3 13:11:17 2020 +0200
+
+    Sprites OleadaDañina implementados
+
+[33mcommit bf38a35f52f832a5cb9473aaf6b3c08bfc4a8ed6[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Sun May 3 13:03:14 2020 +0200
+
+    Prototipo Oleada Dañiña 1 implementado
+
+[33mcommit 289f5dd4078dd036f8094b2249473f8f48d59027[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Sun May 3 12:35:34 2020 +0200
+
+    Ahora el tutorial solo se aplica en Area_Hito
+
+[33mcommit db1629ba9cffc4e0bb4839e7cb4501c70f9d28dc[m
+Author: Javier Rubio <jrubio05@ucm.es>
+Date:   Sun May 3 10:51:12 2020 +0200
+
+    Actualizados los diagramas
+
+[33mcommit 20d7305f644d495294103c39084d846926aaecf7[m
+Author: mihern07 <mihern07@ucm.es>
+Date:   Sat May 2 19:35:22 2020 +0200
+
+    Comenzado el desarrollo de las oleadas de Adds del Gran Coágulo
+
+[33mcommit 7824652d2da3ea5d7b6634238b557970812d650c[m
+Author: Javier Rubio <jrubio05@ucm.es>
+Date:   Sat May 2 16:36:28 2020 +0200
+
+    Añadidas texturas caseras para los glóbulos
+
+[33mcommit 024910b010b60898e57ebfae00ffa8771990a131[m
+Author: mihern07 <mihern07@ucm.es>
+Date:   Fri May 1 19:22:23 2020 +0200
+
+    Añadido el Disparo De Sangre del Gran Coagulo
+
+[33mcommit 877947338c7c6466eaf184301c94098275e1568c[m
+Author: mihern07 <mihern07@ucm.es>
+Date:   Fri May 1 18:58:59 2020 +0200
+
+    Gran Coágulo en una carpeta aparte con scripts nuevos
+
+[33mcommit 85a3ead4cf203f7b2df7e3f820ac37260081cc8e[m
+Author: mihern07 <mihern07@ucm.es>
+Date:   Fri May 1 18:42:19 2020 +0200
+
+    Eliminado el Find del GameManager
+
+[33mcommit 1050058a3faf1d2ae27b832cc857b0fed5e6dec6[m
+Author: mihern07 <mihern07@ucm.es>
+Date:   Fri May 1 18:41:30 2020 +0200
+
+    Creada la sala del Gran Coágulo
+
+[33mcommit 40437cba9b34385a0ed2ac1951bf413a9a0b5bc3[m
+Author: Javier Rubio <jrubio05@ucm.es>
+Date:   Thu Apr 30 16:11:28 2020 +0200
+
+    Añadidos pequeños detalles al terreno
+
+[33mcommit e4af5d488608db25ec50a047b43ae195897d0f77[m
+Author: Javier Rubio <jrubio05@ucm.es>
+Date:   Wed Apr 29 16:15:13 2020 +0200
+
+    Añadidos los tiles del terreno y ajustes menores
+
+[33mcommit 5da0bb08a93765b9f7c7282a6f2be75da0bef542[m[33m ([m[1;33mtag: Hito2[m[33m)[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Tue Apr 28 23:44:15 2020 +0200
+
+    2313 PROBLEMAS CON LAS BUILDS SAMUEL -resuelto-
+
+[33mcommit 33148719d1e173a576341e2e8286253138e65c23[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Tue Apr 28 22:10:57 2020 +0200
+
+    Cambio Portada y modificaciones BuildSettings
+
+[33mcommit f3626a9121a2b19ec2a2485264ccbdbde6389b05[m
+Author: Nicolás Rosa Caballero <nrosa01@ucm.es>
+Date:   Tue Apr 28 22:02:39 2020 +0200
+
+    Arreglado un problema con el disparo del jugador que provocaba errores el cargar de nuevo una escena que ya había sido jugada
+
+[33mcommit fb80a2d029af8c92bfc1b38276c19e75b1ca7e03[m
+Merge: 6242a41 37914a5
+Author: Nicolás Rosa Caballero <nrosa01@ucm.es>
+Date:   Tue Apr 28 21:41:56 2020 +0200
+
+    Merge remote-tracking branch 'refs/remotes/origin/master'
+
+[33mcommit 6242a41deb4cf4b70179f6269cdfc4ef7d072acd[m
+Author: Nicolás Rosa Caballero <nrosa01@ucm.es>
+Date:   Tue Apr 28 21:41:22 2020 +0200
+
+    Arreglado bug al cargar nueva partida tras haber acabado el juego
+
+[33mcommit 37914a50dee844a95286a58a1221e59b97a02d36[m
+Author: druiz07 <you@example.com>
+Date:   Tue Apr 28 21:06:47 2020 +0200
+
+    Actualizado sprite colesterol borrado coagulo jefe y modificadasala de la tenia
+
+[33mcommit ceedd72ccbf2cc5fbf8f57a0c811e65e9c69c98c[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Tue Apr 28 14:14:09 2020 +0200
+
+    Ligero cambio fallido sistema de guardado
+
+[33mcommit fddfdc5af7b10772b3534d8b157d02b6aff76623[m
+Author: Javier Rubio <jrubio05@ucm.es>
+Date:   Tue Apr 28 10:18:51 2020 +0200
+
+    Arreglada la puerta grande (bug visual) y reposicionados glóbulos blancos para el vídeo
+
+[33mcommit 85fafb2dcb254b04b6d53abd1ffce60c8a952260[m
+Author: druiz07 <you@example.com>
+Date:   Mon Apr 27 22:40:50 2020 +0200
+
+    Ajustado enemigo del colesterol e incluido su sprite
+
+[33mcommit 3ef9249c626802de6d890cd8432d6694286d15e4[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Mon Apr 27 19:26:16 2020 +0200
+
+    Arreglado problema limites Colesterol y cambio de Sprite
+
+[33mcommit 208d556741437df8b0a223323734ba38eb6a7d35[m
+Author: mihern07 <mihern07@ucm.es>
+Date:   Mon Apr 27 19:18:51 2020 +0200
+
+    Solucionado un error relacionado con el nuevo cambio de pastilla
+
+[33mcommit 4ece81a5149dc475b00a30e52a078713d9704aa5[m
+Merge: 322d092 ddde02a
+Author: mihern07 <mihern07@ucm.es>
+Date:   Mon Apr 27 18:56:43 2020 +0200
+
+    Eliminado un archivo que daba problemas
+
+[33mcommit 322d0927a56268d9d286d1d1cc85f9bcf6e624bc[m
+Author: mihern07 <mihern07@ucm.es>
+Date:   Mon Apr 27 18:54:27 2020 +0200
+
+    Añadida la animación del ataque a melee y aplicadas al prefab
+
+[33mcommit ddde02ac6a888fae8e7e0e15dda92e236048a9fa[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Mon Apr 27 18:43:31 2020 +0200
+
+    Ahora en vez de cambiar de Sprite cambio el color de UN solo sprite
+
+[33mcommit 635430116bd58c399c25bebdb82eaade1c9839e6[m
+Author: Nicolás Rosa Caballero <nrosa01@ucm.es>
+Date:   Mon Apr 27 18:25:11 2020 +0200
+
+    Arreglado bug para que las partidas las cargue con la máxima vida siempre
+
+[33mcommit 65334cd472f4802b98393f1082a59c0b3a670d6c[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Mon Apr 27 18:03:13 2020 +0200
+
+    Añado la interfaz con las flechas para ser mas visual
+
+[33mcommit 2689c19e05d2f8af66e85a3c9525b5ba3472cb0f[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Mon Apr 27 17:40:21 2020 +0200
+
+    Reorganizacion de TODO el proyecto (Incluyendo las escenas)
+
+[33mcommit 48e75de475ee7b3eeb327e43b628974c85c0a983[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Mon Apr 27 17:16:05 2020 +0200
+
+    Ahora el manu tiene implementado los controles
+
+[33mcommit 3ae16bf115dff6223f0a02e2b0dd9c16b3ee2a89[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Mon Apr 27 16:44:32 2020 +0200
+
+    Subida controles nuevos.Eliminado los antiguos
+
+[33mcommit 4b497767bac51c062dd02ee99227801bfb568205[m
+Merge: 9c10566 0496f71
+Author: samuebla <samuebla@ucm.es>
+Date:   Mon Apr 27 16:03:22 2020 +0200
+
+    Extraño problema a la hora de actualizar el proyecto
+
+[33mcommit 9c1056611c38348a2b664173d8be9ab3989579ab[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Mon Apr 27 16:01:03 2020 +0200
+
+    El jugador por fin puede morir mas de una vez
+
+[33mcommit 0496f71359d5a883b030e1f5ce5919ac3239f376[m
+Author: javimu06 <javimu06@ucm.es>
+Date:   Mon Apr 27 15:18:21 2020 +0200
+
+    Creadas las plataformas estaticas, añadida la zona inicial modo tutorial, realizadas un par de modificaciones sobre el nivel Area_Hito. He implementado más sprites a las plataformas móviles para poder variar su tamaño
+
+[33mcommit 6f561655ae419457795b1bfbc96f3ad8af8d71c5[m
+Merge: 36a556b 5fce6d3
+Author: javimu06 <javimu06@ucm.es>
+Date:   Mon Apr 27 13:27:38 2020 +0200
+
+    Estamos teniendo problemas para subir el proyecto, eliminamos el archivo que da problemas
+
+[33mcommit 36a556b3ed1ca11adbf3f8a2ae70f00aa904329f[m
+Author: javimu06 <javimu06@ucm.es>
+Date:   Mon Apr 27 13:25:08 2020 +0200
+
+    Implementada ducktape de animaciones
+
+[33mcommit 5fce6d3636709d5e936b46b6994b403004f62a12[m
+Merge: 60831ca 923db23
+Author: Nicolás Rosa Caballero <nrosa01@ucm.es>
+Date:   Mon Apr 27 13:18:49 2020 +0200
+
+    Arreglado un conflicto
+
+[33mcommit 60831cabfeb179903cc77b15de559eef3397cf62[m
+Author: Nicolás Rosa Caballero <nrosa01@ucm.es>
+Date:   Mon Apr 27 13:16:08 2020 +0200
+
+    Mejorado el sistema de guardado y cargado para reiniciar nivel cuando pierdes
+
+[33mcommit 923db233de29976b5694e4dcc5658413d73366e7[m
+Merge: 2c0d00c bc8aa68
+Author: javimu06 <javimu06@ucm.es>
+Date:   Mon Apr 27 13:11:44 2020 +0200
+
+    Arreglado problema con la subida del proyecto
+
+[33mcommit bc8aa68b9b3940c972bd507308143a8fc1ad33b9[m
+Author: mihern07 <mihern07@ucm.es>
+Date:   Sun Apr 26 20:45:03 2020 +0200
+
+    Añadidas las animaciones: Idle, Dash y Shoot
+
+[33mcommit 2c0d00ca2c5103ba7665ad60be74805e94c2cad4[m
+Author: javimu06 <javimu06@ucm.es>
+Date:   Sun Apr 26 15:22:37 2020 +0200
+
+    Implementadas las animaciones de las mecanicas, terminado el menu que las muestra, controles implementados al menu de pausa
+
+[33mcommit dd4812f1b596754a2ae40a83e13203cce80b8b5a[m
+Author: Javier Rubio <jrubio05@ucm.es>
+Date:   Sun Apr 26 14:26:54 2020 +0200
+
+    Mejorado el fondo del nivel
+
+[33mcommit 67245b69ffcc5ee0323a3c158665c3f2ea1090e9[m
+Author: Javier Rubio <jrubio05@ucm.es>
+Date:   Sun Apr 26 14:13:29 2020 +0200
+
+    Modificada una plataforma por motivos estéticos (bug)
+
+[33mcommit 58b4b9ae8012b864bf6a210e1cead401be24711d[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Sat Apr 25 17:21:35 2020 +0200
+
+    Corregido anclas y background escena Fin
+
+[33mcommit a2f45bf1c9dc476764b4c842a6933fc988cecb7e[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Sat Apr 25 16:47:41 2020 +0200
+
+    Creado Boton Volver al menu al morir
+
+[33mcommit 786a874fa6ed9fa22658ab77c9c6ec68f0f62c0c[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Sat Apr 25 16:06:32 2020 +0200
+
+    Tutorial acabado a la perfeccion
+
+[33mcommit 1b33254e7b7073a5f60ec2a93d20114a6a4b7f31[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Sat Apr 25 15:47:25 2020 +0200
+
+    Arreglado anclas y Background Menu
+
+[33mcommit 4655e89cc8d2a079b7c60db03da056154e3793e4[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Sat Apr 25 15:43:29 2020 +0200
+
+    Input solucionado aplicado a Area_Hito y Menu
+
+[33mcommit 5597b23b2dfbd2a5c4a3ec35f72f9ccef5e10b77[m
+Author: mihern07 <mihern07@ucm.es>
+Date:   Sat Apr 25 12:24:10 2020 +0200
+
+    Arreglado el problema de la interfaz con Mouse
+
+[33mcommit cea75d8385bb482f3a477f908bcdc7e1e3ad99e5[m
+Author: mihern07 <mihern07@ucm.es>
+Date:   Sat Apr 25 11:37:01 2020 +0200
+
+    Arreglado el problema con el input de los controles
+
+[33mcommit 85ca62f5044c092a693f22898c676f2e8d1c5837[m
+Author: mihern07 <mihern07@ucm.es>
+Date:   Fri Apr 24 20:09:40 2020 +0200
+
+    Añadido BreakTime a todas las Tenias
+
+[33mcommit aa1804b38ed31a7ce3a209d2d0de189a2c0bacf2[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Fri Apr 24 19:17:46 2020 +0200
+
+    Prototipo tabulador hecho
+
+[33mcommit 46986e09742c50a40bb1f4eb635dd2e2840bdcd3[m
+Merge: 2e62744 a2b788d
+Author: samuebla <samuebla@ucm.es>
+Date:   Fri Apr 24 18:38:52 2020 +0200
+
+    Fusion del trabajo de Javi con el mio
+
+[33mcommit 2e627449ac6c7f0e3e8f5e045375109f6b8bb310[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Fri Apr 24 18:36:29 2020 +0200
+
+    Hago un commit para mezclar mis cambios con lo nuevo de Nico y que no me genere conflicto con los cambios que voy a hacer ahora
+
+[33mcommit 5d283bf26c89eff260d2275c7f4d3b48344dac75[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Fri Apr 24 18:30:04 2020 +0200
+
+    Tutorial CASI terminado, falta el tabulador
+
+[33mcommit a2b788d80da3eaf58747e449010acd63dc6b58ff[m
+Merge: 99981da a505b1a
+Author: Nicolás Rosa Caballero <nrosa01@ucm.es>
+Date:   Fri Apr 24 18:16:26 2020 +0200
+
+    Arreglado conflicto con mi copia de trabajo (Nico)
+
+[33mcommit 99981dac6f4adba648a10b864f2be154369d9c5d[m
+Author: Nicolás Rosa Caballero <nrosa01@ucm.es>
+Date:   Fri Apr 24 18:07:53 2020 +0200
+
+    Actualizado bug de las plataformas moviles
+
+[33mcommit a505b1afcbf0f771a0602fb380302958cd989a4d[m
+Author: javimu06 <javimu06@ucm.es>
+Date:   Fri Apr 24 17:16:19 2020 +0200
+
+    Actualizado sprite de background
+
+[33mcommit caebfb6c25661e549611c203d8fa83058de4b797[m
+Merge: 96530e0 2424177
+Author: samuebla <samuebla@ucm.es>
+Date:   Fri Apr 24 17:15:06 2020 +0200
+
+    Importo una nueva Font Style de la Asset Store
+
+[33mcommit 299d7d0a7d947a96c44ba5804644f1e59cba3be0[m
+Author: javimu06 <javimu06@ucm.es>
+Date:   Fri Apr 24 17:14:56 2020 +0200
+
+    Actualizado sprite de la lava, ahora es una animacion
+
+[33mcommit 96530e077f013e5463a2ec78b2dc6be480ebd9b4[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Fri Apr 24 17:03:20 2020 +0200
+
+    Ligero cambio de variables de SueloDañino
+
+[33mcommit 242417762f249e0399721e5f811963c28a3f6af7[m
+Author: mihern07 <mihern07@ucm.es>
+Date:   Fri Apr 24 14:25:55 2020 +0200
+
+    Añadido el botón izquierdo del ratón como input
+
+[33mcommit 4171e4ca79c85cc7b98b6e6c842023c90b32a106[m
+Author: mihern07 <mihern07@ucm.es>
+Date:   Thu Apr 23 19:59:10 2020 +0200
+
+    Ahora el dash tiene cooldown
+
+[33mcommit 5ad4fe50a3deadf8f3621c1d92d2deb4e9e79eae[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Thu Apr 23 17:53:36 2020 +0200
+
+    Prototipo tutorial a medias
+
+[33mcommit 0b96e754554e4c6e3f96265b90d33af081cd8efd[m
+Author: mihern07 <mihern07@ucm.es>
+Date:   Wed Apr 22 21:21:49 2020 +0200
+
+    Actualizado el WallJump, ahora debería de ser más coherente con el input del usuario
+
+[33mcommit fa72acb9b16cb3491fcee9f4b0feb908c116d9a4[m
+Author: mihern07 <mihern07@ucm.es>
+Date:   Wed Apr 22 19:35:15 2020 +0200
+
+    Arreglado el script PauseMenu
+
+[33mcommit d544124e48e9ffcb40878d0819df95243bf9ac70[m
+Author: mihern07 <mihern07@ucm.es>
+Date:   Wed Apr 22 19:21:38 2020 +0200
+
+    Añadido el input del numPad
+
+[33mcommit 7704b5c07e6e811561b9476f00608efb153286c6[m
+Author: druiz07 <62289530+druiz07@users.noreply.github.com>
+Date:   Wed Apr 22 17:52:47 2020 +0200
+
+    Incluido el boss y la puerta del Boss en AreaHito2
+
+[33mcommit 6595b4dab8a3ccfafc3c3b51bc7cc41b0c7af539[m
+Author: Javier Rubio <jrubio05@ucm.es>
+Date:   Wed Apr 22 17:36:22 2020 +0200
+
+    Arreglado un bug sobre plataformas y disparo del jugador
+
+[33mcommit 78e5149c38ba78eb719260b22d57355086242366[m
+Merge: 5c2bc39 5b7fa31
+Author: Javier Rubio <jrubio05@ucm.es>
+Date:   Wed Apr 22 17:30:21 2020 +0200
+
+    Merge branch 'master' of https://github.com/Proyectos1-FDI-UCM/c1920-Grupo02
+
+[33mcommit 5c2bc39034b3810942715e747c655e263048380c[m
+Author: Javier Rubio <jrubio05@ucm.es>
+Date:   Wed Apr 22 17:13:00 2020 +0200
+
+    Más arreglos en la escena del hito
+
+[33mcommit 5b7fa31af90d2676dc9d7968eb4c8b991ce91e47[m
+Merge: da451c1 d106aa7
+Author: samuebla <samuebla@ucm.es>
+Date:   Wed Apr 22 16:54:30 2020 +0200
+
+    Problemas con archivos TileMap
+
+[33mcommit da451c1d80746eae8c1579ec52766ac7cce5b68f[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Wed Apr 22 16:52:41 2020 +0200
+
+    Introducido el marco que indica la pastilla actual en Area_Hito
+
+[33mcommit dce160450828e11bcd305fdcdbe35ac7ce90c58f[m
+Author: Javier Rubio <jrubio05@ucm.es>
+Date:   Wed Apr 22 16:52:35 2020 +0200
+
+    Cambiada la escena del hito para dos bosses
+
+[33mcommit d106aa7df42a0cffcd50d9afe8c90508fb450d7d[m
+Author: Javier Rubio <jrubio05@ucm.es>
+Date:   Wed Apr 22 16:02:26 2020 +0200
+
+    Arreglado el prefab jugador (sprite fix)
+
+[33mcommit ccc2ec686688f691f72580e4e321876a21162986[m
+Author: Javier Rubio <jrubio05@ucm.es>
+Date:   Wed Apr 22 15:56:02 2020 +0200
+
+    Cambiada ligeramente la organización
+
+[33mcommit 5fb257d26f19d37d04085984b1e98541696a7164[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Wed Apr 22 15:12:11 2020 +0200
+
+    Implemento interfaz y zonaBloqueada en Area_Hito
+
+[33mcommit 89c14f3233630479e6b3c22b7986c5d58111c907[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Wed Apr 22 15:09:48 2020 +0200
+
+    La interfaz de las pastillas se ha cambiado(falta el regrueso de la currentPastilla
+
+[33mcommit 62fc1ae5fdc25f3308b15267f3b938084cceba4b[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Wed Apr 22 15:01:10 2020 +0200
+
+    La puerta ahora muestra las celulas blancas necesarias
+
+[33mcommit 7ac70b4f49d8235ade9b2239cd20768d0ade2ed0[m
+Merge: 4faf899 ede2d92
+Author: samuebla <samuebla@ucm.es>
+Date:   Wed Apr 22 11:03:32 2020 +0200
+
+    Ahora el menú te pasa a Area_Hito para el Hito2
+
+[33mcommit 4faf899822fccd2fd9cdbb4bf1a918b5b81f8fc6[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Wed Apr 22 10:33:06 2020 +0200
+
+    Nada importante, archivos temporales
+
+[33mcommit ede2d9215d0129f1cf9f301b8cd4a6bf418f1a58[m
+Author: mihern07 <mihern07@ucm.es>
+Date:   Tue Apr 21 18:28:47 2020 +0200
+
+    Añadido el input de GamePad
+
+[33mcommit daff6bf64db3b5384abcbb9452518b31e4d0202b[m
+Author: mihern07 <mihern07@ucm.es>
+Date:   Sun Apr 19 21:55:03 2020 +0200
+
+    Actualizado el sistema de Input de teclado a Unity Input System
+
+[33mcommit a5136a15b68c3c76164f79e37aced372e410b508[m
+Author: Javier Rubio <jrubio05@ucm.es>
+Date:   Sun Apr 19 21:19:30 2020 +0200
+
+    Arregladas las plataformas de la escena del hito 2
+
+[33mcommit 963756e36f3dc81ce365f9d21fa8d96e3da3de5e[m
+Author: Nicolás Rosa Caballero <nrosa01@ucm.es>
+Date:   Sun Apr 19 20:55:48 2020 +0200
+
+    Arreglado un pequeño fallo de configuracion en el prefab plataforma movil
+
+[33mcommit 2951dbc7fd59ceadfc1a83145a063dbab9d99c4d[m
+Author: Javier Rubio <jrubio05@ucm.es>
+Date:   Sun Apr 19 20:40:44 2020 +0200
+
+    Creada la escena para el hito 2
+
+[33mcommit 036971661bd5c741f7ffe866061fd630a2643abc[m
+Author: Nicolás Rosa Caballero <nrosa01@ucm.es>
+Date:   Sun Apr 19 20:37:23 2020 +0200
+
+    Actualizado prefab plataforma móvil para que por defecto esté configurado para moverse entre dos puntos
+
+[33mcommit cf4728f4c99cb5604b8e99fdd84a002e168eb6c6[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Sun Apr 19 18:41:34 2020 +0200
+
+    Cambios a SueloDañiño para implementar el daño consecutivo
+
+[33mcommit 66c6a2ef88b7f49fb4ed991d1795fe227e03b2e6[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Sun Apr 19 18:31:35 2020 +0200
+
+    Cambio de la invocacion de ControlCamera a el GM
+
+[33mcommit 194a1084fad048f3855a79ba6ae18c8db9c68219[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Fri Apr 17 19:24:45 2020 +0200
+
+    Cambios apuntados en el README.md
+
+[33mcommit c2141019bd5043d7ad680c23db0d137f9080604f[m
+Merge: 302ca05 1f0a263
+Author: samuebla <samuebla@ucm.es>
+Date:   Fri Apr 17 19:22:51 2020 +0200
+
+    Fallo al subir archivo anterior
+
+[33mcommit 302ca053938439beadf2806ac7d9b14cb8045b84[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Fri Apr 17 19:19:05 2020 +0200
+
+    Camara progresiva conseguida
+
+[33mcommit 1f0a2632c8074b60352ed96b030ce6c9d012415e[m
+Author: mihern07 <mihern07@ucm.es>
+Date:   Fri Apr 17 18:52:53 2020 +0200
+
+    Arreglado el problema de la vida y los enemigos ya no pueden ser empujados
+
+[33mcommit 2231a8e7b399356e79386bbc6b911858a8c5b1c1[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Fri Apr 17 18:37:20 2020 +0200
+
+    Cambio de color de la cámara progresivo
+
+[33mcommit cbab1b8c44fbbcb52677dfb7ae1a8dc1077c0859[m
+Author: Nicolás Rosa Caballero <nrosa01@ucm.es>
+Date:   Fri Apr 17 17:34:54 2020 +0200
+
+    Arreglado pequeño bug con las nuevas plataformas y actualizado prefab
+
+[33mcommit 4e6cad0bc5d206abaa8c33fe46417f63f4cea1a3[m
+Author: druiz07 <62289530+druiz07@users.noreply.github.com>
+Date:   Fri Apr 17 17:29:48 2020 +0200
+
+    Creada Puerta de la Sala del Boss
+
+[33mcommit 3d60797a047e80cb3d9d01c059d7a67f2f46d07e[m
+Author: Nicolás Rosa Caballero <nrosa01@ucm.es>
+Date:   Fri Apr 17 16:48:00 2020 +0200
+
+    Las plataformas ahora se actualizan desde abajo
+
+[33mcommit 7314039992abd43377c7f65810a724b72f36da7b[m
+Author: Nicolás Rosa Caballero <nrosa01@ucm.es>
+Date:   Fri Apr 17 16:36:31 2020 +0200
+
+    Creada sala del boss sin puertas
+
+[33mcommit e037e647555c66fbae92a353ebb2cb8fcc49a5e5[m
+Author: javimu06 <javimu06@ucm.es>
+Date:   Fri Apr 17 15:28:04 2020 +0200
+
+    Colores para la camara
+
+[33mcommit fa03b8846ec0e57c42a55c3d7c8de2707ce5fad3[m
+Author: Nicolás Rosa Caballero <nrosa01@ucm.es>
+Date:   Fri Apr 17 12:44:59 2020 +0200
+
+    Creado sistema para guardar la partida
+
+[33mcommit 9433bf01743155f0495e18ff3a96461d6498779a[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Thu Apr 16 23:23:55 2020 +0200
+
+    Modificado el script Pause Menú y añadido la interfaz con los controles
+
+[33mcommit 1f269a57f709e84e9dfdc9e51a2f40cba47f06e2[m
+Author: mihern07 <mihern07@ucm.es>
+Date:   Wed Apr 15 19:59:19 2020 +0200
+
+    Ahora el Gran Coágulo dispara en todas las direcciones
+
+[33mcommit fa8fe881ce66d6ff38ab6225d10428000f1063a6[m
+Author: druiz07 <62289530+druiz07@users.noreply.github.com>
+Date:   Tue Apr 14 16:29:11 2020 +0200
+
+    Subida VERSION Inicial del Boss
+
+[33mcommit b725ad85f4b4a81bba1c59c1577052d7c17c6b22[m
+Author: Javier Rubio <jrubio05@ucm.es>
+Date:   Tue Apr 14 15:34:54 2020 +0200
+
+    Trabajando en la batalla de la tenia
+
+[33mcommit 24156a71119671d99ead376aed51df667896c59f[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Mon Apr 13 23:54:06 2020 +0200
+
+    Se me olvidó añadir los cambios al README.md Samuel
+
+[33mcommit 4655b05e31e2d5d63db5cf1bc441191a239578e9[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Mon Apr 13 23:51:02 2020 +0200
+
+    Corrección Interfaz Samuel
+
+[33mcommit 09a260bfeeb7c3ca2c6fcfe81e1f5a5e027e5de3[m
+Author: mihern07 <mihern07@ucm.es>
+Date:   Mon Apr 13 19:40:44 2020 +0200
+
+    Creado el prefab del Gran Coágulo
+
+[33mcommit 9d7adc2ef6131eb078ff85c8b4368abbff2912a1[m
+Author: Nicolás Rosa Caballero <nrosa01@ucm.es>
+Date:   Fri Apr 10 21:38:07 2020 +0200
+
+    Arreglado bug que provocaba la desaparición de las balas y unificado scripts que controla la velocidad de las balas
+
+[33mcommit 43bbaf8e45e31ebfd31f7a2e33e416ef42b4772b[m
+Author: mihern07 <mihern07@ucm.es>
+Date:   Thu Apr 9 20:04:25 2020 +0200
+
+    Primera iteración partes del coágulo
+
+[33mcommit 00349a4094f3a554b00de97cd28dc736c793bc34[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Thu Apr 9 16:45:24 2020 +0200
+
+    Intento de subida archivos Samuel Num3
+
+[33mcommit b065ccaffd33f41b206462486d63bf2fb7c3cb73[m
+Author: Nicolás Rosa Caballero <nrosa01@ucm.es>
+Date:   Wed Apr 8 11:00:43 2020 +0200
+
+    Pequeña optimización para detectar las plataformas móviles en el PlayerControllerWallJump
+
+[33mcommit 27d807980e34fea6ae645ae92937395498afb98c[m
+Author: Nicolás Rosa Caballero <nrosa01@ucm.es>
+Date:   Tue Apr 7 23:26:59 2020 +0200
+
+    Creado script PlataformaMovil y prefab de plataforma móvil
+
+[33mcommit 8b8f82a296d59f0a8d408749a8d36b6da13dc41b[m
+Author: mihern07 <mihern07@ucm.es>
+Date:   Mon Apr 6 12:38:07 2020 +0200
+
+    Arreglado los scripts de la Tenia
+
+[33mcommit 0f90e8f05bc90a6ede5328d8fd118e76a3d4879d[m
+Author: Nicolás Rosa Caballero <nrosa01@ucm.es>
+Date:   Sat Apr 4 20:19:16 2020 +0200
+
+    Eliminado la carpeta Library
+
+[33mcommit c853b97fef5789cb4f4a365e451d629071fa7c71[m
+Author: Nicolás Rosa Caballero <nrosa01@ucm.es>
+Date:   Sat Apr 4 17:59:12 2020 +0200
+
+    Corregido archivo gitignore a .gitignore (no funcionaba sin ese punto al comienzo)
+
+[33mcommit 99acd0abc6742d9405863cacc65d7a5e6e527a11[m
+Author: Nicolás Rosa Caballero <nrosa01@ucm.es>
+Date:   Sat Apr 4 17:47:33 2020 +0200
+
+    Finalizado el prototipo de los niveles 1 y 2
+
+[33mcommit 02b4892242276214a7d4237aa164da992ac6ebf9[m
+Author: druiz07 <62289530+druiz07@users.noreply.github.com>
+Date:   Thu Apr 2 19:53:53 2020 +0200
+
+    Colesterol y Coagulo creados como enemigos prefabs
+
+[33mcommit a9ddd8483effa84ece5a3cf546432a53f66682cd[m
+Author: mihern07 <mihern07@ucm.es>
+Date:   Thu Apr 2 13:52:11 2020 +0200
+
+    Cambios en la tenia
+
+[33mcommit 314f8d308129fec5e6bda52d0ee0cb0a7b014e05[m
+Author: samuebla <samuebla@ucm.es>
+Date:   Wed Apr 1 13:32:46 2020 +0200
+
+    Añadidos gitignore y subida pillventure

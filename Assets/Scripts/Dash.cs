@@ -58,7 +58,7 @@ public class Dash : MonoBehaviour
     {       
         if (lastTimeOfActivation < Time.time - cooldown)
         {
-            SoundManagerScript.PlaySound("dashSound");   //#audio
+            FXManager.PlaySound("dash");   //#audioz
             if (animator != null)
                 animator.SetTrigger("Dash");
             //Cambio de la capa física de player

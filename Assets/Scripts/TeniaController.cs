@@ -19,7 +19,7 @@ public class TeniaController : MonoBehaviour
     float initialStartOfMovementTime;
     bool alreadyCounting;
     bool collidedWithPlayer = false;
-    bool inBreakTime = false;
+    //bool inBreakTime = false;
 
     [SerializeField]
     float timeInBreakTime;
@@ -163,7 +163,7 @@ public class TeniaController : MonoBehaviour
                     detectingPlayer = false;
                     mordiscoAbominable.enabled = false;
                 }
-                else
+                else if (!mordiscoAbominable.enabled)
                 {
                     //Le sigue
                     enemyFollow.enabled = true;
