@@ -11,6 +11,8 @@ public class GranCoaguloLife : MonoBehaviour
     private GameObject oleadaDanina1;
     private GameObject oleadaDanina2;
 
+    private float initialTime;
+
     public GameObject door;
 
     private void Awake()
@@ -38,12 +40,15 @@ public class GranCoaguloLife : MonoBehaviour
             if (parts == 2)
             {
                 wave1.SetActive(true);
-                oleadaDanina2.SetActive(true);
+                oleadaDanina1.SetActive(true);
             }
             else
             {
                 if (parts == 1)
+                {
                     wave2.SetActive(true);
+                    oleadaDanina1.SetActive(true);
+                }
             }
             disparo.tiempo *= 2;
         }

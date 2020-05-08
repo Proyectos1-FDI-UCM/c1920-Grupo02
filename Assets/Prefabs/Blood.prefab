@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1953740749006715134}
   - component: {fileID: 1672037694440635008}
   - component: {fileID: 7977940084893099847}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Blood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,6 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidad: 20
   damage: 3
+  timeBeforeDestroy: 6
 --- !u!50 &1672037694440635008
 Rigidbody2D:
   serializedVersion: 4
