@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EscenasIndividuales/Samuel/Tutorial.unity
     guid: 4910037a951e9784aad271b6b18d182b
+  - enabled: 1
+    path: Assets/Scenes/EscenasIndividuales/Nico/Prototipo Niveles/Prototipo_Nivel_1.unity
+    guid: 221c5a2a5ebf5644ba32ff19ab0604e8
+  - enabled: 1
+    path: Assets/Scenes/EscenasIndividuales/Nico/Prototipo Niveles/Prototipo_Nivel_2.unity
+    guid: bb6cd297f62db0c4aa82398c4eee6476
   m_configObjects: {}
