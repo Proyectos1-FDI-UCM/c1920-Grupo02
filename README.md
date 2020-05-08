@@ -134,4 +134,6 @@ Sala de la tenia terminada,con la respectiva tenia y las plataformas ajustadas (
 
 //Cambios hechos el 8 de mayo
 Añadida shorting layer Decorations --Samuel
-Escena tutorial terminada al 100%
+Escena tutorial terminada al 100% --Samuel
+Menú modificado: Letras cambiadas
+				Ahora hay un nuevo boton de elegir niveles -Samuel
