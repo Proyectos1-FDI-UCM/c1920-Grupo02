@@ -137,3 +137,4 @@ Añadida shorting layer Decorations --Samuel
 Escena tutorial terminada al 100% --Samuel
 Menú modificado: Letras cambiadas
 				Ahora hay un nuevo boton de elegir niveles -Samuel
+Ahora cuando pegas a un enemigo se nota visualmente que le has hecho daño --Samuel
