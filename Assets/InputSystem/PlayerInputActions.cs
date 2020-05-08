@@ -89,6 +89,14 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Descenso"",
+                    ""type"": ""Button"",
+                    ""id"": ""e28b5b22-516e-4c8f-ac74-fc10dc661290"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -487,6 +495,28 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""action"": ""Submit"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e9367275-626e-41ed-bb4e-071ad926f8ab"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Descenso"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7df28bd5-28bd-4e02-acaf-5a6a81e4a8cf"",
+                    ""path"": ""<Gamepad>/leftStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""GamePad"",
+                    ""action"": ""Descenso"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -618,6 +648,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         m_PlayerControls_Submit = m_PlayerControls.FindAction("Submit", throwIfNotFound: true);
         m_PlayerControls_Cancel = m_PlayerControls.FindAction("Cancel", throwIfNotFound: true);
         m_PlayerControls_Controles = m_PlayerControls.FindAction("Controles", throwIfNotFound: true);
+        m_PlayerControls_Descenso = m_PlayerControls.FindAction("Descenso", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Point = m_UI.FindAction("Point", throwIfNotFound: true);
@@ -683,6 +714,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
     private readonly InputAction m_PlayerControls_Submit;
     private readonly InputAction m_PlayerControls_Cancel;
     private readonly InputAction m_PlayerControls_Controles;
+    private readonly InputAction m_PlayerControls_Descenso;
     public struct PlayerControlsActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -696,6 +728,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         public InputAction @Submit => m_Wrapper.m_PlayerControls_Submit;
         public InputAction @Cancel => m_Wrapper.m_PlayerControls_Cancel;
         public InputAction @Controles => m_Wrapper.m_PlayerControls_Controles;
+        public InputAction @Descenso => m_Wrapper.m_PlayerControls_Descenso;
         public InputActionMap Get() { return m_Wrapper.m_PlayerControls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -732,6 +765,9 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @Controles.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnControles;
                 @Controles.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnControles;
                 @Controles.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnControles;
+                @Descenso.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnDescenso;
+                @Descenso.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnDescenso;
+                @Descenso.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnDescenso;
             }
             m_Wrapper.m_PlayerControlsActionsCallbackInterface = instance;
             if (instance != null)
@@ -763,6 +799,9 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @Controles.started += instance.OnControles;
                 @Controles.performed += instance.OnControles;
                 @Controles.canceled += instance.OnControles;
+                @Descenso.started += instance.OnDescenso;
+                @Descenso.performed += instance.OnDescenso;
+                @Descenso.canceled += instance.OnDescenso;
             }
         }
     }
@@ -861,6 +900,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         void OnSubmit(InputAction.CallbackContext context);
         void OnCancel(InputAction.CallbackContext context);
         void OnControles(InputAction.CallbackContext context);
+        void OnDescenso(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
