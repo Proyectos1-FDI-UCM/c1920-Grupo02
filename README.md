@@ -131,3 +131,7 @@ Terminado de ajustar los ataques de la Tenia , ya se puede dar como completada a
 Escena tutorial al terminada al 50% - Samuel
 La tenia ahora es un prefab - Daniel
 Sala de la tenia terminada,con la respectiva tenia y las plataformas ajustadas (su posicion y movimiento) - Daniel
+
+//Cambios hechos el 8 de mayo
+Añadida shorting layer Decorations --Samuel
+Escena tutorial terminada al 100%
