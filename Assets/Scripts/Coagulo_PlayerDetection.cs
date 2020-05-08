@@ -10,6 +10,18 @@ public class Coagulo_PlayerDetection : MonoBehaviour
     public Transform enemyTransform;
     public int direccion;
     public Vector2 attackDirection;
+    private GranCoaguloLife granCoagulo;
+
+    private void Awake()
+    {
+        granCoagulo = gameObject.GetComponentInParent<GranCoaguloLife>();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (granCoagulo)
+            granCoagulo.StartCombat();
+    }
 
     private void OnTriggerStay2D(Collider2D other)
     {
