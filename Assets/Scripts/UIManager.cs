@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour
     public Text time;            //Contador para el cambio de pastilla
     public GameObject arrows;
     public GameObject tutorialText;       //Texto para el tutorial inicial
+    public Image[] diagramaTutorial;
     private Text tutorial;
     int tutorialHecho = 0;
 
@@ -48,25 +49,30 @@ public class UIManager : MonoBehaviour
         {
             if (num == 0)
             {
+                diagramaTutorial[num].enabled = true;
                 tutorialText.SetActive(true);
                 tutorial.text = "Pulsa A - D o LeftArrow-RightArrow \n para moverte";
             }
             else if (num == 1 && tutorialHecho == 0)
             {
+                diagramaTutorial[num].enabled = true;
                 tutorial.text = "Pulsa W o UpArrow para saltar";
                 tutorialHecho = 1;
             }
             else if (num == 2 && tutorialHecho == 1)
             {
+                diagramaTutorial[num].enabled = true;
                 tutorial.text = "Ahora eres una pastilla de ibuprofeno \n Pulsa Z o Shift para disparar con ella";
                 tutorialHecho = 2;
             }
             else if (num == 3 && tutorialHecho == 2)
             {
+                diagramaTutorial[num].enabled = true;
                 tutorial.text = "Genial, Coge el PowerUp \n para conseguir mas pastillas";
             }
             else if (num == 4)
             {
+                diagramaTutorial[num].enabled = true;
                 tutorial.text = "Ahora puedes cambiar de pastillas \n pulsa tab para ver los controles";
                 tutorialHecho = 3;
             }
