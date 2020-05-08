@@ -240,7 +240,6 @@ public class PlayerControllerWallJump : MonoBehaviour
             if (isGrounded)
             {
                 rb.velocity = new Vector2(movementSpeed * movementInputDirection, rb.velocity.y);
-                if ((rb.velocity.x > 1)||( rb.velocity.x < -1 ))
             }
             else if (!isGrounded && !isWallSliding && movementInputDirection != 0)
             {
