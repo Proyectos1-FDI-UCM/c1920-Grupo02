@@ -109,6 +109,13 @@ public class UIManager : MonoBehaviour
                 hearts[i].enabled = false;
         }
     }
+    public void UpdateLife(int vida)
+    {
+        for (int i = 0; i < vida; i++)  //Para recargar la vida en caso de sumarle corazones
+        {
+            hearts[i].enabled = true;
+        }
+    }
     /// <summary>
     /// Actualiza la puntuación del jugador
     /// </summary>

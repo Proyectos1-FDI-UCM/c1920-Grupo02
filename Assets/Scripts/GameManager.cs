@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         //Cambio de color del fondo según la vida que tengas
-        if (time <1)
+        if (time < 1)
         {
             ColorCamara(time);
             time += Time.deltaTime;
@@ -75,11 +75,11 @@ public class GameManager : MonoBehaviour
         life = MAXHP;
 
         //Actualizamos el UIM
-        if(theUIManager != null)
+        if (theUIManager != null)
         {
-        theUIManager.LifeCount(life);
-        theUIManager.UpdateGlobulosRojosUI(globulosRojos);
-        theUIManager.UpdateGlobulosBlancosUI(globulosBlancos);
+            theUIManager.LifeCount(life);
+            theUIManager.UpdateGlobulosRojosUI(globulosRojos);
+            theUIManager.UpdateGlobulosBlancosUI(globulosBlancos);
         }
     }
 
@@ -115,7 +115,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            
+
             player.gameObject.SetActive(false);
             theUIManager.Tutorial(-1);
             theUIManager.Dead();
@@ -125,6 +125,24 @@ public class GameManager : MonoBehaviour
         }
         return vivo;
     }
+
+
+    public void AddLife(int extra) //Para que los globulos rojos den vida al jugador 
+    {
+
+        if (life + extra > MAXHP) //Para que no se supere la vida maxima;
+        {
+            life = MAXHP;
+        }
+        else life += extra; //Se le suma la vida extra
+        theUIManager.UpdateLife(life); //Actualizamos la UI convenientemente 
+        Debug.Log(life);
+    }
+
+
+
+
+
     /// <summary>
     /// Manda a la UI que actualice la imagen de las pastillas
     /// </summary>
@@ -172,7 +190,7 @@ public class GameManager : MonoBehaviour
 
     public int ReturnGlobulosRojos() { return globulosRojos; }
 
-    public int getMaxHP() {return MAXHP;}
+    public int getMaxHP() { return MAXHP; }
 
     public float GetPlayerLooking()
     {
@@ -232,7 +250,7 @@ public class GameManager : MonoBehaviour
     public void NewGame()
     {
         PlayerData data = SaveSystem.LoadData();
-        if(data.level != null)
+        if (data.level != null)
         {
             life = data.health;
             globulosBlancos = 0;
@@ -242,7 +260,7 @@ public class GameManager : MonoBehaviour
     public void ColorCamara(float time)
     {
         cam = Camera.main;
-        if (life < 13 && life > 9 )
+        if (life < 13 && life > 9)
         {
             cam.backgroundColor = new Color(47f / 255f, 75f / 255f, 118f / 255f);
         }
@@ -269,7 +287,7 @@ public class GameManager : MonoBehaviour
     {
         Application.Quit();
     }
-    
+
     /// <summary>
     /// Establece el player en el GameManager
     /// </summary>
