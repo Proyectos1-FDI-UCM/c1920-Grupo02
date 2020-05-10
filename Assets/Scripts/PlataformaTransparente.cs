@@ -2,7 +2,7 @@
 
 public class PlataformaTransparente : MonoBehaviour
 {
-    public BoxCollider2D collider;
+    public new BoxCollider2D collider;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.GetComponent<PlayerControllerWallJump>())
