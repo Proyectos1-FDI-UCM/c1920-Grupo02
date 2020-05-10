@@ -138,3 +138,7 @@ Escena tutorial terminada al 100% --Samuel
 Menú modificado: Letras cambiadas
 				Ahora hay un nuevo boton de elegir niveles -Samuel
 Ahora cuando pegas a un enemigo se nota visualmente que le has hecho daño --Samuel
+
+//Cambios hechos el 10 de mayo
+Se ha ajustado el nivel 1, se ha cambiado el tille pallete de la lava, se han modificado enemigos, el mapa etc. - Javi y Nico
+Se ha añadido un Script que atrae los glóbulos rojos y blancos
