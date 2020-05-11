@@ -72,14 +72,33 @@ public class UIManager : MonoBehaviour
         {
             aparecer = 0;
             tutorialPhoto.sprite = diagramaTutorial[num].sprite;
+            tutorialHecho = 3;
         }
-        else if (num == 4)
+        else if (num == 4 && tutorialHecho == 3)
         {
             aparecer = 0;
             tutorialPhoto.sprite = diagramaTutorial[num].sprite;
-            tutorialHecho = 3;
+            tutorialHecho = 4;
         }
-        else if (num == 5 && tutorialHecho == 3)
+        else if (num == 5 && tutorialHecho == 4)
+        {
+            aparecer = 0;
+            tutorialPhoto.sprite = diagramaTutorial[num].sprite;
+            tutorialHecho = 5;
+        }
+        else if (num == 6 && tutorialHecho == 5)
+        {
+            aparecer = 0;
+            tutorialPhoto.sprite = diagramaTutorial[num].sprite;
+            tutorialHecho = 6;
+        }
+        else if (num == 7 && tutorialHecho == 6)
+        {
+            aparecer = 0;
+            tutorialPhoto.sprite = diagramaTutorial[num].sprite;
+            tutorialHecho = 7;
+        }
+        else if(num==8)
             tutorialPhoto.enabled = false;
 
     }
