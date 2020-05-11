@@ -21,10 +21,11 @@ public class UIManager : MonoBehaviour
     //Variables necesarias para el tutorial
     public Image tutorialPhoto;
     public Image[] diagramaTutorial;
-    int tutorialHecho = 0;
-    float temporizador;
+    int tutorialHecho = -1;
+    float aparecer;
     void Start()
     {
+         
         //Desactivamos todo
         pastillasUI[0].enabled = false;
         pastillasUI[1].enabled = false;
@@ -39,47 +40,48 @@ public class UIManager : MonoBehaviour
     }
     private void Update()
     {
-        if (temporizador <=1)
+        //Transicion de aparicion
+        if (aparecer <=1)
         {
-            temporizador += Time.deltaTime;
-            tutorialPhoto.color = new Color(0, 0, 0, temporizador);
+            aparecer += Time.deltaTime;
+            tutorialPhoto.color = new Color(1, 1, 1, aparecer);
         }
-
     }
     public void TutorialTrigger(int num)
     {
-        temporizador = 0;
-        if (num == 0)
+        if (num == 0&& tutorialHecho == -1)
         {
+            aparecer = 0;
             tutorialPhoto = diagramaTutorial[num];
             tutorialPhoto.enabled = true;
+            tutorialHecho = 0;
         }
-        else if (num == 1)
+        else if (num == 1 && tutorialHecho ==0)
         {
-            tutorialPhoto = diagramaTutorial[num];
+            aparecer = 0;
+            tutorialPhoto.sprite = diagramaTutorial[num].sprite;
             tutorialHecho = 1;
         }
         else if (num == 2 && tutorialHecho == 1)
         {
-            tutorialPhoto = diagramaTutorial[num];
+            aparecer = 0;
+            tutorialPhoto.sprite = diagramaTutorial[num].sprite;
             tutorialHecho = 2;
         }
         else if (num == 3 && tutorialHecho == 2)
         {
-            tutorialPhoto = diagramaTutorial[num];
+            aparecer = 0;
+            tutorialPhoto.sprite = diagramaTutorial[num].sprite;
         }
         else if (num == 4)
         {
-            tutorialPhoto = diagramaTutorial[num];
+            aparecer = 0;
+            tutorialPhoto.sprite = diagramaTutorial[num].sprite;
             tutorialHecho = 3;
         }
         else if (num == 5 && tutorialHecho == 3)
             tutorialPhoto.enabled = false;
-        if (num == -1)
-        {
-            tutorialPhoto.enabled = true;
-            //tutorial.text = "HAS MUERTO";
-        }
+
     }
 
     public void Dead()
