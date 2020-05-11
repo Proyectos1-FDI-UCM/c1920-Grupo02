@@ -94,9 +94,16 @@ public class PauseMenu : MonoBehaviour
     /// <param name="volume"></param>
     public void SetVolume(float volume)
     {
-        audioMixer.SetFloat("Volume", volume);
+        audioMixer.SetFloat("MasterVol", volume);
     }
-
+    public void SetSFXVolume(float volume)
+    {
+        audioMixer.SetFloat("SFXVol", volume);
+    }
+    public void SetBGMVolume(float volume)
+    {
+        audioMixer.SetFloat("BGMVol", volume);
+    }
     /// <summary>
     /// Método para configurar la pantalla completa
     /// </summary>
