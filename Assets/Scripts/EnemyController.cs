@@ -37,6 +37,7 @@ public class EnemyController : MonoBehaviour
                 //El enemigo sigue patrullando
                 enemyLeftPatrolLimit.atLimit = false;
                 enemyRightPatrolLimit.atLimit = false;
+                enemyFollow.enabled = false;
                 enemyPatrol.enabled = true;
             }
 

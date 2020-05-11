@@ -34,4 +34,9 @@ public class EnemyFollow : MonoBehaviour
                 spriteRenderer.flipX = true;
         }
     }
+
+    private void OnDisable()
+    {
+        rb.velocity = new Vector2(0, 0);
+    }
 }
