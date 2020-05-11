@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 0
-  patrolSpeed: 0
+  patrolSpeed: 0.7
 --- !u!114 &7569626872517266821
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 4420529954736308597}
   - component: {fileID: 4420529954736308603}
   - component: {fileID: 4420529954736308602}
-  m_Layer: 8
+  m_Layer: 14
   m_Name: Bajar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -300,7 +300,7 @@ GameObject:
   - component: {fileID: 8180941316133959644}
   - component: {fileID: 7968172652728001449}
   - component: {fileID: 1260498486547983290}
-  m_Layer: 8
+  m_Layer: 14
   m_Name: Detector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
