@@ -142,3 +142,8 @@ Ahora cuando pegas a un enemigo se nota visualmente que le has hecho daño --Sam
 //Cambios hechos el 10 de mayo
 Se ha ajustado el nivel 1, se ha cambiado el tille pallete de la lava, se han modificado enemigos, el mapa etc. - Javi y Nico
 Se ha añadido un Script que atrae los glóbulos rojos y blancos
+
+//Cambios hechos el 11 de mayo
+Arregladas las plataformas del Gran Coágulo - Miguel
+Arreglados los problemas del colesterol - Miguel
+Ahora las balas enemigas no son destruidas por los ataques del jugador - Miguel
