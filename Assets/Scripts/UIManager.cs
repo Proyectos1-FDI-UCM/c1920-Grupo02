@@ -18,6 +18,11 @@ public class UIManager : MonoBehaviour
     public Text globulosRojosUI;
     public Text globulosBlancosUI;
 
+    //Variables necesarias para el tutorial
+    public Image tutorialPhoto;
+    public Image[] diagramaTutorial;
+    int tutorialHecho = 0;
+    float temporizador;
     void Start()
     {
         //Desactivamos todo
@@ -32,7 +37,51 @@ public class UIManager : MonoBehaviour
             maxLife = hearts.Length;    //Establecemos la çvida máxima
         GameManager.instance.SetUIManager(this);
     }
-    
+    private void Update()
+    {
+        if (temporizador <=1)
+        {
+            temporizador += Time.deltaTime;
+            tutorialPhoto.color = new Color(0, 0, 0, temporizador);
+        }
+
+    }
+    public void TutorialTrigger(int num)
+    {
+        temporizador = 0;
+        if (num == 0)
+        {
+            tutorialPhoto = diagramaTutorial[num];
+            tutorialPhoto.enabled = true;
+        }
+        else if (num == 1)
+        {
+            tutorialPhoto = diagramaTutorial[num];
+            tutorialHecho = 1;
+        }
+        else if (num == 2 && tutorialHecho == 1)
+        {
+            tutorialPhoto = diagramaTutorial[num];
+            tutorialHecho = 2;
+        }
+        else if (num == 3 && tutorialHecho == 2)
+        {
+            tutorialPhoto = diagramaTutorial[num];
+        }
+        else if (num == 4)
+        {
+            tutorialPhoto = diagramaTutorial[num];
+            tutorialHecho = 3;
+        }
+        else if (num == 5 && tutorialHecho == 3)
+            tutorialPhoto.enabled = false;
+        if (num == -1)
+        {
+            tutorialPhoto.enabled = true;
+            //tutorial.text = "HAS MUERTO";
+        }
+    }
+
     public void Dead()
     {
         returnMenu.SetActive(true);

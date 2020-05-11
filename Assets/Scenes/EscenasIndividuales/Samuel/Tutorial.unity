@@ -2749,6 +2749,64 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!1 &590857919
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 590857922}
+  - component: {fileID: 590857921}
+  - component: {fileID: 590857920}
+  m_Layer: 0
+  m_Name: TriggerTutorial
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &590857920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590857919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fe583ed8af8c7b429e06b442b1329ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numTutorial: 0
+--- !u!65 &590857921
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590857919}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4538138, y: 4.7767534, z: 4.7767534}
+  m_Center: {x: -0.45152986, y: -0.9938828, z: 0}
+--- !u!4 &590857922
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590857919}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -30.74, y: 1.39, z: -1123.6351}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &594515817
 GameObject:
   m_ObjectHideFlags: 0
@@ -3345,8 +3403,6 @@ MonoBehaviour:
   - {fileID: 749937530}
   time: {fileID: 1465319397}
   arrows: {fileID: 1590533909}
-  tutorialText: {fileID: 1081540796}
-  diagramaTutorial: []
   returnMenu: {fileID: 460524399}
   hearts:
   - {fileID: 446222273}
@@ -3363,6 +3419,8 @@ MonoBehaviour:
   - {fileID: 1879850520}
   globulosRojosUI: {fileID: 514910683}
   globulosBlancosUI: {fileID: 502122696}
+  tutorialPhoto: {fileID: 0}
+  diagramaTutorial: []
 --- !u!114 &719141335
 MonoBehaviour:
   m_ObjectHideFlags: 0

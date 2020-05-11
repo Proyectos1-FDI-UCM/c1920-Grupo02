@@ -54,10 +54,7 @@ public class GameManager : MonoBehaviour
     }
     public void sumaTutorial(int num)
     {
-        string tutorial = SceneManager.GetActiveScene().name;
-
-        if (tutorial == "Area_Hito")
-            theUIManager.Tutorial(num);
+        theUIManager.TutorialTrigger(num);
     }
 
     public void SetUIManager(UIManager uim)
@@ -117,7 +114,7 @@ public class GameManager : MonoBehaviour
         {
 
             player.gameObject.SetActive(false);
-            theUIManager.Tutorial(-1);
+            theUIManager.TutorialTrigger(-1);
             theUIManager.Dead();
             Debug.Log("Has muerto");
             LoadPlayer();
