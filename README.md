@@ -144,10 +144,7 @@ Se ha ajustado el nivel 1, se ha cambiado el tille pallete de la lava, se han mo
 Se ha añadido un Script que atrae los glóbulos rojos y blancos
 
 //Cambios hechos el 11 de mayo
-<<<<<<< HEAD
 El tutorial ya está acabado con los diagramas y la interfaz correcta --Samuel
-=======
 Arregladas las plataformas del Gran Coágulo - Miguel
 Arreglados los problemas del colesterol - Miguel
 Ahora las balas enemigas no son destruidas por los ataques del jugador - Miguel
->>>>>>> refs/remotes/origin/master
