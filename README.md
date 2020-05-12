@@ -148,3 +148,6 @@ El tutorial ya está acabado con los diagramas y la interfaz correcta --Samuel
 Arregladas las plataformas del Gran Coágulo - Miguel
 Arreglados los problemas del colesterol - Miguel
 Ahora las balas enemigas no son destruidas por los ataques del jugador - Miguel
+
+//Cambios hechos el 12 de mayo
+Comenzado el desarrollo de la acumulación de energía del Gran Coágulo - Miguel
