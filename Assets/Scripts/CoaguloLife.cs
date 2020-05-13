@@ -4,11 +4,12 @@ public class CoaguloLife : MonoBehaviour
 {
     private DispararCoagulo disparo;
     public int parts = 2;
-
+    
     private void Awake()
     {
         disparo = gameObject.GetComponent<DispararCoagulo>();
-    }
+    } 
+
     public void PartLost()
     {
         parts--;

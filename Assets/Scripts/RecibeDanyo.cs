@@ -6,6 +6,8 @@ public class RecibeDanyo : MonoBehaviour
     public int numGlobulosRojos;
     public int life;
     public GameObject puerta;
+
+    //Variables para mostrar que recive daños
     private float damageRecieved;
     private SpriteRenderer sprite;
     private void Awake()
