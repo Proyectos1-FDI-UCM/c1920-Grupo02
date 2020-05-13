@@ -2,6 +2,10 @@
 
 public class CoaguloLife : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject spawner;
+    [SerializeField]
+    private int numGlobulosRojos;
     private DispararCoagulo disparo;
     public int parts = 2;
     
@@ -15,6 +19,7 @@ public class CoaguloLife : MonoBehaviour
         parts--;
         if (parts == 0)
         {
+            spawner.GetComponent<SpawnerGlobulosRojos>().SpawnGlobulosRojos(numGlobulosRojos, gameObject.GetComponent<Transform>());
             Destroy(gameObject);
         }
         else
