@@ -151,3 +151,8 @@ Ahora las balas enemigas no son destruidas por los ataques del jugador - Miguel
 
 //Cambios hechos el 12 de mayo
 Comenzado el desarrollo de la acumulación de energía del Gran Coágulo - Miguel
+
+//Cambios hechos el 13 de mayo
+Ahora los coágulos sueltan glóbulos rojos - Miguel
+Actualizado el input a su última versión - Miguel
+Añadido el Input UI/Move - Miguel

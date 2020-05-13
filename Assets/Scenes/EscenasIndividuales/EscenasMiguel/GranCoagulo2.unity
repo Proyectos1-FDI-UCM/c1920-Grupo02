@@ -2660,9 +2660,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_Mode: 4
+    m_SelectOnUp: {fileID: 1675580520}
+    m_SelectOnDown: {fileID: 1541744736}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
@@ -5410,9 +5410,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_Mode: 4
+    m_SelectOnUp: {fileID: 1541744736}
+    m_SelectOnDown: {fileID: 1615550673}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
@@ -7239,9 +7239,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_Mode: 4
+    m_SelectOnUp: {fileID: 626604216}
+    m_SelectOnDown: {fileID: 1165719891}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
@@ -7682,7 +7682,8 @@ MonoBehaviour:
     type: 3}
   m_PointAction: {fileID: 3694156748966808064, guid: 6bd6153ef4b16c449b7b2c397a0e141c,
     type: 3}
-  m_MoveAction: {fileID: 0}
+  m_MoveAction: {fileID: 7974811267382911277, guid: 6bd6153ef4b16c449b7b2c397a0e141c,
+    type: 3}
   m_SubmitAction: {fileID: 1291072820009328638, guid: 6bd6153ef4b16c449b7b2c397a0e141c,
     type: 3}
   m_CancelAction: {fileID: -5791448424320653441, guid: 6bd6153ef4b16c449b7b2c397a0e141c,
@@ -7710,7 +7711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 1675580518}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1611392325
@@ -7779,9 +7780,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_Mode: 4
+    m_SelectOnUp: {fileID: 1165719891}
+    m_SelectOnDown: {fileID: 1675580520}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
@@ -8131,9 +8132,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_Mode: 4
+    m_SelectOnUp: {fileID: 1615550673}
+    m_SelectOnDown: {fileID: 626604216}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
