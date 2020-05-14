@@ -5,8 +5,51 @@ public class DanyoEnemigo2 : MonoBehaviour
     public GameObject spawner;
     public int numGlobulosRojos;
     public int life;
+
+    //Variables para mostrar que recive daños
+    private float damageRecieved;
+    private SpriteRenderer sprite;
+    private void Awake()
+    {
+        sprite = gameObject.GetComponentInChildren<SpriteRenderer>();
+    }
+    private void Update()
+    {
+
+
+        if (sprite != null)
+        {
+            if (damageRecieved > 0)
+            {
+                damageRecieved -= Time.deltaTime;
+            }
+            else
+                sprite.color = new Color(1, 1, 1);
+
+            if (damageRecieved > 0.40)
+            {
+                sprite.color = new Color(1, 1, 1, 0.7f);
+
+            }
+            else if (damageRecieved > 0.30)
+            {
+                sprite.color = new Color(1, 1, 1);
+            }
+            else if (damageRecieved > 0.20)
+            {
+                sprite.color = new Color(1, 1, 1, 0.7f);
+            }
+            else if (damageRecieved > 0.10)
+            {
+                sprite.color = new Color(1, 1, 1);
+            }
+
+        }
+    }
+
     public void Dañado(int cant) // se recibe "cant" puntos de daño
     {
+        damageRecieved = 0.5f;
         // Variable booleana para que se bloquee uno de cada dos ataques
         if (Random.Range(0,2) == 1)
         {

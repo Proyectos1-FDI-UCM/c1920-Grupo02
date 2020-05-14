@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
@@ -23,9 +24,11 @@ public class UIManager : MonoBehaviour
     public Image[] diagramaTutorial;
     int tutorialHecho = -1;
     float aparecer;
+    Scene currentScene;
     void Start()
     {
-         
+        currentScene = SceneManager.GetActiveScene();
+
         //Desactivamos todo
         pastillasUI[0].enabled = false;
         pastillasUI[1].enabled = false;
@@ -40,11 +43,14 @@ public class UIManager : MonoBehaviour
     }
     private void Update()
     {
-        //Transicion de aparicion
-        if (aparecer <=1)
+        if(currentScene.name == "Tutorial")
         {
-            aparecer += Time.deltaTime;
-            tutorialPhoto.color = new Color(1, 1, 1, aparecer);
+            //Transicion de aparicion
+            if (aparecer <= 1)
+            {
+                aparecer += Time.deltaTime;
+                tutorialPhoto.color = new Color(1, 1, 1, aparecer);
+            }
         }
     }
     public void TutorialTrigger(int num)

@@ -38,7 +38,9 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        player = GameObject.Find("Player").transform;
+        Scene currentScene = SceneManager.GetActiveScene();
+        if(currentScene.name != "Menu")
+            player = GameObject.Find("Player").transform;
     }
 
     private void Update()
@@ -90,7 +92,7 @@ public class GameManager : MonoBehaviour
     {
         ResetGM();
         ChangeScene(sceneName);
-        Destroy(this.gameObject);
+        //Destroy(this.gameObject);     //ELIMINADO POR SAMUEL
     }
 
 

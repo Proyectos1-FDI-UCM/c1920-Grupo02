@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  time: 1
 --- !u!61 &6717146342511033654
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -231,6 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  time: 1
 --- !u!61 &9186390601681712900
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -418,3 +420,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb2d6ade01f4404ba5295eaa50e55e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawner: {fileID: 3426025126485288679, guid: 31213a50384bba3438df7cc9824131d6, type: 3}
+  numGlobulosRojos: 2
+  parts: 2

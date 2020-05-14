@@ -31,6 +31,9 @@ public class OleadaDanina : MonoBehaviour
         {
             //Le hace mucho daño
             GameManager.instance.LoseLife(damage);
+
+            //Y haces que parpadee
+            other.gameObject.GetComponent<PlayerRecibeDanyo>().Dañado();
         }
 
         //Se destruye

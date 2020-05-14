@@ -19,6 +19,10 @@ public class ZonaDañina : MonoBehaviour
         {
             //Restas una vida
             GameManager.instance.LoseLife(1);
+
+            //haces que parpadee
+            collision.gameObject.GetComponent<PlayerRecibeDanyo>().Dañado();
+
             //Y reseteas el timer
             timer = 0.3f;
         }

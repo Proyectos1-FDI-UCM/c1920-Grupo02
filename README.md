@@ -166,3 +166,11 @@ Modificado prefab de player que ahora contiene tambien cosas de sonido -Javier
 
 //Cambios hechos el 12 de mayo
 Comenzado el desarrollo de la acumulación de energía del Gran Coágulo - Miguel
+
+//Cambios hechos el 13 de mayo
+Ahora los coágulos sueltan glóbulos rojos - Miguel
+Actualizado el input a su última versión - Miguel
+Añadido el Input UI/Move - Miguel
+
+//Cambios hechos el 14 de mayo
+Deshabilitado el SpriteRenderer del ataque a melee - Miguel

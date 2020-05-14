@@ -12,7 +12,6 @@ public class ActivatePill : MonoBehaviour
             if(GameManager.instance != null)
             {
                 GameManager.instance.ActualPill(1);
-                GameManager.instance.sumaTutorial(4);
             }
         }
     }
