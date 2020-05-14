@@ -176,3 +176,4 @@ Añadido el Input UI/Move - Miguel
 Deshabilitado el SpriteRenderer del ataque a melee - Miguel
 Añadido funcionamiento Boton elegir nivel- Samuel
 Ajustes nivel 1 -Samuel
+Canvas arreglado Nivel1, tutorial y menu - Samuel
