@@ -23,7 +23,7 @@ public class PauseMenu : MonoBehaviour
     void CallMenu()
     {
         //Si el juego está pausado...
-        if (GameManager.instance.GetMenu() && (!optionsUI.activeSelf))
+        if (GameManager.instance.GetMenu() && (!optionsUI.activeSelf) && (!teclas.activeSelf))
         {
             //Vuelves a jugar
             Resume();
