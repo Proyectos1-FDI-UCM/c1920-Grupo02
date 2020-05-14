@@ -10,8 +10,6 @@ public class UIManager : MonoBehaviour
     public Text time;            //Contador para el cambio de pastilla
     public GameObject arrows;
 
-    public GameObject returnMenu;   //Boton de reintentar
-
     public Image[] hearts; //Corazon lleno
     int maxLife;    //Vida máxima
 
