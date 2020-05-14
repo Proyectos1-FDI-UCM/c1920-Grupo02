@@ -174,3 +174,5 @@ Añadido el Input UI/Move - Miguel
 
 //Cambios hechos el 14 de mayo
 Deshabilitado el SpriteRenderer del ataque a melee - Miguel
+Añadido funcionamiento Boton elegir nivel- Samuel
+Ajustes nivel 1 -Samuel

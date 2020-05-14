@@ -24,7 +24,7 @@ public class PauseMenu : MonoBehaviour
     void CallMenu()
     {
         //Si el juego está pausado...
-        if (GameManager.instance.GetMenu() && (!optionsUI.activeSelf) && (!teclas.activeSelf)&&(!chooseLevel.activeSelf))
+        if (GameManager.instance.GetMenu() && (!optionsUI.activeSelf) && (!teclas.activeSelf)&&(chooseLevel==null||!chooseLevel.activeSelf))
         {
             //Vuelves a jugar
             Resume();
@@ -38,7 +38,7 @@ public class PauseMenu : MonoBehaviour
         {
             BackControls();
         }
-        else if (chooseLevel.activeSelf)
+        else if (chooseLevel !=null && chooseLevel.activeSelf)
         {
             BackChooseLevel();
         }
