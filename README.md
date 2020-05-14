@@ -79,6 +79,8 @@ FINALLY el jugador se muere cuando se queda sin vidas - Samuel
 Creado prototipo Controles pulsando tabulador - Samuel
 Tutorial completado (aunque no finaliza por culpa de que el tabulador no funciona) -Samuel
 Ahora las Tenias tienen un tiempo configurable de BreakTime, en el que no siguen al jugador después de colisionar con el.
+Actualizado el sprite de background -Javier
+Actualizado el sprite de la lava, ahora es una animación -Javier
 
 //Cambios hechos el 25 de abril
 Arreglado el input de la interfaz y los controles
@@ -90,6 +92,8 @@ HE DESCUBIERTO QUE HAY PROBLEMAS AL CAMBIAR DE ESCENAS IN GAME -SAMUEL
 
 //Cambios hechos el 26 de abril
 Añadidas las animaciones: Idle, Run y Shoot
+Implementadas animaciones de mecánicas -Javier
+Insertadas en el menu de tabulación -Javier
 
 //Cambios hechos el 27 de abril
 Ahora la pastilla tiene las animaciones asignadas.
@@ -99,6 +103,8 @@ Solucionado un error del WallJump relacionado con el cambio de pastilla.
 Cambiada la imagen de los controles.
 Ahora se puede acceder a los controles desde el menú.
 Habilitado el botón de Opciones del menú.
+Creadas las plataformas estáticas -Javier
+Implementada la zona inicial modo tutorial -Javier 
 
 //Cambios hechos el 1 de mayo
 Creada la sala del Gran Coágulo - Miguel
@@ -121,11 +127,16 @@ Ahora el Gran Coágulo spawnea los adds correctamente y te mata si no los matas 
 Ahora si quieres poner OleadaDañina en la pared de la derecha pon true el bool Rotate del GO- Samuel
 Creada la base de un par de habilidades de la tenia Bossn - Daniel
 
+//Cambios hechos el 5 de mayo
+Áñadido el código para implementar todos los FX y las pistas base -Javier
 
 //Cambios hechos el 6 de mayo
 Terminado el desarrollo de la oleada dañina - Samuel
 JUntado el progreso del Gran Coágulo - Miguel
 Terminado de ajustar los ataques de la Tenia , ya se puede dar como completada a nivel de mecanicas / habilidades - Daniel 
+Arreglado el deshabilitado de colliders con las plataformas móviles -Javier
+Implementado todo el codigo para los SFX y la música de fondo -Javier
+cambiado el color de la lava por verde -Javier
 
 //Cambios hechos el 7 de mayo
 Escena tutorial al terminada al 50% - Samuel
@@ -138,6 +149,8 @@ Escena tutorial terminada al 100% --Samuel
 Menú modificado: Letras cambiadas
 				Ahora hay un nuevo boton de elegir niveles -Samuel
 Ahora cuando pegas a un enemigo se nota visualmente que le has hecho daño --Samuel
+Reemplazado el prefab de plataforma movil -Javier
+Implementada la bajada de plataformas móviles -Javier
 
 //Cambios hechos el 10 de mayo
 Se ha ajustado el nivel 1, se ha cambiado el tille pallete de la lava, se han modificado enemigos, el mapa etc. - Javi y Nico
@@ -148,6 +161,8 @@ El tutorial ya está acabado con los diagramas y la interfaz correcta --Samuel
 Arregladas las plataformas del Gran Coágulo - Miguel
 Arreglados los problemas del colesterol - Miguel
 Ahora las balas enemigas no son destruidas por los ataques del jugador - Miguel
+Añadidas las barras para regular la música de fondo, los efectos de sonido y el volumen general -Javier
+Modificado prefab de player que ahora contiene tambien cosas de sonido -Javier
 
 //Cambios hechos el 12 de mayo
 Comenzado el desarrollo de la acumulación de energía del Gran Coágulo - Miguel
