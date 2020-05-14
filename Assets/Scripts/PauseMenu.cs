@@ -11,6 +11,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject optionsUI;
     public GameObject controles;
     public GameObject teclas;
+    public GameObject chooseLevel;
     private void Awake()
     {
         inputActions = new PlayerInputActions();
@@ -23,7 +24,7 @@ public class PauseMenu : MonoBehaviour
     void CallMenu()
     {
         //Si el juego está pausado...
-        if (GameManager.instance.GetMenu() && (!optionsUI.activeSelf) && (!teclas.activeSelf))
+        if (GameManager.instance.GetMenu() && (!optionsUI.activeSelf) && (!teclas.activeSelf)&&(!chooseLevel.activeSelf))
         {
             //Vuelves a jugar
             Resume();
@@ -36,6 +37,10 @@ public class PauseMenu : MonoBehaviour
         else if (teclas.activeSelf)
         {
             BackControls();
+        }
+        else if (chooseLevel.activeSelf)
+        {
+            BackChooseLevel();
         }
         else if (pauseUI != null)
             //Se pausa
@@ -121,6 +126,18 @@ public class PauseMenu : MonoBehaviour
         optionsUI.SetActive(false);
         if(pauseUI!=null)
             pauseUI.SetActive(true);
+    }
+    public void BackChooseLevel()
+    {
+        chooseLevel.SetActive(false);
+        if (pauseUI != null)
+            pauseUI.SetActive(true);
+    }
+    public void LoadChooseLevel()
+    {
+        chooseLevel.SetActive(true);
+        if (pauseUI != null)
+            pauseUI.SetActive(false);
     }
     /// <summary>
     /// Te muestra los controles MIENTRAS TIENES PULSADO tabulador
