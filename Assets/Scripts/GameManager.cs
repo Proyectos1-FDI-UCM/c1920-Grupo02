@@ -117,7 +117,6 @@ public class GameManager : MonoBehaviour
 
             player.gameObject.SetActive(false);
             theUIManager.TutorialTrigger(-1);
-            theUIManager.Dead();
             Debug.Log("Has muerto");
             LoadPlayer();
             vivo = false;

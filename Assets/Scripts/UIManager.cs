@@ -108,11 +108,6 @@ public class UIManager : MonoBehaviour
             tutorialPhoto.enabled = false;
 
     }
-
-    public void Dead()
-    {
-        returnMenu.SetActive(true);
-    }
     //Interfaz de la vida
     public void LifeCount(int life)
     {
