@@ -12,17 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Tutorial.unity
     guid: a2d8c8d457158394fb6ebe6f6b6b3b71
   - enabled: 1
-    path: Assets/Scenes/Area_Hito.unity
-    guid: ea60858a4c1dd7c499dda7958cc2be8e
-  - enabled: 1
     path: Assets/Scenes/Nivel 1.unity
     guid: cb1b25ccc8da2e346a5586f69b50cf04
-  - enabled: 1
-    path: Assets/Scenes/EscenasIndividuales/Nico/Prototipo Niveles/Prototipo_Nivel_1.unity
-    guid: 221c5a2a5ebf5644ba32ff19ab0604e8
-  - enabled: 1
-    path: Assets/Scenes/EscenasIndividuales/Nico/Prototipo Niveles/Prototipo_Nivel_2.unity
-    guid: bb6cd297f62db0c4aa82398c4eee6476
   - enabled: 1
     path: Assets/Scenes/Fin.unity
     guid: 77ae7db99e58b9940af3f0fdc9928f60
