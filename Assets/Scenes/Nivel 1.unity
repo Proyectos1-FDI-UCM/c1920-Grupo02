@@ -7272,36 +7272,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1011982274}
   m_CullTransparentMesh: 0
---- !u!1 &1012426874
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1012426875}
-  m_Layer: 0
-  m_Name: Zona con enemigos 3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1012426875
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1012426874}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -30.577066, y: -23.941057, z: -314.0625}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 29
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1014761512
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9127,7 +9097,7 @@ PrefabInstance:
     - target: {fileID: 4096452422742289639, guid: f5503b3cc1f12c649931578b1bdde34a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 31
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4096452422742289639, guid: f5503b3cc1f12c649931578b1bdde34a,
         type: 3}
@@ -14937,7 +14907,7 @@ PrefabInstance:
     - target: {fileID: 4096452422742289639, guid: f5503b3cc1f12c649931578b1bdde34a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 30
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 4096452422742289639, guid: f5503b3cc1f12c649931578b1bdde34a,
         type: 3}
