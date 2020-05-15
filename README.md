@@ -177,3 +177,7 @@ Deshabilitado el SpriteRenderer del ataque a melee - Miguel
 Añadido funcionamiento Boton elegir nivel- Samuel
 Ajustes nivel 1 -Samuel
 Canvas arreglado Nivel1, tutorial y menu - Samuel
+
+//Cambios hechos el 15 de mayo
+Arreglado mapa de lava, no tenía colisiones ni hacía daño
+Ajustado radio del atractor de monedas, se ha disminuido
