@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Scene currentScene = SceneManager.GetActiveScene();
-        if(currentScene.name != "Menu")
+        if(currentScene.name != "Menu"&& currentScene.name != "Fin")
             player = GameObject.Find("Player").transform;
     }
 
@@ -211,6 +211,7 @@ public class GameManager : MonoBehaviour
     {
         //Cambia la escena
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+        life = MAXHP;
     }
 
     /// <summary>
