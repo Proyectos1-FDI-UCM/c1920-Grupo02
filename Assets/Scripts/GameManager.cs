@@ -63,6 +63,10 @@ public class GameManager : MonoBehaviour
     {
         theUIManager = uim;
         theUIManager.LifeCount(life);
+        theUIManager.UpdateGlobulosBlancosUI(0);
+
+        globulosBlancos = 0;
+        theUIManager.UpdateGlobulosRojosUI(globulosRojos);
     }
 
     //Resetea el GM

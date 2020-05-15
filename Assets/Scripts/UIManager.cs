@@ -38,9 +38,6 @@ public class UIManager : MonoBehaviour
 
             maxLife = hearts.Length;    //Establecemos la çvida máxima
         GameManager.instance.SetUIManager(this);
-
-        UpdateGlobulosBlancosUI(0);
-        UpdateGlobulosRojosUI(0);
     }
     private void Update()
     {
