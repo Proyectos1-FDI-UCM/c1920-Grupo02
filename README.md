@@ -181,3 +181,4 @@ Canvas arreglado Nivel1, tutorial y menu - Samuel
 //Cambios hechos el 15 de mayo
 Arreglado mapa de lava, no tenía colisiones ni hacía daño
 Ajustado radio del atractor de monedas, se ha disminuido
+Actualizado el input - Miguel

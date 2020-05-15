@@ -179,17 +179,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""3531313d-ca70-4290-88be-6aeb3850d318"",
-                    ""path"": ""<Gamepad>/leftStick/up"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""GamePad"",
-                    ""action"": ""Vertical"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""5445b274-f302-4e6b-8a12-88553dd41b03"",
                     ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
@@ -256,30 +245,8 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""89d91e59-ebec-486d-a1d2-02ccc8b207ad"",
-                    ""path"": ""<Keyboard>/leftShift"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""ShootOrDash"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""0b22425f-fa3a-43ca-9891-6d00c1d921cf"",
                     ""path"": ""<Keyboard>/z"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""ShootOrDash"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""dd775643-fd11-4866-9f7b-a9b449517989"",
-                    ""path"": ""<Keyboard>/numpad2"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
@@ -311,30 +278,8 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""20eb6c94-d0be-49a3-b5ce-ae7f30302714"",
-                    ""path"": ""<Keyboard>/space"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""AtqMelee"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""e5cc3c88-5aaf-443d-8bad-3aa5a01fa9b8"",
                     ""path"": ""<Keyboard>/x"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""AtqMelee"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""2a42f63d-c577-4bf1-8958-7e2a2e240754"",
-                    ""path"": ""<Keyboard>/numpad1"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
