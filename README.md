@@ -182,3 +182,7 @@ Canvas arreglado Nivel1, tutorial y menu - Samuel
 Arreglado mapa de lava, no tenía colisiones ni hacía daño
 Ajustado radio del atractor de monedas, se ha disminuido
 Actualizado el input - Miguel
+
+//Cambios hechos el 17 de mayo
+Ahora TODOS los enemigos parpadean cuando reciben daño--Samuel
+Ahora hay un contador de globulos rojos en el menú--Samuel
