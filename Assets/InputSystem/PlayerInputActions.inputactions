@@ -423,14 +423,6 @@
                     "interactions": ""
                 },
                 {
-                    "name": "ScrollWheel",
-                    "type": "PassThrough",
-                    "id": "4c7c36d1-8dc7-4cd6-9184-ff4d7376a04d",
-                    "expectedControlType": "Axis",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
                     "name": "Move",
                     "type": "Value",
                     "id": "6be6dda4-5cdc-4edc-9b8c-8a0ada66574f",
@@ -481,17 +473,6 @@
                     "processors": "",
                     "groups": "Keyboard",
                     "action": "MiddleClick",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "adbef64f-8e8d-4647-a30a-df0ae201052e",
-                    "path": "<Mouse>/scroll/y",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "ScrollWheel",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

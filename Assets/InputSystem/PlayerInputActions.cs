@@ -436,14 +436,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""ScrollWheel"",
-                    ""type"": ""PassThrough"",
-                    ""id"": ""4c7c36d1-8dc7-4cd6-9184-ff4d7376a04d"",
-                    ""expectedControlType"": ""Axis"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
                     ""name"": ""Move"",
                     ""type"": ""Value"",
                     ""id"": ""6be6dda4-5cdc-4edc-9b8c-8a0ada66574f"",
@@ -494,17 +486,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
                     ""action"": ""MiddleClick"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""adbef64f-8e8d-4647-a30a-df0ae201052e"",
-                    ""path"": ""<Mouse>/scroll/y"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""ScrollWheel"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -707,7 +688,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         m_UI_LeftClick = m_UI.FindAction("LeftClick", throwIfNotFound: true);
         m_UI_RightClick = m_UI.FindAction("RightClick", throwIfNotFound: true);
         m_UI_MiddleClick = m_UI.FindAction("MiddleClick", throwIfNotFound: true);
-        m_UI_ScrollWheel = m_UI.FindAction("ScrollWheel", throwIfNotFound: true);
         m_UI_Move = m_UI.FindAction("Move", throwIfNotFound: true);
     }
 
@@ -867,7 +847,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
     private readonly InputAction m_UI_LeftClick;
     private readonly InputAction m_UI_RightClick;
     private readonly InputAction m_UI_MiddleClick;
-    private readonly InputAction m_UI_ScrollWheel;
     private readonly InputAction m_UI_Move;
     public struct UIActions
     {
@@ -877,7 +856,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         public InputAction @LeftClick => m_Wrapper.m_UI_LeftClick;
         public InputAction @RightClick => m_Wrapper.m_UI_RightClick;
         public InputAction @MiddleClick => m_Wrapper.m_UI_MiddleClick;
-        public InputAction @ScrollWheel => m_Wrapper.m_UI_ScrollWheel;
         public InputAction @Move => m_Wrapper.m_UI_Move;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
@@ -900,9 +878,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @MiddleClick.started -= m_Wrapper.m_UIActionsCallbackInterface.OnMiddleClick;
                 @MiddleClick.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnMiddleClick;
                 @MiddleClick.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnMiddleClick;
-                @ScrollWheel.started -= m_Wrapper.m_UIActionsCallbackInterface.OnScrollWheel;
-                @ScrollWheel.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnScrollWheel;
-                @ScrollWheel.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnScrollWheel;
                 @Move.started -= m_Wrapper.m_UIActionsCallbackInterface.OnMove;
                 @Move.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnMove;
                 @Move.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnMove;
@@ -922,9 +897,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @MiddleClick.started += instance.OnMiddleClick;
                 @MiddleClick.performed += instance.OnMiddleClick;
                 @MiddleClick.canceled += instance.OnMiddleClick;
-                @ScrollWheel.started += instance.OnScrollWheel;
-                @ScrollWheel.performed += instance.OnScrollWheel;
-                @ScrollWheel.canceled += instance.OnScrollWheel;
                 @Move.started += instance.OnMove;
                 @Move.performed += instance.OnMove;
                 @Move.canceled += instance.OnMove;
@@ -969,7 +941,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         void OnLeftClick(InputAction.CallbackContext context);
         void OnRightClick(InputAction.CallbackContext context);
         void OnMiddleClick(InputAction.CallbackContext context);
-        void OnScrollWheel(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
     }
 }
