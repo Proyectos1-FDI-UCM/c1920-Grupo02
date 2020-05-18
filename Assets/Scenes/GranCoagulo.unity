@@ -4234,7 +4234,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.374, y: 0.291}
   m_AnchorMax: {x: 0.6277307, y: 0.34580475}
-  m_AnchoredPosition: {x: -0.5000305, y: 0.7999916}
+  m_AnchoredPosition: {x: -0.5000305, y: 0.7999878}
   m_SizeDelta: {x: -1, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1008755316
@@ -6746,7 +6746,6 @@ MonoBehaviour:
   audioMixer: {fileID: 24100000, guid: e5047a471a98d744ea52d8c69021628a, type: 2}
   pauseUI: {fileID: 1200860489}
   optionsUI: {fileID: 123503973}
-  controles: {fileID: 0}
   teclas: {fileID: 1864416473}
   chooseLevel: {fileID: 0}
 --- !u!114 &1531571602
@@ -14642,6 +14641,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1507759019170903192, guid: ab2fd3b895f75ae4e9eb0e10f0124b6a,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 5162964775409063787, guid: e5047a471a98d744ea52d8c69021628a,
+        type: 2}
+    - target: {fileID: 8722352326346195024, guid: ab2fd3b895f75ae4e9eb0e10f0124b6a,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ee368937fd13d014785781e67c3c42d7, type: 3}
+    - target: {fileID: 8722352326346195024, guid: ab2fd3b895f75ae4e9eb0e10f0124b6a,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 8533377340617641968, guid: e5047a471a98d744ea52d8c69021628a,
+        type: 2}
+    - target: {fileID: 8722352326346195024, guid: ab2fd3b895f75ae4e9eb0e10f0124b6a,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.593
+      objectReference: {fileID: 0}
     - target: {fileID: 6519990181680491805, guid: ab2fd3b895f75ae4e9eb0e10f0124b6a,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -14651,11 +14672,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingLayer
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8722352326346195024, guid: ab2fd3b895f75ae4e9eb0e10f0124b6a,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3946082813658733388, guid: ab2fd3b895f75ae4e9eb0e10f0124b6a,
         type: 3}
