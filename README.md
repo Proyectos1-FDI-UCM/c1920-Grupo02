@@ -194,3 +194,6 @@ Añadido efecto de niebla cuando desaparece la Tenia - Dani
 Mejoradas la distribucion de las plataformas en la sala de la tenia boss, y redondeado su sala con tiles -Samu
 -Actualizado el canvas en la sala de la tenia por el actual - Samu 
 Ajustados valores internos de la Tenia - Dani 
+
+//Cambios hechos el 19 de mayo
+CREADO POR FIN UN PROTOTIPO DECENTE DE BUILD SIN ERRORES AL CAMBIAR DE ESCENA --Samuel
