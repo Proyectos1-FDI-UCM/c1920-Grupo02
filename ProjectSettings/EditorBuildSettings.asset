@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Nivel 1.unity
     guid: cb1b25ccc8da2e346a5586f69b50cf04
   - enabled: 1
+    path: Assets/Scenes/GranCoagulo.unity
+    guid: bad11a48d09647b4ea2ae5233ca5780c
+  - enabled: 1
     path: Assets/Scenes/Fin.unity
     guid: 77ae7db99e58b9940af3f0fdc9928f60
   m_configObjects: {}
