@@ -74,7 +74,6 @@ public class GameManager : MonoBehaviour
     {
         //Asignamos parámetros
         globulosBlancos = 0;
-        globulosRojos = 0;
         life = MAXHP;
 
         //Actualizamos el UIM
@@ -257,7 +256,6 @@ public class GameManager : MonoBehaviour
         {
             life = data.health;
             globulosBlancos = 0;
-            globulosRojos = 0;
         }
     }
     public void ColorCamara(float time)
