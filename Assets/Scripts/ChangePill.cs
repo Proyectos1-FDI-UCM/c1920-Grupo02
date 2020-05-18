@@ -7,7 +7,7 @@ public class ChangePill : MonoBehaviour
     private bool nextCharacter;
     private bool prevCharacter;
     private bool shootOrDash;
-
+     
     //Contador para cambiar de pastilla
     public float contador = 0;
 

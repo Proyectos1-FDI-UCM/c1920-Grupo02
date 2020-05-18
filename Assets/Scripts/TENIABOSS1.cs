@@ -1,14 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Numerics;
-using UnityEngine;
-using Vector3 = System.Numerics.Vector3;
+﻿using UnityEngine;
 
 public class TENIABOSS1 : MonoBehaviour
 {
     // Start is called before the first frame update
      
-    private float timer = 20;
+    private float timer = 3;
     SpriteRenderer tenia;
     private Rigidbody2D rb;
     Vector3 tamañoactual;
@@ -30,15 +26,15 @@ public class TENIABOSS1 : MonoBehaviour
             {
                               
                 tenia.enabled = false; // lo hacemos invisible
-                rb.velocity = new UnityEngine.Vector2(rb.velocity.x * 4, rb.velocity.y * 4); //Se le aplica una velocidad 4 veces la anterior
+                rb.velocity = new UnityEngine.Vector2(rb.velocity.x * 4, rb.velocity.y); //Se le aplica una velocidad 4 veces la anterior
                
             }
             else
             {
-                rb.velocity = new UnityEngine.Vector2(rb.velocity.x / 4f, rb.velocity.y /4f); //Su velocidad vuelve a ser normal 
+                rb.velocity = new UnityEngine.Vector2(rb.velocity.x / 4f, rb.velocity.y); //Su velocidad vuelve a ser normal 
                 tenia.enabled = true;//Si esta invisible que deje de serlo 
             }
-            timer = 20f;
+            timer = 3;
 
              //He pensado en reducir su tamaño pero no se como hacerlo sin buguearlo  
             
