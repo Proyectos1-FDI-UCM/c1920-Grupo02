@@ -45,6 +45,7 @@ Ahora cuando cambias la resolución del juego la interfaz no se ve modificada -S
 
 Ahora el Gran Coágulo puede disparar en todas las direcciones, falta limpiar los Scripts y determinar el comportamiento de las partes
 
+
 //Cambios hechos el 17 de abril
 Se ha creado un sistema para guardar y cargar partida - Nico
 El sistema para guardar partida ahora guarda la vida, el nivel, el número de glóbulos rojos y blancos,
@@ -177,6 +178,7 @@ Deshabilitado el SpriteRenderer del ataque a melee - Miguel
 Añadido funcionamiento Boton elegir nivel- Samuel
 Ajustes nivel 1 -Samuel
 Canvas arreglado Nivel1, tutorial y menu - Samuel
+Implmentadas un par de plataformas a la sala de la tenia - Dani 
 
 //Cambios hechos el 15 de mayo
 Arreglado mapa de lava, no tenía colisiones ni hacía daño
@@ -186,3 +188,9 @@ Actualizado el input - Miguel
 //Cambios hechos el 17 de mayo
 Ahora TODOS los enemigos parpadean cuando reciben daño--Samuel
 Ahora hay un contador de globulos rojos en el menú--Samuel
+
+//Cambios hechos el 18 de mayo
+Añadido efecto de niebla cuando desaparece la Tenia - Dani
+Mejoradas la distribucion de las plataformas en la sala de la tenia boss, y redondeado su sala con tiles -Samu
+-Actualizado el canvas en la sala de la tenia por el actual - Samu 
+Ajustados valores internos de la Tenia - Dani 
