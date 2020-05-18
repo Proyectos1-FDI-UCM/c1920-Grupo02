@@ -20,6 +20,12 @@ public class ChangePill : MonoBehaviour
 
     Dash dash;
 
+
+    //Cooldown para el disparo
+    float lastTimeOfActivation;
+    [SerializeField]
+    float cooldown;
+
     //Animaciones
     private Animator animator;
 
@@ -33,6 +39,10 @@ public class ChangePill : MonoBehaviour
         inputActions.PlayerControls.ShootOrDash.started += ctx => shootOrDash = true;
         inputActions.PlayerControls.ShootOrDash.canceled += ctx => shootOrDash = false;
         animator = gameObject.GetComponent<Animator>();
+
+        //Cooldown
+        lastTimeOfActivation = -10f;
+
     }
     void Start()
     {
@@ -112,17 +122,20 @@ public class ChangePill : MonoBehaviour
     /// </summary>
     void Shoot()
     {
-        if (animator != null)
-            animator.SetTrigger("Shoot");
-        //La primera vez que dispara lo manda al GM para continuar con el tutorial
-        if (!GameManager.instance.GetMenu()) Instantiate<GameObject>(fire, firePoint.position, firePoint.rotation); //Spawn de disparo
+        if (lastTimeOfActivation < Time.time - cooldown)
+        {
+            if (animator != null)
+                animator.SetTrigger("Shoot");
+
+            if (!GameManager.instance.GetMenu()) Instantiate<GameObject>(fire, firePoint.position, firePoint.rotation); //Spawn de disparo
+            lastTimeOfActivation = Time.time;
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.GetComponent<ActivatePill>())
         {
             cambio = true;
-            //IMPLEMENTAR TEXTO AYUDA
         }
     }
     private void OnEnable()

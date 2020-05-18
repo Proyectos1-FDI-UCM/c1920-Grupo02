@@ -235,6 +235,7 @@ MonoBehaviour:
   contador: 0
   fire: {fileID: 5271028281960215529, guid: ef5686b09d54c4b46b77622a6bc93812, type: 3}
   firePoint: {fileID: 6519990181927552629}
+  cooldown: 1
 --- !u!114 &6519990181680491810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -456,6 +457,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6519990181680491804}
     m_Modifications:
+    - target: {fileID: 7758496882774670726, guid: 4b0028b6a1c8d1c45860a19352bda6f0,
+        type: 3}
+      propertyPath: m_Name
+      value: SFXManager
+      objectReference: {fileID: 0}
     - target: {fileID: 7758496882774670728, guid: 4b0028b6a1c8d1c45860a19352bda6f0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -510,11 +516,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7758496882774670726, guid: 4b0028b6a1c8d1c45860a19352bda6f0,
-        type: 3}
-      propertyPath: m_Name
-      value: SFXManager
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b0028b6a1c8d1c45860a19352bda6f0, type: 3}
