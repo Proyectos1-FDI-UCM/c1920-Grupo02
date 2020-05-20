@@ -6,6 +6,8 @@ public class RecibeDanyo : MonoBehaviour
     public int numGlobulosRojos;
     public int life;
     public GameObject puerta;
+    public GameObject dieEffect;
+    private Transform body;
 
     //Variables para mostrar que recive daños
     private float damageRecieved;
@@ -13,6 +15,7 @@ public class RecibeDanyo : MonoBehaviour
     private void Awake()
     {
         sprite = gameObject.GetComponentInChildren<SpriteRenderer>();
+        body = GetComponentInChildren<EnemyPatrol>().gameObject.transform;
     }
     public void Dañado(int cant) // se recibe "cant" puntos de daño
     {
@@ -30,6 +33,8 @@ public class RecibeDanyo : MonoBehaviour
             // Habria que llamar al metodo confirma boss, que verifica si tiene el Componente Distorsion de camara
             // Si es asi , el Objeto publico puerta, se destruye justo cuando muere la Tenia Boss
             if (GetComponentInChildren<DistorsionCamera>() != null) Destroy(puerta);
+            
+            Instantiate(dieEffect, body.position, Quaternion.identity);
             Destroy(this.gameObject);
             print("Enemigo destruido");
         }

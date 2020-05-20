@@ -9,9 +9,14 @@ public class DanyoEnemigo2 : MonoBehaviour
     //Variables para mostrar que recive daños
     private float damageRecieved;
     private SpriteRenderer sprite;
+
+    public GameObject dieEffect;
+    private Transform body;
+
     private void Awake()
     {
         sprite = gameObject.GetComponentInChildren<SpriteRenderer>();
+        body = GetComponentInChildren<EnemyPatrol>().gameObject.transform;
     }
     private void Update()
     {
@@ -69,6 +74,7 @@ public class DanyoEnemigo2 : MonoBehaviour
             //Spawnea globulos rojos
             spawner.GetComponent<SpawnerGlobulosRojos>().SpawnGlobulosRojos(numGlobulosRojos, gameObject.GetComponentInChildren<EnemyPatrol>().GetComponent<Transform>());
             //Destruye al enemigo
+            Instantiate(dieEffect, body.position, Quaternion.identity);
             Destroy(this.gameObject);
             print("Enemigo destruido");
         }

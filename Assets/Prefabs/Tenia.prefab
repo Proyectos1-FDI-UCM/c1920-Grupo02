@@ -483,6 +483,8 @@ MonoBehaviour:
   numGlobulosRojos: 1
   life: 6
   puerta: {fileID: 0}
+  dieEffect: {fileID: 5414759209881986485, guid: bd406d003ff03b14d8b51b30b7fd1c67,
+    type: 3}
 --- !u!114 &1524877461034893754
 MonoBehaviour:
   m_ObjectHideFlags: 0
