@@ -201,3 +201,5 @@ CREADO POR FIN UN PROTOTIPO DECENTE DE BUILD SIN ERRORES AL CAMBIAR DE ESCENA --
 //Cambios hechos el 20 de  mayo
 Ahora los enemigos (incluidos bosses) dan feedback al jugador cuando mueren instanciando partículas - Nico
 Las balas también instancian partículas cuando se destruyen -Nico
+Añadida animación de OneShot en el Gran Coágulo - Miguel
+Añadidas nuevas Sorting Layers: Enemy y Attacks - Miguel
