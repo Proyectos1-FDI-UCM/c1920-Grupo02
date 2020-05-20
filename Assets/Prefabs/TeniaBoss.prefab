@@ -12,13 +12,13 @@ GameObject:
   - component: {fileID: 3110859241653096680}
   - component: {fileID: 3110859241653096681}
   - component: {fileID: 3110859241653096682}
-  - component: {fileID: 6790368068160196671}
   - component: {fileID: 3110859241653096683}
   - component: {fileID: 509114801040055176}
   - component: {fileID: 7276435658649338579}
   - component: {fileID: 7057494008858132127}
   - component: {fileID: 7934228455343894814}
   - component: {fileID: 7934228455343894801}
+  - component: {fileID: 5452527528255746566}
   m_Layer: 17
   m_Name: Body
   m_TagString: Untagged
@@ -136,18 +136,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
---- !u!114 &6790368068160196671
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3110859241653096676}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3940a113d8180364e83f708e7e0f0b2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3110859241653096683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,6 +217,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sizeMultiplier: 5
+--- !u!114 &5452527528255746566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3110859241653096676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d7f5e4e554bf3b4fa4e7f1c7df7f785, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dieEffect: {fileID: 5414759209881986485, guid: 8ff125f6d749cc945a804ac66d9531cd,
+    type: 3}
 --- !u!1 &3110859241738438689
 GameObject:
   m_ObjectHideFlags: 0
