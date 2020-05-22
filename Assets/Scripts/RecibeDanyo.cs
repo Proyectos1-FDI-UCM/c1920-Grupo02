@@ -30,6 +30,7 @@ public class RecibeDanyo : MonoBehaviour
             // Habria que llamar al metodo confirma boss, que verifica si tiene el Componente Distorsion de camara
             // Si es asi , el Objeto publico puerta, se destruye justo cuando muere la Tenia Boss
             if (GetComponentInChildren<DistorsionCamera>() != null) Destroy(puerta);
+            
             Destroy(this.gameObject);
             print("Enemigo destruido");
         }

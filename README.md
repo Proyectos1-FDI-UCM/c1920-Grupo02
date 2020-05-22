@@ -181,8 +181,8 @@ Canvas arreglado Nivel1, tutorial y menu - Samuel
 Implmentadas un par de plataformas a la sala de la tenia - Dani 
 
 //Cambios hechos el 15 de mayo
-Arreglado mapa de lava, no tenía colisiones ni hacía daño
-Ajustado radio del atractor de monedas, se ha disminuido
+Arreglado mapa de lava, no tenía colisiones ni hacía daño -Nico
+Ajustado radio del atractor de monedas, se ha disminuido -Nico
 Actualizado el input - Miguel
 
 //Cambios hechos el 17 de mayo
@@ -197,3 +197,9 @@ Ajustados valores internos de la Tenia - Dani
 
 //Cambios hechos el 19 de mayo
 CREADO POR FIN UN PROTOTIPO DECENTE DE BUILD SIN ERRORES AL CAMBIAR DE ESCENA --Samuel
+
+//Cambios hechos el 20 de  mayo
+Ahora los enemigos (incluidos bosses) dan feedback al jugador cuando mueren instanciando partículas - Nico
+Las balas también instancian partículas cuando se destruyen -Nico
+Añadida animación de OneShot en el Gran Coágulo - Miguel
+Añadidas nuevas Sorting Layers: Enemy y Attacks - Miguel

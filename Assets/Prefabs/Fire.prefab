@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -6798981161963780320}
   - component: {fileID: 8195377626744728567}
   - component: {fileID: 5606757384708896247}
+  - component: {fileID: 3208375532762655803}
   m_Layer: 9
   m_Name: Fire
   m_TagString: Untagged
@@ -98,7 +99,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialVelocity: 20
   tiempo: 0.2
-  jugador: {fileID: 6445581003937344162, guid: d0b3e9bda6807f74182dc985083da4a4, type: 3}
 --- !u!50 &-6798981161963780320
 Rigidbody2D:
   serializedVersion: 4
@@ -150,3 +150,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   danyoNormal: 1
   tiempoAtaque: 0.75
+--- !u!114 &3208375532762655803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5271028281960215529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d7f5e4e554bf3b4fa4e7f1c7df7f785, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dieEffect: {fileID: 5414759209881986485, guid: be2649aa370d75040b85b8e892cffcf2,
+    type: 3}

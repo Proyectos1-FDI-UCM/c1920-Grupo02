@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3998103026976293177}
   - component: {fileID: 6717146342511033654}
   - component: {fileID: 8190147283678495897}
+  - component: {fileID: 294809173138647220}
   m_Layer: 17
   m_Name: Izq
   m_TagString: Untagged
@@ -69,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1630551845
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: fee04bfe44e9f894b945dd48425460ef, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -136,6 +137,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 3
+--- !u!114 &294809173138647220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199219379221942824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d7f5e4e554bf3b4fa4e7f1c7df7f785, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dieEffect: {fileID: 5414759209881986485, guid: bd406d003ff03b14d8b51b30b7fd1c67,
+    type: 3}
 --- !u!1 &7361085377247552011
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,6 +164,7 @@ GameObject:
   - component: {fileID: 3061535195978236486}
   - component: {fileID: 9186390601681712900}
   - component: {fileID: 3315309618163660727}
+  - component: {fileID: 3731938666603261006}
   m_Layer: 17
   m_Name: Der
   m_TagString: Untagged
@@ -205,8 +221,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1630551845
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: fee04bfe44e9f894b945dd48425460ef, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -272,6 +288,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 3
+--- !u!114 &3731938666603261006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7361085377247552011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d7f5e4e554bf3b4fa4e7f1c7df7f785, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dieEffect: {fileID: 5414759209881986485, guid: bd406d003ff03b14d8b51b30b7fd1c67,
+    type: 3}
 --- !u!1 &7837536500284150080
 GameObject:
   m_ObjectHideFlags: 0

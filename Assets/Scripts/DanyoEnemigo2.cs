@@ -9,6 +9,7 @@ public class DanyoEnemigo2 : MonoBehaviour
     //Variables para mostrar que recive daños
     private float damageRecieved;
     private SpriteRenderer sprite;
+
     private void Awake()
     {
         sprite = gameObject.GetComponentInChildren<SpriteRenderer>();
