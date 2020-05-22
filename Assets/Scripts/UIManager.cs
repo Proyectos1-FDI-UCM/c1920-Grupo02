@@ -17,6 +17,11 @@ public class UIManager : MonoBehaviour
     public Text globulosRojosUI;
     public Text globulosBlancosUI;
 
+    //Variables necesaria para el Reroll de las pastillas
+    private Vector2 auxIbuprofeno;
+    private Vector2 auxHomeopatica;
+    private Vector2 auxExtasis;
+
     //Variables necesarias para el tutorial
     public Image tutorialPhoto;
     public Image[] diagramaTutorial;
@@ -25,6 +30,11 @@ public class UIManager : MonoBehaviour
     Scene currentScene;
     void Start()
     {
+        //Cacheamos
+        auxHomeopatica = pastillasUI[0].transform.position;
+        auxIbuprofeno = pastillasUI[1].transform.position;
+        auxExtasis = pastillasUI[2].transform.position;
+
         currentScene = SceneManager.GetActiveScene();
 
         //Desactivamos todo
@@ -36,7 +46,7 @@ public class UIManager : MonoBehaviour
         arrows.SetActive(false);
 
 
-            maxLife = hearts.Length;    //Establecemos la çvida máxima
+        maxLife = hearts.Length;    //Establecemos la çvida máxima
         GameManager.instance.SetUIManager(this);
     }
     private void Update()
@@ -158,21 +168,35 @@ public class UIManager : MonoBehaviour
         //2 = Extasis
         if (pastilla == 0)
         {
-            currentPill.transform.position = pastillasUI[0].transform.position;
+            //currentPill.transform.position = pastillasUI[0].transform.position;
+
+            pastillasUI[0].transform.position = auxIbuprofeno;
+            pastillasUI[1].transform.position = auxExtasis;
+            pastillasUI[2].transform.position = auxHomeopatica;
+
             pastillasUI[0].color = new Color(1, 1, 1);
             pastillasUI[1].color = new Color(0.5f, 0.5f, 0.5f);
             pastillasUI[2].color = new Color(0.5f, 0.5f, 0.5f);
         }
         else if (pastilla == 1)
         {
-            currentPill.transform.position = pastillasUI[1].transform.position;
+            //currentPill.transform.position = pastillasUI[1].transform.position;
+            pastillasUI[0].transform.position = auxHomeopatica;
+            pastillasUI[1].transform.position = auxIbuprofeno;
+            pastillasUI[2].transform.position = auxExtasis;
+
             pastillasUI[0].color = new Color(0.5f, 0.5f, 0.5f);
             pastillasUI[1].color = new Color(1, 1, 1);
             pastillasUI[2].color = new Color(0.5f, 0.5f, 0.5f);
         }
         else if (pastilla == 2)
         {
-            currentPill.transform.position = pastillasUI[2].transform.position;
+            //currentPill.transform.position = pastillasUI[2].transform.position;
+
+            pastillasUI[0].transform.position = auxExtasis;
+            pastillasUI[1].transform.position = auxHomeopatica;
+            pastillasUI[2].transform.position = auxIbuprofeno;
+
             pastillasUI[0].color = new Color(0.5f, 0.5f, 0.5f);
             pastillasUI[1].color = new Color(0.5f, 0.5f, 0.5f);
             pastillasUI[2].color = new Color(1, 1, 1);
