@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
 
     int pasado = 0;     //Variable para cambiar el color del fondo --Samuel y Javi
 
-    int globulosPasoNivel;
+    int globulosContador = 0;
 
     bool playerCanAtMelee = true; // variable para registrar cuándo puede atacar a melee el jugador --- Javier
     bool menuPartidaSacado = false; // variable para saber si se ha desplegado el menú durante una partida --- Javier
@@ -40,7 +40,6 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        globulosPasoNivel =0;
 
         Scene currentScene = SceneManager.GetActiveScene();
         if(currentScene.name != "Menu"&& currentScene.name != "Fin")
@@ -120,7 +119,6 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-
             player.gameObject.SetActive(false);
             theUIManager.TutorialTrigger(-1);
             Debug.Log("Has muerto");
@@ -192,6 +190,7 @@ public class GameManager : MonoBehaviour
     public int ReturnGlobulosBlancos() { return globulosBlancos; }
 
     public int ReturnGlobulosRojos() { return globulosRojos; }
+    public int ReturnGlobulosRojosContador() { return globulosContador; }
 
     public int getMaxHP() { return MAXHP; }
 
@@ -213,14 +212,17 @@ public class GameManager : MonoBehaviour
         //Cambia la escena
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
         life = MAXHP;
-        globulosRojos = globulosPasoNivel;
+        globulosRojos -= (globulosRojos- globulosContador);
 
     }
     public void NivelCompleted(string sceneName)
     {
         //Cambia la escena
+        globulosContador += globulosRojos;
+
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
         life = MAXHP;
+
     }
 
     /// <summary>
@@ -306,9 +308,5 @@ public class GameManager : MonoBehaviour
     public void SetPlayer(GameObject newPlayer)
     {
         player = newPlayer.transform;
-    }
-    public void SaveGlobulosRojos()
-    {
-        globulosPasoNivel = globulosRojos;
     }
 }
