@@ -12,17 +12,17 @@ public class PlayerControllerWallJump : MonoBehaviour
 
     Vector2 characterScale;
 
-    public bool isWalking;      //is walking de momento no sirve pa na
-    public bool isGrounded;         //Comprueba si toca el suelo
-    public bool isTouchingWall;     //Comprueba si toca un muro
-    public bool isWallSliding;      //Comprueba si se está deslizando
-    public bool canJump;            //Comprueba si puede saltar
+    private bool isWalking;      //is walking de momento no sirve pa na
+    private bool isGrounded;         //Comprueba si toca el suelo
+    private bool isTouchingWall;     //Comprueba si toca un muro
+    private bool isWallSliding;      //Comprueba si se está deslizando
+    private bool canJump;            //Comprueba si puede saltar
 
     //Numero de saltos disponibles
-    int numJumpLeft = 1;
+    private int numJumpLeft = 1;
     //Variables de control para el salto
-    bool gettingOffFloor = false;
-    float timeToGetOffFloor = 0.5f;
+    private bool gettingOffFloor = false;
+    private float timeToGetOffFloor = 0.5f;
 
     //Rigidbody para comprobar la velocidad del player
     private Rigidbody2D rb;
@@ -30,22 +30,21 @@ public class PlayerControllerWallJump : MonoBehaviour
 
     //private int facingDirection = 1;
 
-    public float movementSpeed = 10;
-    public float jumpForce = 16;
+    private float movementSpeed = 10;
+    private float jumpForce = 25;
 
     //Variables para saltos/deslizamientos/etc
-    public float groundCheckRadius;
-    public float wallCheckDistance;
-    public float wallSlideSpeed;
-    public float movementForceInAir;
-    public float airDragMultiplier = 0.95f;
-    public float variableJumpHeighMultiplier = 0.5f;
-    public float wallJumpForce;
+    private float groundCheckRadius = 0.3f;
+    private float wallCheckDistance = 0.6f;
+    private float wallSlideSpeed = 2;
+    private float movementForceInAir = 100;
+    private float airDragMultiplier = 0.95f;
+    private float variableJumpHeighMultiplier = 0.5f;
+    private float wallJumpForce = 20;
 
     //Dirección de los saltos
-    public Vector2 wallJumpDirection;
-    [SerializeField]
-    private float wallJumpTimeOffImpulse;
+    private Vector2 wallJumpDirection = new Vector2(1, 2);
+    private float wallJumpTimeOffImpulse = 0.2f;
 
     private bool playerIsJumpingOffWall = false;
 

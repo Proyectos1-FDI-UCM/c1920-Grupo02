@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
-
+    public Image currentPill;
     public Image[] pastillasUI;  //Interfaz del cambio de pastilla
     public Text time;            //Contador para el cambio de pastilla
     public GameObject arrows;
@@ -41,6 +41,7 @@ public class UIManager : MonoBehaviour
         pastillasUI[1].enabled = false;
         pastillasUI[2].enabled = false;
         time.enabled = false;
+        currentPill.enabled = false;
         arrows.SetActive(false);
 
 
@@ -159,6 +160,7 @@ public class UIManager : MonoBehaviour
         pastillasUI[1].enabled = true;
         pastillasUI[2].enabled = true;
         arrows.SetActive(true);
+        currentPill.enabled = true;
 
         //0 = Homeopatica
         //1 = Ibuprofeno
