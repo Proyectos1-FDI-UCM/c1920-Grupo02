@@ -5,7 +5,6 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
 
-    public Image currentPill;   //Borde dorado que muestra la pastilla que has seleccionado
     public Image[] pastillasUI;  //Interfaz del cambio de pastilla
     public Text time;            //Contador para el cambio de pastilla
     public GameObject arrows;
@@ -42,7 +41,6 @@ public class UIManager : MonoBehaviour
         pastillasUI[1].enabled = false;
         pastillasUI[2].enabled = false;
         time.enabled = false;
-        currentPill.enabled = false;
         arrows.SetActive(false);
 
 
@@ -160,7 +158,6 @@ public class UIManager : MonoBehaviour
         pastillasUI[0].enabled = true;
         pastillasUI[1].enabled = true;
         pastillasUI[2].enabled = true;
-        currentPill.enabled = true;
         arrows.SetActive(true);
 
         //0 = Homeopatica
@@ -168,8 +165,6 @@ public class UIManager : MonoBehaviour
         //2 = Extasis
         if (pastilla == 0)
         {
-            //currentPill.transform.position = pastillasUI[0].transform.position;
-
             pastillasUI[0].transform.position = auxIbuprofeno;
             pastillasUI[1].transform.position = auxExtasis;
             pastillasUI[2].transform.position = auxHomeopatica;
@@ -180,7 +175,6 @@ public class UIManager : MonoBehaviour
         }
         else if (pastilla == 1)
         {
-            //currentPill.transform.position = pastillasUI[1].transform.position;
             pastillasUI[0].transform.position = auxHomeopatica;
             pastillasUI[1].transform.position = auxIbuprofeno;
             pastillasUI[2].transform.position = auxExtasis;
@@ -191,8 +185,6 @@ public class UIManager : MonoBehaviour
         }
         else if (pastilla == 2)
         {
-            //currentPill.transform.position = pastillasUI[2].transform.position;
-
             pastillasUI[0].transform.position = auxExtasis;
             pastillasUI[1].transform.position = auxHomeopatica;
             pastillasUI[2].transform.position = auxIbuprofeno;
