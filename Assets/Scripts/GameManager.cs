@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
 
     int pasado = 0;     //Variable para cambiar el color del fondo --Samuel y Javi
 
+    int globulosPasoNivel;
+
     bool playerCanAtMelee = true; // variable para registrar cuándo puede atacar a melee el jugador --- Javier
     bool menuPartidaSacado = false; // variable para saber si se ha desplegado el menú durante una partida --- Javier
     float time = 0;
@@ -38,6 +40,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        globulosPasoNivel =0;
+
         Scene currentScene = SceneManager.GetActiveScene();
         if(currentScene.name != "Menu"&& currentScene.name != "Fin")
             player = GameObject.Find("Player").transform;
@@ -94,11 +98,10 @@ public class GameManager : MonoBehaviour
     public void NewGame(string sceneName)
     {
         ResetGM();
+        //globulosPasoNivel = globulosRojos;
         ChangeScene(sceneName);
-        //Destroy(this.gameObject);     //ELIMINADO POR SAMUEL
+
     }
-
-
 
     /// <summary>
     /// Comprueba si está vivo y aplica el daño a las vidas
@@ -126,7 +129,6 @@ public class GameManager : MonoBehaviour
         }
         return vivo;
     }
-
 
     public void AddLife(int extra) //Para que los globulos rojos den vida al jugador 
     {
@@ -207,6 +209,14 @@ public class GameManager : MonoBehaviour
     public bool GetMenu() { return menuPartidaSacado; } // comprueba el campo privado "menuPartidaSacado" --- Javier
 
     public void ChangeScene(string sceneName)
+    {
+        //Cambia la escena
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+        life = MAXHP;
+        globulosRojos = globulosPasoNivel;
+
+    }
+    public void NivelCompleted(string sceneName)
     {
         //Cambia la escena
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
@@ -296,5 +306,9 @@ public class GameManager : MonoBehaviour
     public void SetPlayer(GameObject newPlayer)
     {
         player = newPlayer.transform;
+    }
+    public void SaveGlobulosRojos()
+    {
+        globulosPasoNivel = globulosRojos;
     }
 }
