@@ -123,7 +123,7 @@ public class GameManager : MonoBehaviour
             player.gameObject.SetActive(false);
             theUIManager.TutorialTrigger(-1);
             Debug.Log("Has muerto");
-            LoadPlayer();
+            NewGame(SceneManager.GetActiveScene().name);
             vivo = false;
         }
         return vivo;
