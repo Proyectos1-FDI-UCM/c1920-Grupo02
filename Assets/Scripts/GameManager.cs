@@ -18,8 +18,6 @@ public class GameManager : MonoBehaviour
 
     int pasado = 0;     //Variable para cambiar el color del fondo --Samuel y Javi
 
-    int globulosContador = 0;
-
     bool playerCanAtMelee = true; // variable para registrar cuándo puede atacar a melee el jugador --- Javier
     bool menuPartidaSacado = false; // variable para saber si se ha desplegado el menú durante una partida --- Javier
     float time = 0;
@@ -40,9 +38,10 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        LoadPlayer();
 
         Scene currentScene = SceneManager.GetActiveScene();
-        if(currentScene.name != "Menu"&& currentScene.name != "Fin")
+        if (currentScene.name != "Menu" && currentScene.name != "Fin")
             player = GameObject.Find("Player").transform;
     }
 
@@ -96,6 +95,7 @@ public class GameManager : MonoBehaviour
     //Crea una nueva partida en la escena designada
     public void NewGame(string sceneName)
     {
+        LoadPlayer();
         ResetGM();
         //globulosPasoNivel = globulosRojos;
         ChangeScene(sceneName);
@@ -119,6 +119,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+
             player.gameObject.SetActive(false);
             theUIManager.TutorialTrigger(-1);
             Debug.Log("Has muerto");
@@ -139,11 +140,6 @@ public class GameManager : MonoBehaviour
         theUIManager.UpdateLife(life); //Actualizamos la UI convenientemente 
         Debug.Log(life);
     }
-
-
-
-
-
     /// <summary>
     /// Manda a la UI que actualice la imagen de las pastillas
     /// </summary>
@@ -187,42 +183,35 @@ public class GameManager : MonoBehaviour
         Debug.Log(globulosBlancos + " globulos blancos");
         theUIManager.UpdateGlobulosBlancosUI(globulosBlancos);
     }
-    public int ReturnGlobulosBlancos() { return globulosBlancos; }
+    public int ReturnGlobulosBlancos() => globulosBlancos;
 
-    public int ReturnGlobulosRojos() { return globulosRojos; }
-    public int ReturnGlobulosRojosContador() { return globulosContador; }
+    public int ReturnGlobulosRojos() => globulosRojos;
 
     public int getMaxHP() { return MAXHP; }
 
-    public float GetPlayerLooking()
-    {
-        return player.lossyScale.x;
-    } // comprobación del estado de "playerLookingRight" --- Javier
+    public float GetPlayerLooking() => player.lossyScale.x;
+    // comprobación del estado de "playerLookingRight" --- Javier
 
     public void UpdateCanAtack(bool val) { playerCanAtMelee = val; } // actualización del estado de "playerCanAtMelee" --- Javier
-    public bool GetPlayerCanAtack() { return playerCanAtMelee; } // comprobación del estado de "playerCanAtMelee" --- Javier
+    public bool GetPlayerCanAtack() => playerCanAtMelee; // comprobación del estado de "playerCanAtMelee" --- Javier
 
     void CorreTiempo(bool val) { Time.timeScale = val ? 1f : 0f; } // congelamos o descongelamos el juego --- Javier
 
     public void UpdateMenu(bool val) { menuPartidaSacado = val; } // actualiza el campo privado "menuPartidaSacado" --- Javier
-    public bool GetMenu() { return menuPartidaSacado; } // comprueba el campo privado "menuPartidaSacado" --- Javier
+    public bool GetMenu() => menuPartidaSacado;  // comprueba el campo privado "menuPartidaSacado" --- Javier
 
     public void ChangeScene(string sceneName)
     {
         //Cambia la escena
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
         life = MAXHP;
-        globulosRojos -= (globulosRojos- globulosContador);
-
     }
     public void NivelCompleted(string sceneName)
     {
+        SavePlayer();
         //Cambia la escena
-        globulosContador += globulosRojos;
-
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
         life = MAXHP;
-
     }
 
     /// <summary>
@@ -255,7 +244,6 @@ public class GameManager : MonoBehaviour
             life = data.health;
             globulosBlancos = 0;
             globulosRojos = data.globulosRojos;
-            //globulosBlancos = data.globulsoBlancos;
             Debug.Log(data.level);
             SceneManager.LoadScene(data.level, LoadSceneMode.Single);
         }
