@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        SavePlayer();
+        //SavePlayer();
 
     }
 
@@ -239,20 +239,20 @@ public class GameManager : MonoBehaviour
     {
         PlayerData data = SaveSystem.LoadData();
 
-        if (data.level != null)
+        if (data != null)
         {
             life = data.health;
             globulosBlancos = 0;
             globulosRojos = data.globulosRojos;
-            Debug.Log(data.level);
-            SceneManager.LoadScene(data.level, LoadSceneMode.Single);
+            Debug.Log(data);
+            //SceneManager.LoadScene(data.level, LoadSceneMode.Single);
         }
     }
 
     public void NewGame()
     {
         PlayerData data = SaveSystem.LoadData();
-        if (data.level != null)
+        if (data != null)
         {
             life = data.health;
             globulosBlancos = 0;

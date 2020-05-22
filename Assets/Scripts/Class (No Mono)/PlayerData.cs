@@ -4,7 +4,7 @@ using UnityEngine;
 [System.Serializable]
 public class PlayerData
 {
-    public string level;
+    //public string level;
     public int health;
     public int globulosRojos;
     //public int globulsoBlancos;
@@ -13,7 +13,7 @@ public class PlayerData
 
     public PlayerData(GameManager player)
     {
-        level = SceneManager.GetActiveScene().name;
+        //level = SceneManager.GetActiveScene().name;
         health = player.getMaxHP();
         globulosRojos = player.ReturnGlobulosRojos();
         //globulsoBlancos = player.ReturnGlobulosBlancos();
