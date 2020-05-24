@@ -54,6 +54,7 @@ public class GranCoaguloLife : MonoBehaviour
 
     private void Update()
     {
+        FXManager.PlaySound("CoaguloEnergia");
         if (inCombat)
         {
             if (numOleadasDeSangre == 4 && Time.time > initialTime + timerPrimeraOleadaDeSangre)
@@ -93,6 +94,7 @@ public class GranCoaguloLife : MonoBehaviour
         parts--;
         if (parts == 0)
         {
+            FXManager.PlaySound("PuertaDesbloqueable");
             Destroy(door);
             Destroy(gameObject);
         }

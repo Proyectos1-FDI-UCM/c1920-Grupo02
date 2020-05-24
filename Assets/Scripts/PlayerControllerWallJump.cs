@@ -176,6 +176,7 @@ public class PlayerControllerWallJump : MonoBehaviour
     /// </summary>
     private void Jump()
     {
+        FXManager.PlaySound("Salto");
         if (canJump && !isWallSliding)  //Salto desde el suelo
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);

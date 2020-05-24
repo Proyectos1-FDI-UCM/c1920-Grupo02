@@ -7,7 +7,7 @@ public class ChangePill : MonoBehaviour
     private bool nextCharacter;
     private bool prevCharacter;
     private bool shootOrDash;
-     
+
     //Contador para cambiar de pastilla
     public float contador = 0;
 
@@ -84,6 +84,7 @@ public class ChangePill : MonoBehaviour
                 //Puedes cambiar de pastilla
                 if (((prevCharacter && (pastilla == 0)) || ((nextCharacter && (pastilla == 1)))) && contador == 0)   //Extasis
                 {
+                    FXManager.PlaySound("ChangePill");
                     Debug.Log("Pastilla 3");
                     pastilla = 2;
                     spriteRenderer.color = Color.magenta;
@@ -92,6 +93,7 @@ public class ChangePill : MonoBehaviour
                 }
                 else if (((prevCharacter && (pastilla == 1)) || ((nextCharacter && (pastilla == 2)))) && contador == 0)   //Homeopatica
                 {
+                    FXManager.PlaySound("ChangePill");
                     Debug.Log("Pastilla 1");
                     pastilla = 0;
                     spriteRenderer.color = Color.cyan;
@@ -100,6 +102,7 @@ public class ChangePill : MonoBehaviour
                 }
                 else if (((prevCharacter && (pastilla == 2)) || ((nextCharacter && (pastilla == 0)))) && contador == 0)  //Ibuprofeno
                 {
+                    FXManager.PlaySound("ChangePill");
                     Debug.Log("Pastilla 2");
                     pastilla = 1;
                     spriteRenderer.color = Color.white;
@@ -127,7 +130,12 @@ public class ChangePill : MonoBehaviour
             if (animator != null)
                 animator.SetTrigger("Shoot");
 
-            if (!GameManager.instance.GetMenu()) Instantiate<GameObject>(fire, firePoint.position, firePoint.rotation); //Spawn de disparo
+            if (!GameManager.instance.GetMenu())
+            {
+                FXManager.PlaySound("Disparo");
+                Instantiate<GameObject>(fire, firePoint.position, firePoint.rotation);
+            }
+            //Spawn de disparo
             lastTimeOfActivation = Time.time;
         }
     }
