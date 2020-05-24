@@ -4,6 +4,14 @@ public class DieEffect : MonoBehaviour
 {
     public GameObject dieEffect;
     bool isQuiting;
+    bool isEnabled;
+
+    private void OnBecameVisible()
+    {
+        //Si el objeto no es visible, no puede spawnear
+        isEnabled = true;
+        Debug.Log(isEnabled);
+    }
 
     private void OnApplicationQuit()
     {
@@ -12,6 +20,6 @@ public class DieEffect : MonoBehaviour
 
     private void OnDestroy()
     {
-        if(!isQuiting)Instantiate(dieEffect, transform.position, Quaternion.identity);
+        if(!isQuiting && isEnabled)Instantiate(dieEffect, transform.position, Quaternion.identity);
     }
 }
