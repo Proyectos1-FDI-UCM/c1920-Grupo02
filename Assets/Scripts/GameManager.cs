@@ -110,6 +110,7 @@ public class GameManager : MonoBehaviour
     public bool LoseLife(int damage)
     {
         bool vivo;
+        FXManager.PlaySound("RecibeDaño");
         life -= damage;
         theUIManager.LifeCount(life);
         if (life > 0)
