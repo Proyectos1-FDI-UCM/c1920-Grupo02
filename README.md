@@ -203,3 +203,6 @@ Ahora los enemigos (incluidos bosses) dan feedback al jugador cuando mueren inst
 Las balas también instancian partículas cuando se destruyen -Nico
 Añadida animación de OneShot en el Gran Coágulo - Miguel
 Añadidas nuevas Sorting Layers: Enemy y Attacks - Miguel
+
+//Cambios hechos el 24 de mayo
+Añadida nueva capa física para la sangre del Gran Coágulo - Miguel
