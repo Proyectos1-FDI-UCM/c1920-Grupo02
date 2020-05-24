@@ -7609,11 +7609,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gran_Coagulo
       objectReference: {fileID: 0}
-    - target: {fileID: 7837536502030534827, guid: 1a1a96aa2526d4d4f84b115029004326,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7837536502030534832, guid: 1a1a96aa2526d4d4f84b115029004326,
         type: 3}
       propertyPath: m_LocalPosition.x
