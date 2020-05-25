@@ -54,7 +54,7 @@ public class GranCoaguloLife : MonoBehaviour
 
     private void Update()
     {
-        FXManager.PlaySound("CoaguloEnergia");
+        //FXManager.PlaySound("CoaguloEnergia");
         if (inCombat)
         {
             if (numOleadasDeSangre == 4 && Time.time > initialTime + timerPrimeraOleadaDeSangre)
