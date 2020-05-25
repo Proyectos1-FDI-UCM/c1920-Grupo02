@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class FXManager : MonoBehaviour
 {
-    public static AudioClip dashSound, puertaSound , oneShotSound, saltoSound, recibirDañoSound, changePillsound,coaguloEnergySound,disparoSound ;  //Nombre de los sonidos
+    public static AudioClip dashSound, puertaSound, oneShotSound, saltoSound, recibirDañoSound, changePillsound, coaguloEnergySound, disparoSound, clickSound;  //Nombre de los sonidos
     static AudioSource audio;
     void Start()
     {
@@ -17,10 +17,14 @@ public class FXManager : MonoBehaviour
         changePillsound = Resources.Load<AudioClip>("Music/SoundEffects/ChangePill");
         coaguloEnergySound = Resources.Load<AudioClip>("Music/SoundEffects/CoaguloEnergia");
         disparoSound = Resources.Load<AudioClip>("Music/SoundEffects/Disparo");
+        clickSound = Resources.Load<AudioClip>("Music/SoundEffects/click");
 
         audio = GetComponent<AudioSource>();
     }
-
+    public void ButtonSound(string sound)
+    {
+        PlaySound(sound);
+    }
     public static void PlaySound(string sound)
     {
         switch (sound)
@@ -48,6 +52,9 @@ public class FXManager : MonoBehaviour
                 break;
             case "Disparo":
                 audio.PlayOneShot(disparoSound);
+                break;
+            case "click":
+                audio.PlayOneShot(clickSound);
                 break;
         }
     }
