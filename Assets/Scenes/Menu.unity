@@ -3185,6 +3185,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7758496882774670726, guid: 4b0028b6a1c8d1c45860a19352bda6f0,
+        type: 3}
+      propertyPath: m_Name
+      value: FXManager
+      objectReference: {fileID: 0}
     - target: {fileID: 7758496882774670728, guid: 4b0028b6a1c8d1c45860a19352bda6f0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3239,11 +3244,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7758496882774670726, guid: 4b0028b6a1c8d1c45860a19352bda6f0,
-        type: 3}
-      propertyPath: m_Name
-      value: FXManager
       objectReference: {fileID: 0}
     - target: {fileID: 7758496882774670729, guid: 4b0028b6a1c8d1c45860a19352bda6f0,
         type: 3}
