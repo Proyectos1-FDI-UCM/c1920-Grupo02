@@ -18,6 +18,7 @@ public class DieEffect : MonoBehaviour
     {
         //Si el objeto no es visible, no puede spawnear
         isEnabled = true;
+        GameManager.isQuitingGame = false;
         Debug.Log(isEnabled);
     }
 

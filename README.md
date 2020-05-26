@@ -212,3 +212,4 @@ Corregido error que salía al detener la escena de Gran Coágulo sin que apareci
 //Cambios hechos el 26 de mayo
 Cambiada la puerta final del Gran Coágulo a un Sprite en vez de a un cubo - Miguel
 Cambiado el orden y las sorting layers - Miguel
+Arreglado bugs del script dieEffect - Nico
