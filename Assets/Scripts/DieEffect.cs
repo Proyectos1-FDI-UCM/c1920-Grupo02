@@ -17,9 +17,9 @@ public class DieEffect : MonoBehaviour
     {
         isQuiting = true;
     }
-
-    private void OnDestroy()
+    public void Efecto()
     {
-        if(!isQuiting && isEnabled)Instantiate(dieEffect, transform.position, Quaternion.identity);
+        if (!isQuiting && isEnabled) Instantiate(dieEffect, transform.position, Quaternion.identity);
+
     }
 }

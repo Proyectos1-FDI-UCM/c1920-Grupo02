@@ -14,10 +14,11 @@ public class DanyoEnemigo2 : MonoBehaviour
     private float damageRecieved;
     private SpriteRenderer sprite;
     private float time = 0.2f;
+    DieEffect effect;
 
     private void Awake()
     {
-
+        effect = gameObject.GetComponentInChildren<DieEffect>();
         sprite = gameObject.GetComponentInChildren<SpriteRenderer>();
     }
     private void Update()
@@ -79,6 +80,7 @@ public class DanyoEnemigo2 : MonoBehaviour
 
         if (life <= 0)
         {
+            effect.Efecto();
             //Spawnea globulos rojos
             spawner.GetComponent<SpawnerGlobulosRojos>().SpawnGlobulosRojos(numGlobulosRojos, gameObject.GetComponentInChildren<EnemyPatrol>().GetComponent<Transform>());
             //Destruye al enemigo
