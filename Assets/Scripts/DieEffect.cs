@@ -5,15 +5,14 @@ public class DieEffect : MonoBehaviour
     public GameObject dieEffect;
     bool isQuiting;
     bool isEnabled;
-    static bool playerDying;
-
-    public static bool PlayerDying { get => playerDying; set => playerDying = value; }
+    public static bool playerDying;
 
     private void Awake()
     {
         isQuiting = false;
-        PlayerDying = true;
+        playerDying = true;
     }
+   
 
     private void OnBecameVisible()
     {
@@ -28,7 +27,7 @@ public class DieEffect : MonoBehaviour
     }
     public void OnDestroy()
     {
-        if (!isQuiting && isEnabled && PlayerDying) Instantiate(dieEffect, transform.position, Quaternion.identity);
+        if (!isQuiting && isEnabled && playerDying && !GameManager.isQuitingGame) Instantiate(dieEffect, transform.position, Quaternion.identity);
 
     }
 }
