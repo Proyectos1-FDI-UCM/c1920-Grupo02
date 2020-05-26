@@ -8,10 +8,10 @@ public class ParteCoaguloVida : MonoBehaviour
     //Variables para mostrar que recive daños
     private float damageRecieved;
     private SpriteRenderer sprite;
-    DieEffect effect;
+    //DieEffect effect;
     private void Awake()
     {
-        effect = gameObject.GetComponent<DieEffect>();
+        //effect = gameObject.GetComponent<DieEffect>();
         vidaTotal = gameObject.GetComponentInParent<CoaguloLife>();
         sprite = gameObject.GetComponentInChildren<SpriteRenderer>();
     }
@@ -55,7 +55,7 @@ public class ParteCoaguloVida : MonoBehaviour
         life -= cant;
         if (life <= 0)
         {
-            effect.Efecto();
+            //effect.Efecto();
             vidaTotal.PartLost();
             //Destruye al enemigo
             Destroy(this.gameObject);

@@ -10,10 +10,10 @@ public class RecibeDanyo : MonoBehaviour
     //Variables para mostrar que recive daños
     private float damageRecieved;
     private SpriteRenderer sprite;
-    DieEffect effect;
+    //DieEffect effect;
     private void Awake()
     {
-        effect = gameObject.GetComponentInChildren<DieEffect>();
+        //effect = gameObject.GetComponentInChildren<DieEffect>();
         sprite = gameObject.GetComponentInChildren<SpriteRenderer>();
     }
     public void Dañado(int cant) // se recibe "cant" puntos de daño
@@ -22,7 +22,7 @@ public class RecibeDanyo : MonoBehaviour
         life -= cant;
         if (life <= 0)
         {
-            effect.Efecto();
+            //effect.Efecto();
             if (spawner != null)
             {
                 //Spawnea globulos rojos
