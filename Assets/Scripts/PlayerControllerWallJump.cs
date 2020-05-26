@@ -176,9 +176,10 @@ public class PlayerControllerWallJump : MonoBehaviour
     /// </summary>
     private void Jump()
     {
-        FXManager.PlaySound("Salto");
         if (canJump && !isWallSliding)  //Salto desde el suelo
         {
+            FXManager.PlaySound("Salto");
+
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             gettingOffFloor = true;
             numJumpLeft--;
@@ -186,6 +187,8 @@ public class PlayerControllerWallJump : MonoBehaviour
         }
         else if (isWallSliding)   //Wall Hop
         {
+            FXManager.PlaySound("Salto");
+
             //facingDirection *= -1;
             characterScale = transform.localScale;
 
