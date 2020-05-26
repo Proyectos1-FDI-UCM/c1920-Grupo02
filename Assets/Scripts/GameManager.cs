@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     static int globulosRojos = 0;
     static int globulosBlancos = 0;
 
+    public static bool isQuitingGame = false;
+
     int pasado = 0;     //Variable para cambiar el color del fondo --Samuel y Javi
 
     bool playerCanAtMelee = true; // variable para registrar cuándo puede atacar a melee el jugador --- Javier
@@ -121,7 +123,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            DieEffect.PlayerDying = false;
+            DieEffect.playerDying = false;
             player.gameObject.SetActive(false);
             theUIManager.TutorialTrigger(-1);
             Debug.Log("Has muerto");
@@ -205,6 +207,7 @@ public class GameManager : MonoBehaviour
     public void ChangeScene(string sceneName)
     {
         //Cambia la escena
+        isQuitingGame = true;
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
         life = MAXHP;
     }
@@ -253,6 +256,7 @@ public class GameManager : MonoBehaviour
 
     public void NewGame()
     {
+        
         PlayerData data = SaveSystem.LoadData();
         if (data != null)
         {
