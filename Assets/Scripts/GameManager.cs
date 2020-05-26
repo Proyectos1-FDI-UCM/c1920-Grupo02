@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     bool playerCanAtMelee = true; // variable para registrar cuándo puede atacar a melee el jugador --- Javier
     bool menuPartidaSacado = false; // variable para saber si se ha desplegado el menú durante una partida --- Javier
     float time = 0;
+
     void Awake()
     {
         if (instance == null)
@@ -120,7 +121,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-
+            DieEffect.PlayerDying = false;
             player.gameObject.SetActive(false);
             theUIManager.TutorialTrigger(-1);
             Debug.Log("Has muerto");
