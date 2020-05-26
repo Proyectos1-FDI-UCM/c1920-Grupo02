@@ -56,12 +56,12 @@ TagManager:
   - name: Player
     uniqueID: 543879999
     locked: 0
-  - name: Attacks
-    uniqueID: 2162451471
-    locked: 0
   - name: Enemy
     uniqueID: 2664415451
     locked: 0
   - name: Decorations
     uniqueID: 3570112633
+    locked: 0
+  - name: Attacks
+    uniqueID: 2162451471
     locked: 0

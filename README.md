@@ -208,3 +208,7 @@ Añadidas nuevas Sorting Layers: Enemy y Attacks - Miguel
 Añadida nueva capa física para la sangre del Gran Coágulo - Miguel
 Añadidas Sorting Layers para el Gran Coágulo - Miguel
 Corregido error que salía al detener la escena de Gran Coágulo sin que aparecieran los coágulos - Nico
+
+//Cambios hechos el 26 de mayo
+Cambiada la puerta final del Gran Coágulo a un Sprite en vez de a un cubo - Miguel
+Cambiado el orden y las sorting layers - Miguel
