@@ -199,7 +199,7 @@ public class GameManager : MonoBehaviour
     public void UpdateCanAtack(bool val) { playerCanAtMelee = val; } // actualización del estado de "playerCanAtMelee" --- Javier
     public bool GetPlayerCanAtack() => playerCanAtMelee; // comprobación del estado de "playerCanAtMelee" --- Javier
 
-    void CorreTiempo(bool val) { Time.timeScale = val ? 1f : 0f; } // congelamos o descongelamos el juego --- Javier
+    public void CorreTiempo(bool val) { Time.timeScale = val ? 1f : 0f; } // congelamos o descongelamos el juego --- Javier
 
     public void UpdateMenu(bool val) { menuPartidaSacado = val; } // actualiza el campo privado "menuPartidaSacado" --- Javier
     public bool GetMenu() => menuPartidaSacado;  // comprueba el campo privado "menuPartidaSacado" --- Javier
