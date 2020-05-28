@@ -11,6 +11,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject optionsUI;
     public GameObject teclas;
     public GameObject chooseLevel;
+    public GameObject credicts;
     private void Awake()
     {
         inputActions = new PlayerInputActions();
@@ -34,6 +35,10 @@ public class PauseMenu : MonoBehaviour
         else if (teclas.activeSelf)
         {
             BackControls();
+        }
+        else if (credicts.activeSelf)
+        {
+            BackCredicts();
         }
         else if (chooseLevel !=null && chooseLevel.activeSelf)
         {
@@ -157,6 +162,18 @@ public class PauseMenu : MonoBehaviour
     public void BackControls()
     {
         teclas.SetActive(false);
+        if (pauseUI != null)
+            pauseUI.SetActive(true);
+    }
+    public void LoadCredicts()
+    {
+        credicts.SetActive(true);
+        if (pauseUI != null)
+            pauseUI.SetActive(false);
+    }
+    public void BackCredicts()
+    {
+        credicts.SetActive(false);
         if (pauseUI != null)
             pauseUI.SetActive(true);
     }
