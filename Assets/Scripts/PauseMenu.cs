@@ -36,7 +36,7 @@ public class PauseMenu : MonoBehaviour
         {
             BackControls();
         }
-        else if (credicts.activeSelf)
+        else if (credicts != null && credicts.activeSelf)
         {
             BackCredicts();
         }
@@ -167,13 +167,15 @@ public class PauseMenu : MonoBehaviour
     }
     public void LoadCredicts()
     {
-        credicts.SetActive(true);
+        if (credicts != null)
+            credicts.SetActive(true);
         if (pauseUI != null)
             pauseUI.SetActive(false);
     }
     public void BackCredicts()
     {
-        credicts.SetActive(false);
+        if (credicts != null)
+            credicts.SetActive(false);
         if (pauseUI != null)
             pauseUI.SetActive(true);
     }
