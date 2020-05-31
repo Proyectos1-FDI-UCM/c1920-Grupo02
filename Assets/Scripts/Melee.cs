@@ -34,7 +34,7 @@ public class Melee : MonoBehaviour
                     }
                     else if (this.gameObject.transform.localScale.x == -1) // si el personaje mira a izdas.:
                     {
-                        Instantiate<GameObject>(ataque, gameObject.transform.position + new Vector3(-0.75f, 0, 0), Quaternion.identity, gameObject.transform); // invocación de prefab
+                        Instantiate<GameObject>(ataque, gameObject.transform.position, Quaternion.identity, gameObject.transform); // invocación de prefab
                     }
                 }
             }
