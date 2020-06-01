@@ -75,7 +75,17 @@ public class ChangePill : MonoBehaviour
 
         //Disparo       Al empezar con el ibuprofeno puedes disparar desde el inicio
         if (shootOrDash && pastilla == 1 && GameManager.instance.GetPlayerCanAtack()) //Si se pulsas una tecla de disparo y eres Ibuprofeno...
-            Shoot(); //Dispara
+        {
+            //Disparas
+            if (lastTimeOfActivation < Time.time - cooldown)
+            {
+                if (animator != null)
+                    animator.SetTrigger("Shoot");
+                Invoke("Shoot", 0.1f);//Invoke meramente estetico
+            }
+
+                
+        }
 
         if (cambio) //Si has recogido el powerUp...
         {
@@ -127,9 +137,6 @@ public class ChangePill : MonoBehaviour
     {
         if (lastTimeOfActivation < Time.time - cooldown)
         {
-            if (animator != null)
-                animator.SetTrigger("Shoot");
-
             if (!GameManager.instance.GetMenu())
             {
                 FXManager.PlaySound("Disparo");
