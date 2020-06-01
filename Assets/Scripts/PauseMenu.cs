@@ -81,7 +81,13 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
         GameManager.instance.ChangeScene("Menu");
     }
-
+    public void Mouse(bool visible)
+    {
+        if (visible)
+            Cursor.visible = true;
+        else
+            Cursor.visible = false;
+    }
     /// <summary>
     /// Quita el nuevo
     /// </summary>

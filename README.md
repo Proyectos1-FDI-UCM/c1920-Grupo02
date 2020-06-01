@@ -213,3 +213,6 @@ Corregido error que salía al detener la escena de Gran Coágulo sin que apareci
 Cambiada la puerta final del Gran Coágulo a un Sprite en vez de a un cubo - Miguel
 Cambiado el orden y las sorting layers - Miguel
 Arreglado bugs del script dieEffect - Nico
+
+//Cambios hechos el 1 de Junio
+Ahora el Raton solo aparece en el menú y la interfaz de Pausa --Samuel
