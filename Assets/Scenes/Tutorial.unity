@@ -460,7 +460,7 @@ MonoBehaviour:
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 0
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 0
@@ -6389,6 +6389,7 @@ MonoBehaviour:
   optionsUI: {fileID: 759944577}
   teclas: {fileID: 594041936}
   chooseLevel: {fileID: 0}
+  credicts: {fileID: 0}
 --- !u!114 &1154890831
 MonoBehaviour:
   m_ObjectHideFlags: 0
