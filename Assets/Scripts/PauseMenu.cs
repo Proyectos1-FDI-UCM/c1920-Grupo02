@@ -45,8 +45,11 @@ public class PauseMenu : MonoBehaviour
             BackChooseLevel();
         }
         else if (pauseUI != null)
+        {
             //Se pausa
             Pause();
+        }
+            
     }
 
     /// <summary>
@@ -54,6 +57,7 @@ public class PauseMenu : MonoBehaviour
     /// </summary>
     public void Resume()
     {
+        Cursor.visible = false;
         pauseUI.SetActive(false);
         Time.timeScale = 1;
         GameManager.instance.UpdateMenu(false);
@@ -64,6 +68,7 @@ public class PauseMenu : MonoBehaviour
     /// </summary>
     void Pause()
     {
+        Cursor.visible = true;
         pauseUI.SetActive(true);
         Time.timeScale = 0;
         GameManager.instance.UpdateMenu(true);
