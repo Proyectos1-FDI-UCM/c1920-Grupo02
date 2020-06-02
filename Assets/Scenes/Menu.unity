@@ -1681,8 +1681,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 1436521996}
   m_HandleRect: {fileID: 347509882}
   m_Direction: 0
-  m_MinValue: -20
-  m_MaxValue: 10
+  m_MinValue: -70
+  m_MaxValue: 20
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -3473,11 +3473,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7758496882774670726, guid: 4b0028b6a1c8d1c45860a19352bda6f0,
-        type: 3}
-      propertyPath: m_Name
-      value: FXManager
-      objectReference: {fileID: 0}
     - target: {fileID: 7758496882774670728, guid: 4b0028b6a1c8d1c45860a19352bda6f0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3532,6 +3527,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7758496882774670726, guid: 4b0028b6a1c8d1c45860a19352bda6f0,
+        type: 3}
+      propertyPath: m_Name
+      value: FXManager
       objectReference: {fileID: 0}
     - target: {fileID: 7758496882774670729, guid: 4b0028b6a1c8d1c45860a19352bda6f0,
         type: 3}
@@ -4082,8 +4082,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 931575384}
   m_HandleRect: {fileID: 1606251725}
   m_Direction: 0
-  m_MinValue: -20
-  m_MaxValue: 10
+  m_MinValue: -70
+  m_MaxValue: 20
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -6027,8 +6027,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 2144630939}
   m_HandleRect: {fileID: 1706265034}
   m_Direction: 0
-  m_MinValue: -20
-  m_MaxValue: 10
+  m_MinValue: -70
+  m_MaxValue: 20
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:

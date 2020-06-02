@@ -696,17 +696,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 3765439610240424369, guid: ccb9b20901c047240bec1bd45d47b85c,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 6519990181680491804, guid: ab2fd3b895f75ae4e9eb0e10f0124b6a,
-        type: 3}
-    - target: {fileID: 3765439610240424369, guid: ccb9b20901c047240bec1bd45d47b85c,
-        type: 3}
-      propertyPath: tutorial
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 3765439610240424368, guid: ccb9b20901c047240bec1bd45d47b85c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -761,6 +750,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3765439610240424369, guid: ccb9b20901c047240bec1bd45d47b85c,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 6519990181680491804, guid: ab2fd3b895f75ae4e9eb0e10f0124b6a,
+        type: 3}
+    - target: {fileID: 3765439610240424369, guid: ccb9b20901c047240bec1bd45d47b85c,
+        type: 3}
+      propertyPath: tutorial
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccb9b20901c047240bec1bd45d47b85c, type: 3}
@@ -4175,8 +4175,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 242186503}
   m_HandleRect: {fileID: 387606637}
   m_Direction: 0
-  m_MinValue: -20
-  m_MaxValue: 10
+  m_MinValue: -70
+  m_MaxValue: 20
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -5031,21 +5031,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2770198308643028554, guid: 9fce2f392fc659342ba5efe1682c5170,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.48563004
-      objectReference: {fileID: 0}
-    - target: {fileID: 2770198308643028557, guid: 9fce2f392fc659342ba5efe1682c5170,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.newSize.y
-      value: 0.48563004
-      objectReference: {fileID: 0}
-    - target: {fileID: 2770198308643028555, guid: 9fce2f392fc659342ba5efe1682c5170,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.newSize.y
-      value: 0.48563004
-      objectReference: {fileID: 0}
     - target: {fileID: 2770198309041265594, guid: 9fce2f392fc659342ba5efe1682c5170,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5056,10 +5041,25 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2770198308643028554, guid: 9fce2f392fc659342ba5efe1682c5170,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.48563004
+      objectReference: {fileID: 0}
     - target: {fileID: 2770198308643028556, guid: 9fce2f392fc659342ba5efe1682c5170,
         type: 3}
       propertyPath: vMovimiento
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2770198308643028557, guid: 9fce2f392fc659342ba5efe1682c5170,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.48563004
+      objectReference: {fileID: 0}
+    - target: {fileID: 2770198308643028555, guid: 9fce2f392fc659342ba5efe1682c5170,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.48563004
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9fce2f392fc659342ba5efe1682c5170, type: 3}
@@ -5501,8 +5501,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 1195602627}
   m_HandleRect: {fileID: 539569427}
   m_Direction: 0
-  m_MinValue: -20
-  m_MaxValue: 10
+  m_MinValue: -70
+  m_MaxValue: 20
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -9091,8 +9091,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 1415450404}
   m_HandleRect: {fileID: 1957676169}
   m_Direction: 0
-  m_MinValue: -20
-  m_MaxValue: 10
+  m_MinValue: -70
+  m_MaxValue: 20
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
