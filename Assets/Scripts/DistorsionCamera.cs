@@ -45,7 +45,7 @@ public class DistorsionCamera : MonoBehaviour
 
         if (collision.gameObject.GetComponent<PlayerControllerWallJump>() != null)
         {
-          
+            FXManager.PlaySound("TaeniaBite");
             Shake(cantidad, tiempo);
 
         }
