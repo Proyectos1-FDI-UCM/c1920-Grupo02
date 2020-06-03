@@ -216,3 +216,7 @@ Arreglado bugs del script dieEffect - Nico
 
 //Cambios hechos el 1 de Junio
 Ahora el Raton solo aparece en el menú y la interfaz de Pausa --Samuel
+
+//Cambios hechos el 3 de Junio
+Aumentada considerablemente la vida máxima del Gran Coágulo - Miguel
+Disminuido en 10 segundos el tiempo para matar a los adds en el Gran Coágulo - Miguel
