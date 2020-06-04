@@ -87,22 +87,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e67d5918325c9414a8cb8c1e92c8a92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isWalking: 0
-  isGrounded: 0
-  isTouchingWall: 0
-  isWallSliding: 0
-  canJump: 0
-  movementSpeed: 10
-  jumpForce: 25
-  groundCheckRadius: 0.3
-  wallCheckDistance: 0.6
-  wallSlideSpeed: 2
-  movementForceInAir: 100
-  airDragMultiplier: 0.95
-  variableJumpHeighMultiplier: 0.5
-  wallJumpForce: 20
-  wallJumpDirection: {x: 1, y: 2}
-  wallJumpTimeOffImpulse: 0.2
   groundCheck: {fileID: 6519990183263965948}
   wallCheck: {fileID: 6519990181636063999}
   whatIsGround:
@@ -192,7 +176,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.036126614, y: -0.007371664}
+  m_Offset: {x: -0.032716155, y: -0.019308269}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -203,7 +187,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9316664, y: 1.7800412}
+  m_Size: {x: 0.86345744, y: 1.756168}
   m_EdgeRadius: 0
 --- !u!114 &6519990181680491811
 MonoBehaviour:
@@ -457,6 +441,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6519990181680491804}
     m_Modifications:
+    - target: {fileID: 7758496882774670726, guid: 4b0028b6a1c8d1c45860a19352bda6f0,
+        type: 3}
+      propertyPath: m_Name
+      value: SFXManager
+      objectReference: {fileID: 0}
     - target: {fileID: 7758496882774670728, guid: 4b0028b6a1c8d1c45860a19352bda6f0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -511,11 +500,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7758496882774670726, guid: 4b0028b6a1c8d1c45860a19352bda6f0,
-        type: 3}
-      propertyPath: m_Name
-      value: SFXManager
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b0028b6a1c8d1c45860a19352bda6f0, type: 3}
