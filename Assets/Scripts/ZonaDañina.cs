@@ -3,28 +3,41 @@
 public class ZonaDañina : MonoBehaviour
 {
     //Variable que indica cada cuanto se le quita vida al jugador 
-    private float timer = 0; 
- 
-    //Si te quedas en la zona dañina...
-    private void OnCollisionStay2D(Collision2D collision)
+    private float timer = 0;
+    private bool inTouch;
+    int parpadeo = 0;
+    private void Update()
     {
-        //Si el timer no ha llegado a 0...
-        if (collision.gameObject.GetComponent<PlayerControllerWallJump>() != null && timer>0)
+        //Si te quedas en la zona dañina...
+        if (inTouch&&timer>0)
         {
-            //Lo vas restando
-            timer -=Time.deltaTime;
+            timer -= Time.deltaTime;
         }
-        //Si el timer ya está en 0...
-        else if (collision.gameObject.GetComponent<PlayerControllerWallJump>() != null && timer <= 0) 
+        else if (timer <= 0)
         {
             //Restas una vida
             GameManager.instance.LoseLife(1);
 
-            //haces que parpadee
-            collision.gameObject.GetComponent<PlayerRecibeDanyo>().Dañado();
-
+            parpadeo++;
             //Y reseteas el timer
             timer = 0.3f;
+        }
+
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        inTouch = true;
+        timer = 0;
+        //haces que parpadee
+        collision.gameObject.GetComponent<PlayerRecibeDanyo>().Dañado();
+    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (parpadeo > 0)
+        {
+            //haces que parpadee
+            collision.gameObject.GetComponent<PlayerRecibeDanyo>().Dañado();
+            parpadeo--;
         }
     }
     //Cuando te sales de la zona dañina...
@@ -32,5 +45,6 @@ public class ZonaDañina : MonoBehaviour
     {
         //Reseteas el timer para que vuelva a hacer daño
         timer = 0;
+        inTouch = false;
     }
 }
