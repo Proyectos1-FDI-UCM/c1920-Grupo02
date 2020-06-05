@@ -361,7 +361,8 @@ public class PlayerControllerWallJump : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        transform.parent = null;
+        if(collision.gameObject.GetComponent<PlataformaMovil>())
+            transform.parent = null;
     }
 
     private void OnEnable()
