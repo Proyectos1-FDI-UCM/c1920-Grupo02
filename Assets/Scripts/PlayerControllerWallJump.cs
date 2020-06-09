@@ -176,7 +176,7 @@ public class PlayerControllerWallJump : MonoBehaviour
     /// </summary>
     private void Jump()
     {
-        if (canJump && !isWallSliding)  //Salto desde el suelo
+        if (canJump && !isWallSliding && isGrounded)  //Salto desde el suelo
         {
             FXManager.PlaySound("Salto");
 
