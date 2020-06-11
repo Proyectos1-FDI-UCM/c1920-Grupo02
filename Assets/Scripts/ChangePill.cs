@@ -19,6 +19,7 @@ public class ChangePill : MonoBehaviour
     public Transform firePoint; //Lugar de Spawn
 
     Dash dash;
+    MeleeMovement move; //Script usado para poder disparar y bajar plataformas
 
 
     //Cooldown para el disparo
@@ -49,6 +50,7 @@ public class ChangePill : MonoBehaviour
         //Cacheo
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         dash = gameObject.GetComponent<Dash>();
+        move = gameObject.GetComponent<MeleeMovement>();
     }
     void Update()
     {
@@ -79,6 +81,7 @@ public class ChangePill : MonoBehaviour
             //Disparas
             if (lastTimeOfActivation < Time.time - cooldown)
             {
+                move.enabled = true;
                 if (animator != null)
                     animator.SetTrigger("Shoot");
                 Invoke("Shoot", 0.1f);//Invoke meramente estetico
