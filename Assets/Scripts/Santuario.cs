@@ -30,12 +30,16 @@ public class Santuario : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        FXManager.PlaySound("Sanacion");
+        
         //Le sanas
         GameManager.instance.AddLife(12);
-        if(!done)
-        //Empieza a desaparecer
+        if (!done)
+        {
+            FXManager.PlaySound("Sanacion");
+            //Empieza a desaparecer
             timer = 5;
+        }
+        
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
