@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Santuario : MonoBehaviour
 {
@@ -41,6 +39,5 @@ public class Santuario : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         GameManager.instance.AddLife(12);
-
     }
 }
