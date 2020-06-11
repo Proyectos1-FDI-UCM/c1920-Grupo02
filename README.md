@@ -220,3 +220,6 @@ Ahora el Raton solo aparece en el menú y la interfaz de Pausa --Samuel
 //Cambios hechos el 3 de Junio
 Aumentada considerablemente la vida máxima del Gran Coágulo - Miguel
 Disminuido en 10 segundos el tiempo para matar a los adds en el Gran Coágulo - Miguel
+
+//Cambios hechos el 11 de Junio
+Implementado Santuario en todos los niveles --Samuel
