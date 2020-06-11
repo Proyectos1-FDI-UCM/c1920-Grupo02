@@ -4867,6 +4867,7 @@ GameObject:
   - component: {fileID: 2408993257662784027}
   - component: {fileID: 2408993257662784024}
   - component: {fileID: 2408993257662784026}
+  - component: {fileID: 8633090383955160454}
   m_Layer: 0
   m_Name: Gravity Change
   m_TagString: changer
@@ -4965,3 +4966,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7355652, y: 0.8843961}
   m_EdgeRadius: 0
+--- !u!114 &8633090383955160454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2408993257662784025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c229b303f386d443976b4f6e9743061, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
