@@ -63,7 +63,7 @@ public class ChangePill : MonoBehaviour
             else
             {
                 contador -= Time.deltaTime;
-                GameManager.instance.Contador(contador);
+                GameManager.instance.Contador(contador+1);
             }
         }
         else
@@ -98,7 +98,7 @@ public class ChangePill : MonoBehaviour
                     Debug.Log("Pastilla 3");
                     pastilla = 2;
                     spriteRenderer.color = Color.magenta;
-                    contador = 6;
+                    contador = 1;
                     GameManager.instance.ActualPill(pastilla);
                 }
                 else if (((prevCharacter && (pastilla == 1)) || ((nextCharacter && (pastilla == 2)))) && contador == 0)   //Homeopatica
@@ -107,7 +107,7 @@ public class ChangePill : MonoBehaviour
                     Debug.Log("Pastilla 1");
                     pastilla = 0;
                     spriteRenderer.color = Color.cyan;
-                    contador = 6;
+                    contador = 1;
                     GameManager.instance.ActualPill(pastilla);
                 }
                 else if (((prevCharacter && (pastilla == 2)) || ((nextCharacter && (pastilla == 0)))) && contador == 0)  //Ibuprofeno
@@ -116,7 +116,7 @@ public class ChangePill : MonoBehaviour
                     Debug.Log("Pastilla 2");
                     pastilla = 1;
                     spriteRenderer.color = Color.white;
-                    contador = 6;
+                    contador = 1;
                     GameManager.instance.ActualPill(pastilla);
                 }
             }
