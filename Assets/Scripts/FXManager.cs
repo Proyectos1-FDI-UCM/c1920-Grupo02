@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class FXManager : MonoBehaviour
 {
-    public static AudioClip dashSound, puertaSound, oneShotSound, saltoSound, recibirDañoSound, changePillsound, coaguloEnergySound, disparoSound, clickSound, TaeniaBite;  //Nombre de los sonidos
+    public static AudioClip dashSound, puertaSound, oneShotSound, saltoSound, recibirDañoSound, changePillsound, coaguloEnergySound, disparoSound, clickSound, TaeniaBite, Sanacion;  //Nombre de los sonidos
     static AudioSource audio;
     void Start()
     {
         TaeniaBite = Resources.Load<AudioClip>("Music/SoundEffects/TaeniaBite");
+        Sanacion = Resources.Load<AudioClip>("Music/SoundEffects/Sanacion");
         dashSound = Resources.Load<AudioClip>("Music/SoundEffects/dash");
         puertaSound = Resources.Load<AudioClip>("Music/SoundEffects/PuertaDesbloqueable");
         oneShotSound = Resources.Load<AudioClip>("Music/SoundEffects/OneShotGranCoagulo");
@@ -59,6 +60,9 @@ public class FXManager : MonoBehaviour
                 break;
             case "TaeniaBite":
                 audio.PlayOneShot(TaeniaBite);
+                break;
+            case "Sanacion":
+                audio.PlayOneShot(Sanacion);
                 break;
         }
     }
