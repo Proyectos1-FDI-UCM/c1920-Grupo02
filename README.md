@@ -203,6 +203,7 @@ Ahora los enemigos (incluidos bosses) dan feedback al jugador cuando mueren inst
 Las balas también instancian partículas cuando se destruyen -Nico
 Añadida animación de OneShot en el Gran Coágulo - Miguel
 Añadidas nuevas Sorting Layers: Enemy y Attacks - Miguel
+Ajustada la tenia boss y su sala -- Daniel
 
 //Cambios hechos el 24 de mayo
 Añadida nueva capa física para la sangre del Gran Coágulo - Miguel
@@ -220,6 +221,9 @@ Ahora el Raton solo aparece en el menú y la interfaz de Pausa --Samuel
 //Cambios hechos el 3 de Junio
 Aumentada considerablemente la vida máxima del Gran Coágulo - Miguel
 Disminuido en 10 segundos el tiempo para matar a los adds en el Gran Coágulo - Miguel
+Ajustada la tenia y sus limites de patrullaje -- Daniel
+
 
 //Cambios hechos el 11 de Junio
 Implementado Santuario en todos los niveles --Samuel
+Implementado el sonido del santuario en todos los niveles --Daniel
