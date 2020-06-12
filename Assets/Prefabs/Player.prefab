@@ -277,8 +277,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd18f3dad3ab05b4981c8dfa2df660c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  move: 0.01
-  limiteMovimiento: 0.011
+  move: 0.001
+  limiteMovimiento: 0.0011
 --- !u!1 &6519990181927552626
 GameObject:
   m_ObjectHideFlags: 0
