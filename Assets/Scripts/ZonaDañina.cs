@@ -47,4 +47,26 @@ public class ZonaDañina : MonoBehaviour
         timer = 0;
         inTouch = false;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        inTouch = true;
+        timer = 0;
+        //haces que parpadee
+        collision.gameObject.GetComponent<PlayerRecibeDanyo>().Dañado();
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (parpadeo > 0)
+        {
+            //haces que parpadee
+            collision.gameObject.GetComponent<PlayerRecibeDanyo>().Dañado();
+            parpadeo--;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        //Reseteas el timer para que vuelva a hacer daño
+        timer = 0;
+        inTouch = false;
+    }
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4927277637599704283}
   - component: {fileID: 563959708503955251}
   - component: {fileID: 2853037474012195696}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: "SueloDa\xF1ino"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.0012657642, y: -0.18441296}
